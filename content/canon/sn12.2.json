@@ -1,0 +1,323 @@
+{
+  "uid": "sn12.2",
+  "title": "",
+  "translator": "Bhikkhu Sujato",
+  "segments": [
+    {
+      "uid": "sn12.2:0.1",
+      "text": "Linked Discourses 12.2"
+    },
+    {
+      "uid": "sn12.2:0.2",
+      "text": "1. The Buddhas"
+    },
+    {
+      "uid": "sn12.2:0.3",
+      "text": "Analysis"
+    },
+    {
+      "uid": "sn12.2:1.1",
+      "text": "At Sāvatthī."
+    },
+    {
+      "uid": "sn12.2:1.2",
+      "text": "\"Mendicants, I will teach and analyze for you dependent origination."
+    },
+    {
+      "uid": "sn12.2:1.3",
+      "text": "Listen and apply your mind well, I will speak.\""
+    },
+    {
+      "uid": "sn12.2:1.4",
+      "text": "\"Yes, sir,\" they replied."
+    },
+    {
+      "uid": "sn12.2:1.5",
+      "text": "The Buddha said this:"
+    },
+    {
+      "uid": "sn12.2:2.1",
+      "text": "\"And what is dependent origination?"
+    },
+    {
+      "uid": "sn12.2:2.2",
+      "text": "Ignorance is a requirement for choices."
+    },
+    {
+      "uid": "sn12.2:2.3",
+      "text": "Choices are a requirement for consciousness."
+    },
+    {
+      "uid": "sn12.2:2.4",
+      "text": "Consciousness is a requirement for name and form."
+    },
+    {
+      "uid": "sn12.2:2.5",
+      "text": "Name and form are requirements for the six sense fields."
+    },
+    {
+      "uid": "sn12.2:2.6",
+      "text": "The six sense fields are requirements for contact."
+    },
+    {
+      "uid": "sn12.2:2.7",
+      "text": "Contact is a requirement for feeling."
+    },
+    {
+      "uid": "sn12.2:2.8",
+      "text": "Feeling is a requirement for craving."
+    },
+    {
+      "uid": "sn12.2:2.9",
+      "text": "Craving is a requirement for grasping."
+    },
+    {
+      "uid": "sn12.2:2.10",
+      "text": "Grasping is a requirement for continued existence."
+    },
+    {
+      "uid": "sn12.2:2.11",
+      "text": "Continued existence is a requirement for rebirth."
+    },
+    {
+      "uid": "sn12.2:2.12",
+      "text": "Rebirth is a requirement for old age and death, sorrow, lamentation, pain, sadness, and distress to come to be."
+    },
+    {
+      "uid": "sn12.2:2.13",
+      "text": "That is how this entire mass of suffering originates."
+    },
+    {
+      "uid": "sn12.2:3.1",
+      "text": "And what is old age and death?"
+    },
+    {
+      "uid": "sn12.2:3.2",
+      "text": "The old age, decrepitude, broken teeth, grey hair, wrinkly skin, diminished vitality, and failing faculties of the various sentient beings in the various orders of sentient beings."
+    },
+    {
+      "uid": "sn12.2:3.3",
+      "text": "This is called old age."
+    },
+    {
+      "uid": "sn12.2:3.4",
+      "text": "The passing away, passing on, disintegration, demise, mortality, death, decease, breaking up of the aggregates, and laying to rest of the corpse of the various sentient beings in the various orders of sentient beings."
+    },
+    {
+      "uid": "sn12.2:3.5",
+      "text": "This is called death."
+    },
+    {
+      "uid": "sn12.2:3.6",
+      "text": "Such is old age, and such is death."
+    },
+    {
+      "uid": "sn12.2:3.7",
+      "text": "This is called old age and death."
+    },
+    {
+      "uid": "sn12.2:4.1",
+      "text": "And what is rebirth?"
+    },
+    {
+      "uid": "sn12.2:4.2",
+      "text": "The rebirth, inception, conception, regeneration, manifestation of the aggregates, and acquisition of the sense fields of the various sentient beings in the various orders of sentient beings."
+    },
+    {
+      "uid": "sn12.2:4.3",
+      "text": "This is called rebirth."
+    },
+    {
+      "uid": "sn12.2:5.1",
+      "text": "And what is continued existence?"
+    },
+    {
+      "uid": "sn12.2:5.2",
+      "text": "There are these three states of existence."
+    },
+    {
+      "uid": "sn12.2:5.3",
+      "text": "Existence in the sensual realm, the realm of luminous form, and the formless realm."
+    },
+    {
+      "uid": "sn12.2:5.4",
+      "text": "This is called continued existence."
+    },
+    {
+      "uid": "sn12.2:6.1",
+      "text": "And what is grasping?"
+    },
+    {
+      "uid": "sn12.2:6.2",
+      "text": "There are these four kinds of grasping."
+    },
+    {
+      "uid": "sn12.2:6.3",
+      "text": "Grasping at sensual pleasures, views, precepts and observances, and theories of a self."
+    },
+    {
+      "uid": "sn12.2:6.4",
+      "text": "This is called grasping."
+    },
+    {
+      "uid": "sn12.2:7.1",
+      "text": "And what is craving?"
+    },
+    {
+      "uid": "sn12.2:7.2",
+      "text": "There are these six classes of craving."
+    },
+    {
+      "uid": "sn12.2:7.3",
+      "text": "Craving for sights, sounds, smells, tastes, touches, and ideas."
+    },
+    {
+      "uid": "sn12.2:7.4",
+      "text": "This is called craving."
+    },
+    {
+      "uid": "sn12.2:8.1",
+      "text": "And what is feeling?"
+    },
+    {
+      "uid": "sn12.2:8.2",
+      "text": "There are these six classes of feeling."
+    },
+    {
+      "uid": "sn12.2:8.3",
+      "text": "Feeling born of contact through the eye, ear, nose, tongue, body, and mind."
+    },
+    {
+      "uid": "sn12.2:8.4",
+      "text": "This is called feeling."
+    },
+    {
+      "uid": "sn12.2:9.1",
+      "text": "And what is contact?"
+    },
+    {
+      "uid": "sn12.2:9.2",
+      "text": "There are these six classes of contact."
+    },
+    {
+      "uid": "sn12.2:9.3",
+      "text": "Contact through the eye, ear, nose, tongue, body, and mind."
+    },
+    {
+      "uid": "sn12.2:9.4",
+      "text": "This is called contact."
+    },
+    {
+      "uid": "sn12.2:10.1",
+      "text": "And what are the six sense fields?"
+    },
+    {
+      "uid": "sn12.2:10.2",
+      "text": "The sense fields of the eye, ear, nose, tongue, body, and mind."
+    },
+    {
+      "uid": "sn12.2:10.3",
+      "text": "These are called the six sense fields."
+    },
+    {
+      "uid": "sn12.2:11.1",
+      "text": "And what are name and form?"
+    },
+    {
+      "uid": "sn12.2:11.2",
+      "text": "Feeling, perception, intention, contact, and application of mind."
+    },
+    {
+      "uid": "sn12.2:11.3",
+      "text": "This is called name."
+    },
+    {
+      "uid": "sn12.2:11.4",
+      "text": "The four principal states, and form derived from the four principal states."
+    },
+    {
+      "uid": "sn12.2:11.5",
+      "text": "This is called form."
+    },
+    {
+      "uid": "sn12.2:11.6",
+      "text": "Such is name and such is form."
+    },
+    {
+      "uid": "sn12.2:11.7",
+      "text": "These are called name and form."
+    },
+    {
+      "uid": "sn12.2:12.1",
+      "text": "And what is consciousness?"
+    },
+    {
+      "uid": "sn12.2:12.2",
+      "text": "There are these six classes of consciousness."
+    },
+    {
+      "uid": "sn12.2:12.3",
+      "text": "Eye, ear, nose, tongue, body, and mind consciousness."
+    },
+    {
+      "uid": "sn12.2:12.4",
+      "text": "This is called consciousness."
+    },
+    {
+      "uid": "sn12.2:13.1",
+      "text": "And what are choices?"
+    },
+    {
+      "uid": "sn12.2:13.2",
+      "text": "There are three kinds of choices."
+    },
+    {
+      "uid": "sn12.2:13.3",
+      "text": "Choices by way of body, speech, and mind."
+    },
+    {
+      "uid": "sn12.2:13.4",
+      "text": "These are called choices."
+    },
+    {
+      "uid": "sn12.2:14.1",
+      "text": "And what is ignorance?"
+    },
+    {
+      "uid": "sn12.2:14.2",
+      "text": "Not knowing about suffering, the origin of suffering, the cessation of suffering, and the practice that leads to the cessation of suffering."
+    },
+    {
+      "uid": "sn12.2:14.3",
+      "text": "This is called ignorance."
+    },
+    {
+      "uid": "sn12.2:15.1",
+      "text": "And so, ignorance is a requirement for choices."
+    },
+    {
+      "uid": "sn12.2:15.2",
+      "text": "Choices are a requirement for consciousness. …"
+    },
+    {
+      "uid": "sn12.2:15.3",
+      "text": "That is how this entire mass of suffering originates."
+    },
+    {
+      "uid": "sn12.2:15.4",
+      "text": "When ignorance fades away and ceases with no residue left behind, choices cease."
+    },
+    {
+      "uid": "sn12.2:15.5",
+      "text": "When choices cease, consciousness ceases. …"
+    },
+    {
+      "uid": "sn12.2:15.6",
+      "text": "That is how this entire mass of suffering ceases.\""
+    },
+    {
+      "uid": "sn12.2:15.7",
+      "text": ""
+    }
+  ]
+}

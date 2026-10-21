@@ -1,0 +1,915 @@
+{
+  "uid": "mn21",
+  "title": "",
+  "translator": "Bhikkhu Sujato",
+  "segments": [
+    {
+      "uid": "mn21:0.1",
+      "text": "Middle Discourses 21"
+    },
+    {
+      "uid": "mn21:0.2",
+      "text": "The Simile of the Saw"
+    },
+    {
+      "uid": "mn21:1.1",
+      "text": "So I have heard."
+    },
+    {
+      "uid": "mn21:1.2",
+      "text": "At one time the Buddha was staying near Sāvatthī in Jeta's Grove, Anāthapiṇḍika's monastery."
+    },
+    {
+      "uid": "mn21:2.1",
+      "text": "Now at that time, Venerable Phagguna of the Top-Knot was spending too long mixing closely with some nuns."
+    },
+    {
+      "uid": "mn21:2.2",
+      "text": "So much so that"
+    },
+    {
+      "uid": "mn21:2.3",
+      "text": "if any mendicant criticized those nuns in his presence, Phagguna of the Top-Knot got angry and upset, and even instigated disciplinary proceedings."
+    },
+    {
+      "uid": "mn21:2.4",
+      "text": "And if any mendicant criticized Phagguna of the Top-Knot in their presence, those nuns got angry and upset, and even instigated disciplinary proceedings."
+    },
+    {
+      "uid": "mn21:2.5",
+      "text": "That's how close Phagguna of the Top-Knot was with those nuns."
+    },
+    {
+      "uid": "mn21:3.1",
+      "text": "Then a mendicant went up to the Buddha, bowed, sat down to one side, and told him what was going on."
+    },
+    {
+      "uid": "mn21:3.2",
+      "text": ""
+    },
+    {
+      "uid": "mn21:3.3",
+      "text": ""
+    },
+    {
+      "uid": "mn21:3.4",
+      "text": ""
+    },
+    {
+      "uid": "mn21:3.5",
+      "text": ""
+    },
+    {
+      "uid": "mn21:3.6",
+      "text": ""
+    },
+    {
+      "uid": "mn21:4.1",
+      "text": "So the Buddha addressed one of the monks,"
+    },
+    {
+      "uid": "mn21:4.2",
+      "text": "\"Please, monk, in my name tell the mendicant Phagguna of the Top-Knot that"
+    },
+    {
+      "uid": "mn21:4.3",
+      "text": "the Teacher summons him.\""
+    },
+    {
+      "uid": "mn21:4.4",
+      "text": "\"Yes, sir,\" that monk replied. He went to Phagguna of the Top-Knot and said to him,"
+    },
+    {
+      "uid": "mn21:4.5",
+      "text": "\"Reverend Phagguna, the Teacher summons you.\""
+    },
+    {
+      "uid": "mn21:4.6",
+      "text": "\"Yes, reverend,\" Phagguna replied. He went to the Buddha, bowed, and sat down to one side. The Buddha said to him:"
+    },
+    {
+      "uid": "mn21:5.1",
+      "text": "\"Is it really true, Phagguna, that you've been spending too long mixing closely with some nuns?"
+    },
+    {
+      "uid": "mn21:5.2",
+      "text": "So much so that"
+    },
+    {
+      "uid": "mn21:5.3",
+      "text": "if any mendicant criticizes those nuns in your presence, you get angry and upset, and even instigate disciplinary proceedings?"
+    },
+    {
+      "uid": "mn21:5.4",
+      "text": "And if any mendicant criticizes you in those nuns' presence, they get angry and upset, and even instigate disciplinary proceedings?"
+    },
+    {
+      "uid": "mn21:5.5",
+      "text": "Is that how close you've become with those nuns?\""
+    },
+    {
+      "uid": "mn21:5.6",
+      "text": "\"Yes, sir.\""
+    },
+    {
+      "uid": "mn21:5.7",
+      "text": "\"Phagguna, are you not a gentleman who has gone forth out of faith from the lay life to homelessness?\""
+    },
+    {
+      "uid": "mn21:5.8",
+      "text": "\"Yes, sir.\""
+    },
+    {
+      "uid": "mn21:6.1",
+      "text": "\"As such, it's not appropriate for you to mix so closely with those nuns."
+    },
+    {
+      "uid": "mn21:6.2",
+      "text": "So if anyone criticizes those nuns in your presence, you should give up any desires or thoughts of domestic life."
+    },
+    {
+      "uid": "mn21:6.3",
+      "text": "If that happens, you should train like this:"
+    },
+    {
+      "uid": "mn21:6.4",
+      "text": "'My mind will not degenerate. I will blurt out no bad words. I will remain full of sympathy, with a heart of love and no secret hate.'"
+    },
+    {
+      "uid": "mn21:6.5",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:6.6",
+      "text": "So even if someone strikes those nuns with fists, stones, rods, and swords in your presence, you should give up any desires or thoughts of domestic life."
+    },
+    {
+      "uid": "mn21:6.7",
+      "text": "If that happens, you should train like this:"
+    },
+    {
+      "uid": "mn21:6.8",
+      "text": "'My mind will not degenerate. I will blurt out no bad words. I will remain full of sympathy, with a heart of love and no secret hate.'"
+    },
+    {
+      "uid": "mn21:6.9",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:6.10",
+      "text": "So if anyone criticizes you in your presence, you should give up any desires or thoughts of domestic life."
+    },
+    {
+      "uid": "mn21:6.11",
+      "text": "If that happens, you should train like this: 'My mind will not degenerate. I will blurt out no bad words. I will remain full of sympathy, with a heart of love and no secret hate.'"
+    },
+    {
+      "uid": "mn21:6.12",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:6.13",
+      "text": "So Phagguna, even if someone strikes you with fists, stones, rods, and swords, you should give up any desires or thoughts of domestic life."
+    },
+    {
+      "uid": "mn21:6.14",
+      "text": "If that happens, you should train like this: 'My mind will not degenerate. I will blurt out no bad words. I will remain full of sympathy, with a heart of love and no secret hate.'"
+    },
+    {
+      "uid": "mn21:6.15",
+      "text": "That's how you should train.\""
+    },
+    {
+      "uid": "mn21:7.1",
+      "text": "Then the Buddha said to the mendicants:"
+    },
+    {
+      "uid": "mn21:7.2",
+      "text": "\"Mendicants, I used to be satisfied with the mendicants."
+    },
+    {
+      "uid": "mn21:7.3",
+      "text": "Once, I addressed them:"
+    },
+    {
+      "uid": "mn21:7.4",
+      "text": "'I eat my food in one sitting per day."
+    },
+    {
+      "uid": "mn21:7.5",
+      "text": "Doing so, I find that I'm healthy and well, nimble, strong, and living comfortably."
+    },
+    {
+      "uid": "mn21:7.6",
+      "text": "You too should eat your food in one sitting per day."
+    },
+    {
+      "uid": "mn21:7.7",
+      "text": "Doing so, you'll find that you're healthy and well, nimble, strong, and living comfortably.'"
+    },
+    {
+      "uid": "mn21:7.8",
+      "text": "I didn't have to keep on instructing those mendicants;"
+    },
+    {
+      "uid": "mn21:7.9",
+      "text": "I just had to prompt their mindfulness."
+    },
+    {
+      "uid": "mn21:7.10",
+      "text": "Suppose a chariot stood harnessed to thoroughbreds at a level crossroads, with a goad ready."
+    },
+    {
+      "uid": "mn21:7.11",
+      "text": "A deft horse trainer, a master charioteer, might mount the chariot, taking the reins in his right hand and goad in the left. He'd drive out and back wherever he wishes, whenever he wishes."
+    },
+    {
+      "uid": "mn21:7.12",
+      "text": "In the same way, I didn't have to keep on instructing those mendicants;"
+    },
+    {
+      "uid": "mn21:7.13",
+      "text": "I just had to prompt their mindfulness."
+    },
+    {
+      "uid": "mn21:7.14",
+      "text": "So, mendicants, you too should give up what's unskillful and devote yourselves to skillful qualities."
+    },
+    {
+      "uid": "mn21:7.15",
+      "text": "In this way you'll achieve growth, improvement, and maturity in this teaching and training."
+    },
+    {
+      "uid": "mn21:8.1",
+      "text": "Suppose that not far from a town or village there was a large grove of sal trees"
+    },
+    {
+      "uid": "mn21:8.2",
+      "text": "that was choked with castor-oil weeds."
+    },
+    {
+      "uid": "mn21:8.3",
+      "text": "Then along comes a person who wants to help protect and nurture that grove."
+    },
+    {
+      "uid": "mn21:8.4",
+      "text": "They'd cut down the crooked sal saplings that were robbing the sap, and throw them out. They'd clean up the interior of the grove,"
+    },
+    {
+      "uid": "mn21:8.5",
+      "text": "and properly care for the straight, well-formed sal saplings."
+    },
+    {
+      "uid": "mn21:8.6",
+      "text": "In this way, in due course, that sal grove would grow, increase, and mature."
+    },
+    {
+      "uid": "mn21:8.7",
+      "text": "In the same way, mendicants, you too should give up what's unskillful and devote yourselves to skillful qualities."
+    },
+    {
+      "uid": "mn21:8.8",
+      "text": "In this way you'll achieve growth, improvement, and maturity in this teaching and training."
+    },
+    {
+      "uid": "mn21:9.1",
+      "text": "Once upon a time, mendicants, right here in Sāvatthī there was a housewife named Vedehikā."
+    },
+    {
+      "uid": "mn21:9.2",
+      "text": "She had this good reputation:"
+    },
+    {
+      "uid": "mn21:9.3",
+      "text": "'The housewife Vedehikā is gentle, placid, and calm.'"
+    },
+    {
+      "uid": "mn21:9.4",
+      "text": "Now, Vedehikā had a bonded maid named Kāḷī who was deft, tireless, and well-organized in her work."
+    },
+    {
+      "uid": "mn21:9.5",
+      "text": "Then Kāḷī thought,"
+    },
+    {
+      "uid": "mn21:9.6",
+      "text": "'My mistress has a good reputation as being"
+    },
+    {
+      "uid": "mn21:9.7",
+      "text": "gentle, placid, and calm."
+    },
+    {
+      "uid": "mn21:9.8",
+      "text": "But does she actually have anger in her and just not show it? Or does she have no anger?"
+    },
+    {
+      "uid": "mn21:9.9",
+      "text": "Or is it just because my work is well-organized that she doesn't show anger, even though she still has it inside?"
+    },
+    {
+      "uid": "mn21:9.10",
+      "text": "Why don't I test my mistress?'"
+    },
+    {
+      "uid": "mn21:9.11",
+      "text": "So Kāḷī got up during the day."
+    },
+    {
+      "uid": "mn21:9.12",
+      "text": "Vedehikā said to her,"
+    },
+    {
+      "uid": "mn21:9.13",
+      "text": "'Oi wench, Kāḷī!'"
+    },
+    {
+      "uid": "mn21:9.14",
+      "text": "'What is it, ma'am?'"
+    },
+    {
+      "uid": "mn21:9.15",
+      "text": "'You're getting up in the day—what's up with you, wench?'"
+    },
+    {
+      "uid": "mn21:9.16",
+      "text": "'Nothing, ma'am.'"
+    },
+    {
+      "uid": "mn21:9.17",
+      "text": "'Oh, so nothing's up, you naughty maid, but you get up in the day!' Angry and upset, she scowled."
+    },
+    {
+      "uid": "mn21:9.18",
+      "text": "Then Kāḷī thought,"
+    },
+    {
+      "uid": "mn21:9.19",
+      "text": "'My mistress actually has anger in her and just doesn't show it; it's not that she has no anger."
+    },
+    {
+      "uid": "mn21:9.20",
+      "text": "It's just because my work is well-organized that she doesn't show anger, even though she still has it inside."
+    },
+    {
+      "uid": "mn21:9.21",
+      "text": "Why don't I test my mistress further?'"
+    },
+    {
+      "uid": "mn21:9.22",
+      "text": "So Kāḷī got up later in the day."
+    },
+    {
+      "uid": "mn21:9.23",
+      "text": "Vedehikā said to her,"
+    },
+    {
+      "uid": "mn21:9.24",
+      "text": "'Oi wench, Kāḷī!'"
+    },
+    {
+      "uid": "mn21:9.25",
+      "text": "'What is it, ma'am?'"
+    },
+    {
+      "uid": "mn21:9.26",
+      "text": "'You're getting up later in the day—what's up with you, wench?'"
+    },
+    {
+      "uid": "mn21:9.27",
+      "text": "'Nothing, ma'am.'"
+    },
+    {
+      "uid": "mn21:9.28",
+      "text": "'Oh, so nothing's up, you naughty maid, but you get up later in the day!' Angry and upset, she blurted out angry words."
+    },
+    {
+      "uid": "mn21:9.29",
+      "text": "Then Kāḷī thought,"
+    },
+    {
+      "uid": "mn21:9.30",
+      "text": "'My mistress actually has anger in her and just doesn't show it; it's not that she has no anger."
+    },
+    {
+      "uid": "mn21:9.31",
+      "text": "It's just because my work is well-organized that she doesn't show anger, even though she still has it inside."
+    },
+    {
+      "uid": "mn21:9.32",
+      "text": "Why don't I test my mistress further?'"
+    },
+    {
+      "uid": "mn21:9.33",
+      "text": "So Kāḷī got up even later in the day."
+    },
+    {
+      "uid": "mn21:9.34",
+      "text": "Vedehikā said to her,"
+    },
+    {
+      "uid": "mn21:9.35",
+      "text": "'Oi wench, Kāḷī!'"
+    },
+    {
+      "uid": "mn21:9.36",
+      "text": "'What is it, ma'am?'"
+    },
+    {
+      "uid": "mn21:9.37",
+      "text": "'You're getting up even later in the day—what's up with you, wench?'"
+    },
+    {
+      "uid": "mn21:9.38",
+      "text": "'Nothing, ma'am.'"
+    },
+    {
+      "uid": "mn21:9.39",
+      "text": "'Oh, so nothing's up, you naughty maid, but you get up even later in the day!' Angry and upset, she grabbed a door-pin and hit Kāḷī on the head, cracking it open."
+    },
+    {
+      "uid": "mn21:9.40",
+      "text": "Then Kāḷī, with blood pouring from her cracked skull, denounced her mistress to the neighbors,"
+    },
+    {
+      "uid": "mn21:9.41",
+      "text": "'See, ladies, what the gentle one did!"
+    },
+    {
+      "uid": "mn21:9.42",
+      "text": "See what the placid one did! See what the calm one did!"
+    },
+    {
+      "uid": "mn21:9.43",
+      "text": "How on earth can she grab a door-pin and hit her only maid on the head, cracking it open, just for getting up late?'"
+    },
+    {
+      "uid": "mn21:9.44",
+      "text": "Then after some time the housewife Vedehikā got this bad reputation:"
+    },
+    {
+      "uid": "mn21:9.45",
+      "text": "'The housewife Vedehikā is fierce, ill-tempered, and not calm at all.'"
+    },
+    {
+      "uid": "mn21:10.1",
+      "text": "In the same way, a mendicant may be the gentlest of the gentle, the most placid of the placid, the calmest of the calm, so long as they don't encounter any disagreeable criticism."
+    },
+    {
+      "uid": "mn21:10.2",
+      "text": "But it's when they encounter disagreeable criticism that you'll know whether they're really gentle, placid, and calm."
+    },
+    {
+      "uid": "mn21:10.3",
+      "text": "I don't say that a mendicant is easy to admonish if they make themselves easy to admonish only for the sake of robes, almsfood, lodgings, and medicines and supplies for the sick."
+    },
+    {
+      "uid": "mn21:10.4",
+      "text": "Why is that?"
+    },
+    {
+      "uid": "mn21:10.5",
+      "text": "Because when they don't get robes, almsfood, lodgings, and medicines and supplies for the sick, they're no longer easy to admonish."
+    },
+    {
+      "uid": "mn21:10.6",
+      "text": "But when a mendicant is easy to admonish purely because they honor, respect, revere, worship, and venerate the teaching, then I say that they're easy to admonish."
+    },
+    {
+      "uid": "mn21:10.7",
+      "text": "So, mendicants, you should train yourselves: 'We will be easy to admonish purely because we honor, respect, revere, worship, and venerate the teaching.'"
+    },
+    {
+      "uid": "mn21:10.8",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:11.1",
+      "text": "Mendicants, there are these five ways in which others might criticize you."
+    },
+    {
+      "uid": "mn21:11.2",
+      "text": "Their speech may be timely or untimely,"
+    },
+    {
+      "uid": "mn21:11.3",
+      "text": "true or false,"
+    },
+    {
+      "uid": "mn21:11.4",
+      "text": "gentle or harsh,"
+    },
+    {
+      "uid": "mn21:11.5",
+      "text": "beneficial or harmful,"
+    },
+    {
+      "uid": "mn21:11.6",
+      "text": "from a heart of love or from secret hate."
+    },
+    {
+      "uid": "mn21:11.7",
+      "text": "When others criticize you, they may do so in any of these ways."
+    },
+    {
+      "uid": "mn21:11.8",
+      "text": ""
+    },
+    {
+      "uid": "mn21:11.9",
+      "text": ""
+    },
+    {
+      "uid": "mn21:11.10",
+      "text": ""
+    },
+    {
+      "uid": "mn21:11.11",
+      "text": ""
+    },
+    {
+      "uid": "mn21:11.12",
+      "text": "If that happens, you should train like this:"
+    },
+    {
+      "uid": "mn21:11.13",
+      "text": "'Our minds will not degenerate. We will blurt out no bad words. We will remain full of sympathy, with a heart of love and no secret hate."
+    },
+    {
+      "uid": "mn21:11.14",
+      "text": "We will meditate spreading a heart of love to that individual. And with them as a basis, we will meditate spreading a heart full of love to everyone in the world—abundant, expansive, limitless, free of enmity and ill will.'"
+    },
+    {
+      "uid": "mn21:11.15",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:12.1",
+      "text": "Suppose a person was to come along carrying a spade and basket"
+    },
+    {
+      "uid": "mn21:12.2",
+      "text": "and say,"
+    },
+    {
+      "uid": "mn21:12.3",
+      "text": "'I shall make this great earth be without earth!'"
+    },
+    {
+      "uid": "mn21:12.4",
+      "text": "And they'd dig all over, scatter all over, spit all over, and urinate all over, saying,"
+    },
+    {
+      "uid": "mn21:12.5",
+      "text": "'Be without earth! Be without earth!'"
+    },
+    {
+      "uid": "mn21:12.6",
+      "text": "What do you think, mendicants?"
+    },
+    {
+      "uid": "mn21:12.7",
+      "text": "Could that person make this great earth be without earth?\""
+    },
+    {
+      "uid": "mn21:12.8",
+      "text": "\"No, sir."
+    },
+    {
+      "uid": "mn21:12.9",
+      "text": "Why is that?"
+    },
+    {
+      "uid": "mn21:12.10",
+      "text": "Because this great earth is deep and limitless."
+    },
+    {
+      "uid": "mn21:12.11",
+      "text": "It's not easy to make it be without earth."
+    },
+    {
+      "uid": "mn21:12.12",
+      "text": "That person will eventually get weary and frustrated.\""
+    },
+    {
+      "uid": "mn21:13.1",
+      "text": "\"In the same way, there are these five ways in which others might criticize you."
+    },
+    {
+      "uid": "mn21:13.2",
+      "text": "Their speech may be timely or untimely,"
+    },
+    {
+      "uid": "mn21:13.3",
+      "text": "true or false,"
+    },
+    {
+      "uid": "mn21:13.4",
+      "text": "gentle or harsh,"
+    },
+    {
+      "uid": "mn21:13.5",
+      "text": "beneficial or harmful,"
+    },
+    {
+      "uid": "mn21:13.6",
+      "text": "from a heart of love or from secret hate."
+    },
+    {
+      "uid": "mn21:13.7",
+      "text": "When others criticize you, they may do so in any of these ways."
+    },
+    {
+      "uid": "mn21:13.8",
+      "text": ""
+    },
+    {
+      "uid": "mn21:13.9",
+      "text": ""
+    },
+    {
+      "uid": "mn21:13.10",
+      "text": ""
+    },
+    {
+      "uid": "mn21:13.11",
+      "text": ""
+    },
+    {
+      "uid": "mn21:13.12",
+      "text": "If that happens, you should train like this:"
+    },
+    {
+      "uid": "mn21:13.13",
+      "text": "'Our minds will not degenerate. We will blurt out no bad words. We will remain full of sympathy, with a heart of love and no secret hate."
+    },
+    {
+      "uid": "mn21:13.14",
+      "text": "We will meditate spreading a heart of love to that individual. And with them as a basis, we will meditate spreading a heart like the earth to everyone in the world—abundant, expansive, limitless, free of enmity and ill will.'"
+    },
+    {
+      "uid": "mn21:13.15",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:14.1",
+      "text": "Suppose a person was to come along with dye such as red lac, turmeric, indigo, or rose madder,"
+    },
+    {
+      "uid": "mn21:14.2",
+      "text": "and say,"
+    },
+    {
+      "uid": "mn21:14.3",
+      "text": "'I shall draw pictures in space, making pictures appear there.'"
+    },
+    {
+      "uid": "mn21:14.4",
+      "text": "What do you think, mendicants?"
+    },
+    {
+      "uid": "mn21:14.5",
+      "text": "Could that person draw pictures in space?\""
+    },
+    {
+      "uid": "mn21:14.6",
+      "text": "\"No, sir."
+    },
+    {
+      "uid": "mn21:14.7",
+      "text": "Why is that?"
+    },
+    {
+      "uid": "mn21:14.8",
+      "text": "Because space has no form or appearance."
+    },
+    {
+      "uid": "mn21:14.9",
+      "text": "It's not easy to draw pictures there."
+    },
+    {
+      "uid": "mn21:14.10",
+      "text": "That person will eventually get weary and frustrated.\""
+    },
+    {
+      "uid": "mn21:15.1",
+      "text": "\"In the same way, if others criticize you in any of these five ways … you should train like this:"
+    },
+    {
+      "uid": "mn21:15.2",
+      "text": "'… We will meditate spreading a heart of love to that person. And with them as a basis, we will meditate spreading a heart like space to everyone in the world—abundant, expansive, limitless, free of enmity and ill will.'"
+    },
+    {
+      "uid": "mn21:15.3",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:16.1",
+      "text": "Suppose a person was to come along carrying a blazing grass torch,"
+    },
+    {
+      "uid": "mn21:16.2",
+      "text": "and say,"
+    },
+    {
+      "uid": "mn21:16.3",
+      "text": "'I shall burn and scorch the Ganges River with this blazing grass torch.'"
+    },
+    {
+      "uid": "mn21:16.4",
+      "text": "What do you think, mendicants?"
+    },
+    {
+      "uid": "mn21:16.5",
+      "text": "Could that person burn and scorch the Ganges River with a blazing grass torch?\""
+    },
+    {
+      "uid": "mn21:16.6",
+      "text": "\"No, sir."
+    },
+    {
+      "uid": "mn21:16.7",
+      "text": "Why is that?"
+    },
+    {
+      "uid": "mn21:16.8",
+      "text": "Because the Ganges River is deep and limitless."
+    },
+    {
+      "uid": "mn21:16.9",
+      "text": "It's not easy to burn and scorch it with a blazing grass torch."
+    },
+    {
+      "uid": "mn21:16.10",
+      "text": "That person will eventually get weary and frustrated.\""
+    },
+    {
+      "uid": "mn21:17.1",
+      "text": "\"In the same way, if others criticize you in any of these five ways … you should train like this:"
+    },
+    {
+      "uid": "mn21:17.2",
+      "text": "'… We will meditate spreading a heart of love to that individual. And with them as a basis, we will meditate spreading a heart like the Ganges to everyone in the world—abundant, expansive, limitless, free of enmity and ill will.'"
+    },
+    {
+      "uid": "mn21:17.3",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:18.1",
+      "text": "Suppose there was a catskin bag that was rubbed, well-rubbed, very well-rubbed, soft, silky, rid of rustling and crackling."
+    },
+    {
+      "uid": "mn21:18.2",
+      "text": "Then a person comes along carrying a stick or a stone,"
+    },
+    {
+      "uid": "mn21:18.3",
+      "text": "and says,"
+    },
+    {
+      "uid": "mn21:18.4",
+      "text": "'I shall make this soft catskin bag rustle and crackle with this stick or stone.'"
+    },
+    {
+      "uid": "mn21:18.5",
+      "text": "What do you think, mendicants?"
+    },
+    {
+      "uid": "mn21:18.6",
+      "text": "Could that person make that soft catskin bag rustle and crackle with that stick or stone?\""
+    },
+    {
+      "uid": "mn21:18.7",
+      "text": "\"No, sir."
+    },
+    {
+      "uid": "mn21:18.8",
+      "text": "Why is that?"
+    },
+    {
+      "uid": "mn21:18.9",
+      "text": "Because that catskin bag is rubbed, well-rubbed, very well-rubbed, soft, silky, rid of rustling and crackling."
+    },
+    {
+      "uid": "mn21:18.10",
+      "text": "It's not easy to make it rustle or crackle with a stick or stone."
+    },
+    {
+      "uid": "mn21:18.11",
+      "text": "That person will eventually get weary and frustrated.\""
+    },
+    {
+      "uid": "mn21:19.1",
+      "text": "\"In the same way, there are these five ways in which others might criticize you."
+    },
+    {
+      "uid": "mn21:19.2",
+      "text": "Their speech may be timely or untimely,"
+    },
+    {
+      "uid": "mn21:19.3",
+      "text": "true or false,"
+    },
+    {
+      "uid": "mn21:19.4",
+      "text": "gentle or harsh,"
+    },
+    {
+      "uid": "mn21:19.5",
+      "text": "beneficial or harmful,"
+    },
+    {
+      "uid": "mn21:19.6",
+      "text": "from a heart of love or from secret hate."
+    },
+    {
+      "uid": "mn21:19.7",
+      "text": "When others criticize you, they may do so in any of these ways."
+    },
+    {
+      "uid": "mn21:19.8",
+      "text": ""
+    },
+    {
+      "uid": "mn21:19.9",
+      "text": ""
+    },
+    {
+      "uid": "mn21:19.10",
+      "text": ""
+    },
+    {
+      "uid": "mn21:19.11",
+      "text": ""
+    },
+    {
+      "uid": "mn21:19.12",
+      "text": "If that happens, you should train like this:"
+    },
+    {
+      "uid": "mn21:19.13",
+      "text": "'Our minds will not degenerate. We will blurt out no bad words. We will remain full of sympathy, with a heart of love and no secret hate."
+    },
+    {
+      "uid": "mn21:19.14",
+      "text": "We will meditate spreading a heart of love to that individual. And with them as a basis, we will meditate spreading a heart like a catskin bag to everyone in the world—abundant, expansive, limitless, free of enmity and ill will.'"
+    },
+    {
+      "uid": "mn21:19.15",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:20.1",
+      "text": "Even if low-down bandits were to sever you limb from limb with a two-handed saw, anyone who had a malevolent thought on that account would not be following my instructions."
+    },
+    {
+      "uid": "mn21:20.2",
+      "text": "If that happens, you should train like this:"
+    },
+    {
+      "uid": "mn21:20.3",
+      "text": "'Our minds will not degenerate. We will blurt out no bad words. We will remain full of sympathy, with a heart of love and no secret hate."
+    },
+    {
+      "uid": "mn21:20.4",
+      "text": "We will meditate spreading a heart of love to that individual. And with them as a basis, we will meditate spreading a heart full of love to everyone in the world—abundant, expansive, limitless, free of enmity and ill will.'"
+    },
+    {
+      "uid": "mn21:20.5",
+      "text": "That's how you should train."
+    },
+    {
+      "uid": "mn21:21.1",
+      "text": "If you frequently reflect on this advice on the simile of the saw,"
+    },
+    {
+      "uid": "mn21:21.2",
+      "text": "do you see any criticism, large or small, that you could not endure?\""
+    },
+    {
+      "uid": "mn21:21.3",
+      "text": "\"No, sir.\""
+    },
+    {
+      "uid": "mn21:21.4",
+      "text": "\"So, mendicants, you should frequently reflect on this advice on the simile of the saw."
+    },
+    {
+      "uid": "mn21:21.5",
+      "text": "This will be for your lasting welfare and happiness.\""
+    },
+    {
+      "uid": "mn21:21.6",
+      "text": "That is what the Buddha said."
+    },
+    {
+      "uid": "mn21:21.7",
+      "text": "Satisfied, the mendicants approved what the Buddha said."
+    },
+    {
+      "uid": "mn21:21.8",
+      "text": ""
+    }
+  ]
+}

@@ -314,6 +314,236 @@
           { label: "The conscientious worker", text: "Take the poorer job. Right livelihood is not only about the five forbidden trades; it is about what your days are made of. A life spent on pointless work is a quiet form of the harm the precepts exist to prevent." },
         ],
       },
+      {
+        id: "s15", n: 15, domain: "Speech", title: "The rumour that's probably true",
+        prompt:
+          "You hear, from two sources you trust, that a colleague has been falsifying safety reports. The sources are credible but not certain, and one has a grudge. Sharing it would get the reports checked before the next inspection; it would also end the colleague's career if it is wrong, and the rumour would follow them either way. Your manager asks you, privately, whether there is anything you should tell them.",
+        anchor: {
+          session: "6.1",
+          uids: ["mn58:8.1", "mn58:8.2", "mn58:8.3", "dhp1:1", "dhp1:2"],
+          inference:
+            "The speech test is not 'is it true' but true, beneficial, and timely together. A rumour that may be true fails the first test precisely when certainty is missing, and the harm of spreading it is the second.",
+        },
+        leavesOpen:
+          "Whether protective disclosure requires certainty, and what duty you owe to a colleague you suspect. The canon has a test for speech, not an investigation procedure.",
+        question: "What do you tell your manager — and what do you tell the colleague?",
+        seminar: [
+          "Is 'probably true' enough when someone else's livelihood is at stake?",
+          "Does the answer change if the safety risk is to other people rather than to property?",
+          "What would you want done if the rumour were about you?",
+        ],
+        counter: [
+          { label: "The protective reporter", text: "Report the facts and name the uncertainty: two credible sources, one with a grudge, no proof. Say exactly what you know and what you do not. Silence in the face of a safety risk is also a choice with victims." },
+          { label: "The careful holder", text: "Say nothing until you can verify. An unverified rumour told to a manager is not disclosure; it is laundering gossip through authority, and the colleague has no way to answer it." },
+        ],
+      },
+      {
+        id: "s16", n: 16, domain: "Relationships", title: "The friend who's bad for you",
+        prompt:
+          "Your closest friend since school is loyal, funny, and reliably there — and steadily making your life worse. They mock your attempts to change, borrow money they do not repay, and get defensive whenever you set a limit. You have known them for fifteen years, and they were there when no one else was. They are now asking you to lend them a deposit for a flat.",
+        anchor: {
+          session: "6.2",
+          uids: ["dn31:31.1", "dn31:31.2", "sn45.2:2.2", "sn45.2:2.3"],
+          inference:
+            "Friendship in DN 31 is a set of reciprocal duties, not a feeling. AN 45.2 says the company you keep is the whole of the path, which makes a friendship's direction a serious question rather than a sentimental one.",
+        },
+        leavesOpen:
+          "Whether loyalty to a long friendship outweighs the canon's blunt teaching on bad friends, and what you owe someone who was once good for you. The canon names the duties; it does not time them out.",
+        question: "Do you lend the deposit, keep the friendship without lending, or end it?",
+        seminar: [
+          "Is withdrawing support a betrayal or a duty to yourself?",
+          "What exactly makes this friend 'bad for you' — their conduct, or your conduct around them?",
+          "What would you owe them if they were your sibling?",
+        ],
+        counter: [
+          { label: "The loyal friend", text: "Keep the friendship and refuse the money. Fifteen years of presence is not cancelled by a bad patch, and the duties of friendship include honesty, not exit. Tell them plainly what the limits are and stay." },
+          { label: "The honest exit", text: "End it, or let it fade. The canon treats bad friends as a drain on the path, not a cross to carry. Staying teaches both of you that the behaviour has no cost, and that is not kindness." },
+        ],
+      },
+      {
+        id: "s17", n: 17, domain: "Speech", title: "The thing you said when angry",
+        prompt:
+          "In an argument you said something true and cruel about a friend's marriage, in front of two other people. It landed, and it was accurate. They have not spoken to you since. You want to apologise, but the honest version of the apology admits the sentence was true — and they have not asked for an explanation. The silence has now lasted three weeks.",
+        anchor: {
+          session: "6.3",
+          uids: ["mn21:20.1", "mn21:20.2", "mn21:20.3", "mn58:8.2"],
+          inference:
+            "The saw standard is about the mind under provocation, not about the truth of what was said. A true sentence can still fail the test of timing and gentleness, and an apology that defends the content is a second injury.",
+        },
+        leavesOpen:
+          "Whether an apology owes the truth about the content, and what repair looks like when the harm was accurate. The canon names the standard for speech; it does not give a procedure for apology.",
+        question: "What do you say in the apology — and what do you leave out?",
+        seminar: [
+          "Can an apology be honest if it does not admit the sentence was true?",
+          "Does the audience change the harm, or only the embarrassment?",
+          "What would 'no bad words' have required of you in the argument?",
+        ],
+        counter: [
+          { label: "The unqualified apology", text: "Apologise for the act, not the content: for the timing, the audience, and the cruelty. Do not relitigate the truth. Repair is about the relationship now, not about who was right then." },
+          { label: "The honest account", text: "Apologise and say the hard part too: it was true, and saying it that way was wrong. An apology that hides the content asks them to forgive a sentence you still stand behind, which is not repair." },
+        ],
+      },
+      {
+        id: "s18", n: 18, domain: "Relationships", title: "The explanation you owe",
+        prompt:
+          "A friendship ended badly two years ago — you left without explaining why. You have since moved cities and built a life that does not include them. They have asked, twice, for a conversation. You know the reason would hurt them and would also be partly about your own shame. Silence has become the easier kindness, and you are not sure it is kindness.",
+        anchor: {
+          session: "6.1",
+          uids: ["mn58:8.1", "mn58:8.2", "mn58:8.3", "sn3.8:4.4"],
+          inference:
+            "Truth, benefit, and timing are a test of speech, not of disclosure. MN 58 also says the Realized One speaks with sympathy for sentient beings — which cuts against both brutal honesty and evasive silence.",
+        },
+        leavesOpen:
+          "Whether an explanation is owed after a relationship ends, and whether the other person's need to know outweighs the harm of telling. The canon has no procedure for closure.",
+        question: "Do you have the conversation, send a letter, or keep the silence?",
+        seminar: [
+          "Is silence a kindness here, or avoidance with a kind face?",
+          "Who benefits from the explanation — them, you, or neither?",
+          "What does 'timely' mean two years later?",
+        ],
+        counter: [
+          { label: "The honest conversation", text: "Have it. They have asked twice, which makes the information theirs to hear, and an unexplained ending is a wound that keeps reopening. Say it gently, take responsibility for your part, and do not ask to be forgiven." },
+          { label: "The protective silence", text: "Do not reopen it. An explanation two years late serves your conscience more than their life, and some truths are not beneficial just because they are true. Decline clearly and kindly, and let them go." },
+        ],
+      },
+      {
+        id: "s19", n: 19, domain: "Relationships", title: "The parent you're caring for",
+        prompt:
+          "Your parent can no longer live alone. You are the only child nearby, and the practical choice is to move them in — which would mean giving up the job you have built, or the relationship you are in, or both. The other option is a care home they have said they would hate. They are frightened, and they are not being unreasonable about the fear.",
+        anchor: {
+          session: "6.5",
+          uids: ["dn31:28.1", "dn31:28.2", "an5.57:1.6"],
+          inference:
+            "DN 31 names supporting parents as a duty, but it assumes a household economy where that duty was structurally possible. AN 5.57's recollection of separation is not a solution; it is a way of seeing the situation without the fantasy that a perfect option exists.",
+        },
+        leavesOpen:
+          "What filial duty requires when it collides with your own life, and whether a care home can satisfy it. The canon's assumption of a different economy is real and does not translate cleanly.",
+        question: "What do you actually do — and what do you tell yourself it means about you?",
+        seminar: [
+          "Is this a duty with a fixed content, or a duty to do your best under constraint?",
+          "What does the parent owe you, if anything?",
+          "Does the answer change if the parent was cruel to you?",
+        ],
+        counter: [
+          { label: "The dutiful child", text: "Move them in and absorb the cost. The duty named in DN 31 is not conditional on convenience, and a care home chosen for your career is a decision you will have to defend to yourself for years." },
+          { label: "The sustainable carer", text: "Choose the care home. A carer who loses their livelihood and relationship is not more loving, only more depleted, and the duty to support parents does not require self-erasure. Visit often and stay honest." },
+        ],
+      },
+      {
+        id: "s20", n: 20, domain: "Relationships", title: "The colleague everyone avoids",
+        prompt:
+          "One colleague is awkward, repetitive, and slightly inappropriate in ways that are hard to name. The team has quietly excluded them from lunches, chat threads, and the good projects. You have gone along with it because the cost of objecting is social, and because you find them difficult too. They have just been assigned to your project for six months.",
+        anchor: {
+          session: "6.4",
+          uids: ["sn3.8:4.3", "sn3.8:4.4", "sn45.2:2.2"],
+          inference:
+            "The analogical argument cuts both ways: they hold themselves as dear as you hold yourself, and you would not want to be managed by avoidance. Good friendship as the whole of the path raises the standard for what you owe a colleague you did not choose.",
+        },
+        leavesOpen:
+          "Whether collegial kindness requires inclusion, and how to hold goodwill toward someone whose behaviour is genuinely difficult. The canon has no workplace policy.",
+        question: "What do you change about your own conduct — and what do you ask of the team?",
+        seminar: [
+          "Is exclusion here harm, or simply the absence of friendship?",
+          "What do you owe someone whose behaviour you also need to address?",
+          "Would you accept this treatment for yourself if you were the awkward one?",
+        ],
+        counter: [
+          { label: "The includer", text: "Include them deliberately and without commentary: lunches, the thread, one real conversation. You do not have to like them, and the analogical argument does not require affection — only that you not treat them as a non-person." },
+          { label: "The honest boundary-setter", text: "Inclusion without feedback is not kindness. Say plainly what the inappropriate behaviour is and what would change it, then include them on the same terms as everyone else. Goodwill and standards are not opposites." },
+        ],
+      },
+      {
+        id: "s21", n: 21, domain: "Habit", title: "The phone at 2am",
+        prompt:
+          "It is 2am. You are scrolling, and you know it costs you tomorrow: the meeting, the gym, the mood you will bring home. There is no deadline and nothing to find. You have decided to stop at midnight four times this month, and four times you have not. The phone is in your hand now, and the decision is not really a decision any more.",
+        anchor: {
+          session: "4.2",
+          uids: ["mn20:5.1", "mn20:5.2", "an6.55:7.1"],
+          inference:
+            "MN 20 treats a stuck thought as something to be managed by technique, not defeated by resolve: look away if substitution fails. AN 6.55 adds that too much effort produces restlessness — which is why a rule at 2am fails where a design change at 9pm might work.",
+        },
+        leavesOpen:
+          "Whether discipline is a matter of willpower or of environment, and how much of the habit is choice at all. The canon gives techniques for thoughts, not a theory of addiction.",
+        question: "What do you do at 2am — and what do you change before 9pm?",
+        seminar: [
+          "Is this a failure of will, or a failure of design?",
+          "Which of MN 20's five techniques would actually work here?",
+          "What would you tell a friend in the same loop?",
+        ],
+        counter: [
+          { label: "The designer", text: "Stop trying to win at 2am. Change the environment: charger outside the bedroom, a paper book, an alarm. The sutta's own logic is technique before willpower, and the cheapest technique is not having the phone in reach." },
+          { label: "The strict rule-keeper", text: "Set a hard rule and hold it, even when it feels impossible. Design only moves the decision earlier; someone still has to choose. Treating the habit as purely environmental is how people avoid the one honest commitment." },
+        ],
+      },
+      {
+        id: "s22", n: 22, domain: "Habit", title: "The deadline and the shortcut",
+        prompt:
+          "A report is due in six hours. One section is not done, and the data you need is not available. A colleague's earlier draft contains a number that would fit, but it was from a different year and you cannot verify it. No one will check before publication. The number is plausible, and the report is for a decision that will be made next week.",
+        anchor: {
+          session: "4.3",
+          uids: ["sn3.17:4.1", "sn3.17:4.2", "mn61:9.1", "mn61:9.2"],
+          inference:
+            "The mirror check asks before, during, and after whether an action leads to harm. Time pressure does not suspend the check; it compresses it. Diligence in SN 3.17 is not busyness but not letting things slip, which is the opposite of the shortcut.",
+        },
+        leavesOpen:
+          "Whether an unverifiable but plausible number is a lie or an estimate, and what disclosure would make it honest. The canon has a check for harm; it has no publishing standard.",
+        question: "Do you use the number, flag it, or leave the section blank — and what do you write?",
+        seminar: [
+          "Is the harm the wrong number or the hidden uncertainty?",
+          "What would the after-the-fact check require you to do next week?",
+          "Would you sign your name to the paragraph?",
+        ],
+        counter: [
+          { label: "The transparent estimator", text: "Use the number and label it: 'unverified estimate from a prior-year draft; to be confirmed.' That is honest, useful, and it puts the uncertainty where the reader can see it. Blank sections hide the problem instead." },
+          { label: "The refuser", text: "Leave it blank and say why in the cover note. A plausible number from the wrong year is exactly the kind of contamination that survives into decisions. Better an incomplete report than a fluent falsehood." },
+        ],
+      },
+      {
+        id: "s23", n: 23, domain: "Habit", title: "The drink you don't want",
+        prompt:
+          "You have stopped drinking, for reasons you do not want to explain to a table of colleagues. It is the third round, and the glass is in front of you. Refusing will be noticed, and someone will make it a thing — either a joke or a question. Accepting would be easier, and one drink would probably not matter to anyone but you.",
+        anchor: {
+          session: "2.5",
+          uids: ["dn31:3.1", "an4.62:6.2"],
+          inference:
+            "The canon treats intoxicants as a drain on wealth and a corruption of conduct, and AN 4.62 ranks blamelessness above the other goods. The social cost of refusing is real, but it is not the kind of cost the ranking protects.",
+        },
+        leavesOpen:
+          "Whether a single drink is a breach, and how much explanation you owe to people who are not owed anything. The canon names the precept; it does not script the table.",
+        question: "Do you take it, refuse it plainly, or refuse with an explanation — and which explanation?",
+        seminar: [
+          "Is the pressure the drink, or the requirement to justify yourself?",
+          "What do you owe the table, if anything?",
+          "Does it change if the colleague pressing you is your manager?",
+        ],
+        counter: [
+          { label: "The plain refuser", text: "Say no, once, without a story: 'Not for me, thanks.' Explanations invite negotiation, and you do not owe anyone your reasons. The discomfort lasts a minute; the precedent lasts longer." },
+          { label: "The social accommodator", text: "Take the glass, hold it, and do not drink. Or accept and leave it full. The precept is about intoxication, not about a glass in your hand, and making a scene about your virtue is its own kind of self-regard." },
+        ],
+      },
+      {
+        id: "s24", n: 24, domain: "Habit", title: "The comparison spiral",
+        prompt:
+          "You open the app and see that a former classmate has a job you wanted, a body you used to have, and a life that looks easier than yours. You know the feed is edited. You also know the feeling is not going away: you are behind, and the evidence is on the screen. You have been scrolling for forty minutes, and you feel worse than when you started.",
+        anchor: {
+          session: "4.4",
+          uids: ["dhp1:1", "dhp1:2", "sn36.6:1.8", "sn36.6:1.9"],
+          inference:
+            "The two-arrows analysis separates the first feeling (the sting of comparison) from the second (the story that you are behind, and the scrolling that follows). Dhp 1-2 makes the mind's direction causal, which is why the story matters more than the feed.",
+        },
+        leavesOpen:
+          "Whether ambition and comparison can be separated, and whether the sting is information or only a habit. The canon names the second arrow; it does not abolish the first.",
+        question: "What do you do with the next ten minutes — and what do you tell yourself about the feeling?",
+        seminar: [
+          "Which part is the first arrow, and which is the story you added?",
+          "Is the comparison ever useful? When?",
+          "What would you need to believe for the feed to lose its authority?",
+        ],
+        counter: [
+          { label: "The deconstructor", text: "Name the mechanism: curated feed, selected sample, second arrow. Put the phone down and do one concrete thing toward your own goal. The feeling is a manufactured comparison, and treating it as evidence is the error." },
+          { label: "The listener", text: "Take the sting seriously. It is telling you something about what you actually want, and dismissing it as a second arrow is a way of avoiding a real ambition. Sit with it, then decide — but do not scroll." },
+        ],
+      },
     ],
 
     glossary: {
@@ -394,6 +624,50 @@
       upekkha: { pali: "upekkhā", respelling: "u-PEK-kha", literal: "looking on; equanimity", here: "The steady middle: neither pushing away nor grabbing. Not indifference — it is what remains when reactivity has quieted.", related: ["khanti", "metta", "jhana"] },
       passaddhi: { pali: "passaddhi", respelling: "pas-SAD-dhi", literal: "calming, tranquility", here: "The settling of body and mind that follows right effort. In MN 19 the Buddha stops thinking not for doctrine but so the mind will not be stressed.", related: ["samadhi", "viriya", "jhana"] },
       viriya: { pali: "viriya", respelling: "vi-RI-ya", literal: "energy, effort", here: "The effort that keeps a practice going. In AN 6.55 it is a tension to be tuned, not a quantity to be maximised: too much becomes restlessness, too little becomes laziness.", related: ["passaddhi", "samadhi", "appamada"] },
+      atta: { pali: "attā", respelling: "AT-ta", literal: "self, soul", here: "The permanent controller the not-self teaching denies. It is not the conventional person, which is why 'there is no self' is a misleading translation of anattā.", related: ["anatta", "khandha", "mana"] },
+      vaca: { pali: "vācā", respelling: "VA-cha", literal: "speech", here: "The verbal act. Right speech is defined by four refusals rather than by a tone of voice.", related: ["sammavaca", "sacca", "sila"] },
+      sammajiva: { pali: "sammājīva", respelling: "sam-MA-JI-va", literal: "right livelihood", here: "Earning a living by giving up wrong livelihood. The canon names five forbidden trades and leaves the rest to judgement.", related: ["samajivita", "sila", "kamma"] },
+      maranasati: { pali: "maraṇasati", respelling: "ma-ra-NA-sa-ti", literal: "recollection of death", here: "Remembering that death is certain and its time unknown. A clarity practice about carelessness, not a meditation on gloom.", related: ["anicca", "appamada", "samvega"] },
+      samatha: { pali: "samatha", respelling: "SA-ma-tha", literal: "calm, settling", here: "The tranquilising wing of practice, paired with insight. Its purpose is a mind steady enough to see, not a pleasant state to collect.", related: ["vipassana", "samadhi", "passaddhi"] },
+      vipassana: { pali: "vipassanā", respelling: "vi-PAS-sa-na", literal: "seeing clearly", here: "Insight into impermanence, suffering, and not-self as they appear in experience. Not a retreat brand and not a technique in itself.", related: ["samatha", "anicca", "anatta"] },
+      kusala: { pali: "kusala", respelling: "KU-sa-la", literal: "skillful", here: "Whatever leads to welfare and reduces harm. The canon's basic evaluative word, and a better fit than 'good'.", related: ["akusala", "sila", "punna"] },
+      akusala: { pali: "akusala", respelling: "a-KU-sa-la", literal: "unskillful", here: "Whatever leads to harm, whether or not it feels bad at the time. The pair kusala/akusala is about consequences, not rules.", related: ["kusala", "kilesa", "dukkha"] },
+      lobha: { pali: "lobha", respelling: "LO-bha", literal: "greed", here: "The pulling-toward: wanting to have, keep, or repeat. One of the three unwholesome roots.", related: ["dosa", "moha", "tanha"] },
+      dosa: { pali: "dosa", respelling: "DO-sa", literal: "hate, aversion", here: "The pushing-away: the wish that something would stop or disappear. Paired with greed and delusion.", related: ["lobha", "moha", "byapada"] },
+      moha: { pali: "moha", respelling: "MO-ha", literal: "delusion", here: "Not seeing experience as it is — impermanent, unsatisfactory, not-self. The root that makes the other two possible.", related: ["avijja", "lobha", "dosa"] },
+      mana: { pali: "māna", respelling: "MA-na", literal: "conceit", here: "Measuring yourself against others: better, equal, or worse. Subtler than arrogance, and the last fetter the path removes.", related: ["atta", "asava", "ditthi"] },
+      vicikiccha: { pali: "vicikicchā", respelling: "vi-chi-KICH-cha", literal: "doubt", here: "A hindrance when it paralyses. Not the same as honest questioning, which the canon encourages — see the Kālāmas.", related: ["nivarana", "ditthi", "saddha"] },
+      uddhacca: { pali: "uddhacca", respelling: "ud-DHACH-cha", literal: "restlessness", here: "Agitation that will not let the mind settle. Paired with sloth and torpor as a single hindrance.", related: ["nivarana", "thinamiddha", "passaddhi"] },
+      thinamiddha: { pali: "thīnamiddha", respelling: "THI-na-MID-dha", literal: "sloth and torpor", here: "Heaviness and dullness of mind and body. The other half of the third hindrance, and the reason 'just sit longer' is bad advice.", related: ["nivarana", "uddhacca", "viriya"] },
+      kamacchanda: { pali: "kāmacchanda", respelling: "KA-ma-chanda", literal: "sensual desire", here: "Wanting pleasant sense experience. The first hindrance, and the one most easily mistaken for enthusiasm.", related: ["nivarana", "lobha", "tanha"] },
+      byapada: { pali: "byāpāda", respelling: "bya-PA-da", literal: "ill will", here: "The wish to harm or to see someone fail. The second hindrance; the direct opposite of mettā.", related: ["nivarana", "dosa", "metta"] },
+      nivarana: { pali: "nīvaraṇa", respelling: "ni-VA-ra-na", literal: "hindrance, covering", here: "The five states that obstruct concentration: sensual desire, ill will, sloth and torpor, restlessness, and doubt.", related: ["kamacchanda", "byapada", "vicikiccha"] },
+      bojjhanga: { pali: "bojjhaṅga", respelling: "bod-JHAN-ga", literal: "awakening factor", here: "Seven qualities that lead to awakening: mindfulness, investigation, energy, rapture, tranquility, concentration, and equanimity.", related: ["sati", "viriya", "upekkha"] },
+      sotapanna: { pali: "sotāpanna", respelling: "so-TA-pan-na", literal: "stream-enterer", here: "One who has entered the path and cannot fall back. First of the four stages of awakening.", related: ["sakadagami", "anagami", "arahant"] },
+      sakadagami: { pali: "sakadāgāmi", respelling: "sa-ka-DA-ga-mi", literal: "once-returner", here: "The second stage: at most one more return to this human realm.", related: ["sotapanna", "anagami", "arahant"] },
+      anagami: { pali: "anāgāmi", respelling: "a-NA-ga-mi", literal: "non-returner", here: "The third stage: no return to the sensual realm. The path's stages are described as fetters removed, not as experiences had.", related: ["sotapanna", "sakadagami", "arahant"] },
+      arahant: { pali: "arahant", respelling: "a-ra-HANT", literal: "worthy one", here: "The fourth stage: finished, with nothing further to do. The canon's term for a fully awakened person.", related: ["sotapanna", "nibbana", "asava"] },
+      bhavana: { pali: "bhāvanā", respelling: "BHA-va-na", literal: "cultivation, bringing into being", here: "The word usually translated 'meditation'. It is closer to developing a capacity than to relaxing.", related: ["samatha", "vipassana", "sati"] },
+      sacca: { pali: "sacca", respelling: "SACH-cha", literal: "truth", here: "Both the fact and the act of telling it. The four truths are called noble because they are seen, not because they are propositions to believe.", related: ["ariyasacca", "vaca", "ditthi"] },
+      ayatana: { pali: "āyatana", respelling: "a-YA-ta-na", literal: "sense field", here: "The six internal and six external bases of experience: eye and sights, ear and sounds, and so on through mind and ideas.", related: ["dhatu", "phassa", "vedana"] },
+      dhatu: { pali: "dhātu", respelling: "DHA-tu", literal: "element", here: "The constituents the canon analyses experience into: earth, water, fire, air, space, and consciousness.", related: ["ayatana", "khandha", "rupa"] },
+      bhava: { pali: "bhava", respelling: "BHA-va", literal: "existence, becoming", here: "Being a certain kind of being. The tenth link of dependent origination, and the object of the third kind of craving.", related: ["jati", "paticcasamuppada", "tanha"] },
+      jati: { pali: "jāti", respelling: "JA-ti", literal: "birth", here: "The arising of a new existence. The eleventh link, immediately followed by ageing and death.", related: ["bhava", "paticcasamuppada", "dukkha"] },
+      bodhi: { pali: "bodhi", respelling: "BO-dhi", literal: "awakening", here: "From the same root as buddha: waking up. The goal is described as knowing and seeing, not as a feeling.", related: ["buddha", "nibbana", "bojjhanga"] },
+      abhidhamma: { pali: "abhidhamma", respelling: "a-bhi-DHAM-ma", literal: "about the teaching", here: "The third basket: systematic philosophy and psychology. This path deliberately excludes most of it.", related: ["tipitaka", "dhamma", "khandha"] },
+      gatha: { pali: "gāthā", respelling: "GA-tha", literal: "verse", here: "A metrical unit. Many prose suttas end with a verse summary, which is often the part people remember.", related: ["sutta", "dhamma", "sacca"] },
+      indriya: { pali: "indriya", respelling: "in-DRI-ya", literal: "faculty", here: "A governing capacity: faith, energy, mindfulness, concentration, and wisdom. They are to be balanced, not maximised one at a time.", related: ["saddha", "viriya", "samadhi"] },
+      samvega: { pali: "saṃvega", respelling: "sam-VE-ga", literal: "urgency, shock", here: "The seriousness that comes from seeing how things are. Not panic; the mood that makes practice matter.", related: ["maranasati", "appamada", "anicca"] },
+      saddha: { pali: "saddhā", respelling: "SAD-dha", literal: "faith, confidence", here: "Trust based on something seen or tested, not credulity. The canon pairs it with wisdom rather than opposing them.", related: ["indriya", "vicikiccha", "buddha"] },
+      paccaya: { pali: "paccaya", respelling: "pach-CHA-ya", literal: "condition", here: "What something depends on. The technical term in dependent origination: each link is a requirement for the next.", related: ["paticcasamuppada", "avijja", "bhava"] },
+      asankhata: { pali: "asaṅkhata", respelling: "a-san-KHA-ta", literal: "unconditioned", here: "The not-made. A synonym for nibbāna in the sense Ud 8.3 uses: freedom from what is produced and conditioned.", related: ["nibbana", "sankhara", "nirodha"] },
+      alobha: { pali: "alobha", respelling: "a-LO-bha", literal: "non-greed", here: "The absence of pulling-toward: generosity and letting go as a root, not a mood.", related: ["lobha", "dana", "caga"] },
+      adosa: { pali: "adosa", respelling: "a-DO-sa", literal: "non-hate", here: "The absence of pushing-away: the root of kindness and patience.", related: ["dosa", "metta", "khanti"] },
+      amoha: { pali: "amoha", respelling: "a-MO-ha", literal: "non-delusion", here: "The absence of confusion: the root of wisdom, and the positive name for what replaces ignorance.", related: ["moha", "panna", "avijja"] },
+      vimutti: { pali: "vimutti", respelling: "vi-MUT-ti", literal: "freedom, release", here: "The goal stated as an outcome rather than a place. The canon's most common word for what the path produces.", related: ["nibbana", "nirodha", "arahant"] },
+      samvara: { pali: "saṃvara", respelling: "sam-VA-ra", literal: "restraint", here: "Guarding the senses: not suppression, but not letting attention wander into what feeds the unwholesome.", related: ["sila", "sati", "indriya"] },
+      yoniso: { pali: "yoniso", respelling: "YO-ni-so", literal: "from the womb; wisely", here: "As in yoniso manasikāra: attention that goes to the root of a matter. The canon's term for useful curiosity.", related: ["ayoniso", "sati", "panna"] },
+      ayoniso: { pali: "ayoniso", respelling: "a-YO-ni-so", literal: "unwisely", here: "Attention that stays on the surface and feeds the hindrances. Not stupidity; a habit of looking in the wrong place.", related: ["yoniso", "nivarana", "moha"] },
     },
   };
 

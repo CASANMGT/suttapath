@@ -20,7 +20,8 @@ to intervene.
 
 **Scenario ↔ session pairs:** s1 3.1 · s2 1.3 · s3 2.3 · s4 3.2 · s5 2.5 ·
 s6 3.1 · s7 2.5 · s8 3.5 · s9 2.3 · s10 3.2 · s11 1.6 · s12 2.5 ·
-s13 3.4 · s14 3.5
+s13 3.4 · s14 3.5 · s15 6.1 · s16 6.2 · s17 6.3 · s18 6.1 · s19 6.5 ·
+s20 6.4 · s21 4.2 · s22 4.3 · s23 2.5 · s24 4.4
 
 ---
 
@@ -179,3 +180,92 @@ structure at all, only competing goods. Running them back-to-back after
 Track 3 (s13) and Track 4 (s14) tests whether the path has taught students
 to tell the two kinds of difficulty apart. If they cannot, revisit session
 3.5's inference note before the seminar.
+
+## s15 · The rumour that's probably true · Speech → session 6.1
+
+Open on the uncertainty, not the accusation: "what would you need to see
+before you repeated it?" MN 58's four cases are a brake as much as a
+permission, and "probably" fails the truth test. Expect the safety angle to
+dominate — that is a real good, and the session pairs it with another real
+good, the colleague's livelihood. Hold the room where they must choose
+which uncertainty they are willing to live with.
+
+## s16 · The friend who's bad for you · Relationships → session 6.2
+
+Open with the debt: "what do fifteen years buy?" DN 31 defines friendship by
+reciprocal duties, and SN 45.2 makes the company you keep constitutive —
+which turns loyalty into a question rather than an answer. Expect the room
+to defend the friend strongly; hear it, then ask what the friend's duties
+are, using the text's own list. The interesting split is between people who
+read "bad for you" as conduct and people who read it as effect.
+
+## s17 · The thing you said when angry · Speech → session 6.3
+
+Open with the sentence itself and ask who it served. The saw simile raises
+the bar on the mind under provocation, not on the truth of the content, and
+the room will conflate the two. Use MN 58's refusal of harmful-but-true
+speech to separate them. Expect a strong faction for "the apology should
+admit it was true"; make them say what the apology is *for* before deciding.
+This is the best scenario for showing that repair and honesty can pull apart.
+
+## s18 · The explanation you owe · Relationships → session 6.1
+
+Open with the silence, not the hurt: "who is the silence protecting?" The
+three-part speech test does not settle disclosure — a true, beneficial thing
+can still be untimely two years on. Expect the room to split on whether the
+explanation is owed because it was asked for twice, and push them to name
+whose need it meets. The counter-positions are genuinely close; end without
+resolving and say the canon has no procedure for closure.
+
+## s19 · The parent you're caring for · Relationships → session 6.5
+
+Open with the constraint, not the virtue: "what would you actually give up,
+and for how long?" DN 31 names the duty, but its household economy is not
+yours, and AN 5.57's recollection of separation is a way to see clearly, not
+a solution. Expect early consensus that "both options are hard" — press for
+a decision and its cost. This is also the scenario most likely to touch real
+grief in the room; leave space, and do not force disclosure.
+
+## s20 · The colleague everyone avoids · Relationships → session 6.4
+
+Open with the room's own behaviour: "who decided, and when?" The analogical
+argument in SN 3.8 is about what you owe someone whose self-regard is as real
+as yours, and it cuts against quiet exclusion. Expect defensiveness framed as
+"we're not obliged to be friends"; distinguish harm from the absence of
+affection. The counter-position on honest feedback is the one most groups
+have never considered.
+
+## s21 · The phone at 2am · Habit → session 4.2
+
+Open at the hour, not the virtue: "what would you actually do differently at
+2am?" The answer is usually nothing, which is the point — MN 20's logic is
+technique before willpower, and AN 6.55 warns that force breeds restlessness.
+Expect the room to prescribe discipline; counter with design. The best
+discussion comes from asking which of the five techniques is even available
+in bed at 2am.
+
+## s22 · The deadline and the shortcut · Habit → session 4.3
+
+Open with the clock: "what do you do in the next six hours?" The mirror check
+compresses rather than disappears under pressure, and the after-the-fact
+check is the one people skip. Expect a pragmatic consensus around "flag it";
+press on what flagging costs in a culture that punishes uncertainty. The
+interesting split is whether an unverified number is a lie or an estimate.
+
+## s23 · The drink you don't want · Habit → session 2.5
+
+Open with the social cost, not the precept: "what does refusing cost you
+here?" AN 4.62 ranks blamelessness above the goods that make compliance
+easy, but the ranking does not script the table. Expect the room to defend
+"just hold the glass" as a compromise; ask what that compromise is
+communicating, and to whom. The counter-positions are both live, and the
+scenario works best when nobody is cast as the prude or the pushover.
+
+## s24 · The comparison spiral · Habit → session 4.4
+
+Open on the feeling, not the feed: "what is the sting telling you?" The
+two-arrows analysis separates the first feeling from the story and the
+scrolling, and Dhp 1–2 makes the mind's direction causal. Expect a fast
+consensus that social media is bad; that is not the exercise. Press on
+whether the comparison ever carries information, and let the "listener"
+counter-position have its say — sometimes the sting is a real ambition.

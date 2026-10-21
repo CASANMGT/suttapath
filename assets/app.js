@@ -271,7 +271,7 @@
 
     $("#main").innerHTML = `<article class="session wrap">
       <header class="session-head">
-        <div class="session-head__ref"><b>${esc(s.ref)}</b><i></i>${esc(s.pali)}<i></i>${s.minutes} min</div>
+        <div class="session-head__ref"><b>${esc(s.ref)}</b><i></i><span class="session-head__pali">${esc(s.pali)}</span><i></i>${s.minutes} min</div>
         <h1 class="session-title">${esc(s.title)}</h1>
         <p class="session-hook">${esc(s.hook)}</p>
       </header>
@@ -628,7 +628,7 @@
       </ul>
 
       <h2>What this path uses</h2>
-      <p>${S.length} sessions from the four main <em>nikāyas</em> and the Sutta Nipāta. We do not pretend this is a survey. It is a sequence chosen so that each session gives you one usable idea and the vocabulary to read the next one. The full curriculum is thirty-six sessions across six tracks; four tracks are open.</p>
+      <p>${S.length} sessions from the four main <em>nikāyas</em> and the Sutta Nipāta. We do not pretend this is a survey. It is a sequence chosen so that each session gives you one usable idea and the vocabulary to read the next one. The full curriculum is thirty-six sessions across six tracks, and all six tracks are open.</p>
 
       <h2>Whose Buddhism is this?</h2>
       <p>Theravāda. That matters: the canon is shared, but the commentarial tradition, the meditation instructions, and the monastic culture are specific. Where a passage is interpreted differently by other schools, we say so. We do not present a modernist or secular reading as if it were the text.</p>
@@ -661,7 +661,7 @@
       <p class="dek">A beginner's path through the Pali Canon. Built as an installable web app; works offline once loaded.</p>
 
       <h2>What this is</h2>
-      <p>Thirty-six sessions in six tracks are planned. ${S.length} are written: <em>How to Read This</em>, <em>What the Teaching Claims</em>, <em>The Ethical Life</em>, and <em>The Mind</em>. Each session has one short passage, a plain paraphrase, a context note, a labelled inference, four terms, a reflection, and a practice that fits in a week.</p>
+      <p>Thirty-six sessions in six tracks, all written: <em>How to Read This</em>, <em>What the Teaching Claims</em>, <em>The Ethical Life</em>, <em>The Mind</em>, <em>The Deep End</em>, and <em>Living With Others</em>. Each session has one short passage, a plain paraphrase, a context note, a labelled inference, four terms, a reflection, and a practice that fits in a week.</p>
       <p>The Integrity Lab has ${LAB.length} scenarios. They are not quizzes. Each is anchored to a passage and each leaves something the canon does not decide.</p>
 
       <h2>What it is not</h2>
@@ -817,6 +817,19 @@
   window.addEventListener("hashchange", route);
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") closePopover();
+  });
+
+  window.addEventListener("beforeprint", () => {
+    $$("details").forEach((d) => {
+      d.dataset.wasOpen = d.open ? "1" : "";
+      d.open = true;
+    });
+  });
+  window.addEventListener("afterprint", () => {
+    $$("details").forEach((d) => {
+      if (d.dataset.wasOpen !== "1") d.open = false;
+      delete d.dataset.wasOpen;
+    });
   });
 
   route();

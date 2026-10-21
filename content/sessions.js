@@ -10,11 +10,11 @@
 (function (root) {
   const data = {
     meta: {
-      version: "0.3.0",
+      version: "1.0.0",
       translationLabel: "Bhikkhu Sujato · CC0",
       totalSessions: 36,
-      builtSessions: 24,
-      builtTracks: [1, 2, 3, 4],
+      builtSessions: 36,
+      builtTracks: [1, 2, 3, 4, 5, 6],
     },
 
     tracks: [
@@ -22,8 +22,8 @@
       { id: 2, title: "What the Teaching Claims", subtitle: "The frame, before the ethics.", status: "ready" },
       { id: 3, title: "The Ethical Life", subtitle: "Relationships, not rules.", status: "ready" },
       { id: 4, title: "The Mind", subtitle: "Attention, habit, and the second arrow.", status: "ready" },
-      { id: 5, title: "The Deep End", subtitle: "Not-self, conditionality, and the unknown.", status: "later" },
-      { id: 6, title: "Living With Others", subtitle: "Speech, friendship, and the last words.", status: "later" },
+      { id: 5, title: "The Deep End", subtitle: "Not-self, conditionality, and the unknown.", status: "ready" },
+      { id: 6, title: "Living With Others", subtitle: "Speech, friendship, and the last words.", status: "ready" },
     ],
 
     sessions: [
@@ -694,7 +694,7 @@
           },
           {
             uids: ["an8.54:4.1", "an8.54:4.2", "an8.54:4.3"],
-            para: "Good friendship: living near people accomplished in faith, ethics, generosity, and wisdom, and emulating them.",
+            para: "Good friendship: live near people mature in faith, ethics, generosity, and wisdom. Talk with them, and copy what they do.",
             mark: "emulates the same kind of accomplishment",
           },
           {
@@ -734,7 +734,7 @@
           },
         ],
         inference:
-          "The list is short because the principle is meant to be applied, not legislated. Two readings are defensible: a narrow one (do not be the seller whose product is the harm) and a broad one (do not profit from an industry whose core product is harm). The canon does not settle it. What it does rule out is the claim that livelihood is ethically neutral. This is also the passage most often cited in arguments about whether Buddhists may serve in the military, work in gambling, or invest in arms manufacturers — note that the text addresses trade, not employment or investment, and that gap is real.",
+          "The list is short because the principle is meant to be applied, not legislated. Two readings are defensible: a narrow one (do not be the seller whose product is the harm) and a broad one (do not profit from an industry whose core product is harm). The canon does not settle it. What it rules out is the claim that livelihood is ethically neutral. Note that the text addresses trade, not employment or investment, and that gap is real.",
         terms: ["sila", "samma-ajiva", "kamma"],
         reflection:
           "Where does your income come from, at two removes? If your employer's core product were a weapon, would you need to know?",
@@ -971,7 +971,7 @@
           },
         ],
         inference:
-          "This is a permission slip, but a conditional one. The sutta names two failure modes, and it does not pretend that rest is always the answer — slack energy has its own name and its own cost. It is also worth noticing that the teaching comes with a diagnosis of Soṇa's specific problem, not a general rule for everyone. Where you are on the tuning is something you have to judge, and the sutta gives you the vocabulary to judge it.",
+          "This is a permission slip, but a conditional one. The sutta names two failure modes, and it does not pretend that rest is always the answer — slack energy has its own name and its own cost. The teaching also comes with a diagnosis of Soṇa's specific problem, not a general rule. Where you are on the tuning is yours to judge, and the sutta gives you the vocabulary.",
         terms: ["viriya", "samadhi", "passaddhi"],
         reflection:
           "Where are you over-tight right now — and what would even tension look like there, concretely?",
@@ -1007,6 +1007,437 @@
           "What did you notice about the breath that you had not noticed before — and how quickly did attention leave?",
         practice:
           "Five minutes, once. Sit, straighten up, and follow the breath. Not more than five minutes, and not every day unless you want to.",
+      },
+
+      {
+        id: "5.1", track: 5, order: 1, ref: "SN 22.59", pali: "Anattalakkhaṇasutta",
+        title: "Nothing You Can Point To", minutes: 12,
+        hook: "Not-self does not mean you do not exist. It means something narrower and stranger.",
+        oneIdea: "Nothing you can point to is controllable, permanent, or worth calling 'mine' in the way you assume.",
+        context:
+          "This is the second sermon the Buddha is said to have given, to the same five ascetics who heard the first. It is an argument, not an announcement: if any of the five aggregates were really yours, you could command it to be otherwise. You cannot. The conclusion is applied to every kind of experience, past, future, internal, external, and then the sutta states what follows from seeing it.",
+        blocks: [
+          {
+            uids: ["sn22.59:2.1", "sn22.59:2.2", "sn22.59:2.3", "sn22.59:2.4", "sn22.59:2.5"],
+            para: "If form were self, you could command it to be otherwise. You cannot — and that is the whole argument.",
+            mark: "form is not-self",
+          },
+          {
+            uids: ["sn22.59:6.1", "sn22.59:6.2", "sn22.59:6.3", "sn22.59:6.4", "sn22.59:6.5", "sn22.59:6.6", "sn22.59:6.7", "sn22.59:6.8"],
+            para: "The five aggregates are impermanent; what is impermanent is suffering; what is suffering is not fit to be called mine.",
+            mark: "'This is mine, I am this, this is my self'",
+          },
+          {
+            uids: ["sn22.59:7.1"],
+            para: "The conclusion is applied to every kind of form, at every time, inside and out.",
+            mark: "This is not mine, I am not this, this is not my self",
+          },
+          {
+            uids: ["sn22.59:11.1", "sn22.59:11.2"],
+            para: "What follows is not nihilism but disenchantment: seeing this, desire fades, and with it the grip.",
+            mark: "Being disillusioned, desire fades away",
+          },
+        ],
+        inference:
+          "The argument is about control and ownership, not about existence. The sutta never says there is no person; it says nothing you can point to behaves like a self you own. That distinction is the one most readers miss, which is why the practice asks what you can command. If you finish concluding 'nothing matters', the reading has gone wrong — disenchantment is closer to sobering up than to despair.",
+        terms: ["anatta", "khandha", "dukkha"],
+        reflection:
+          "Find the thing you call 'me' that has not changed in ten years. What did you find instead?",
+        practice:
+          "Pick one thing you call yours — a habit, a role, a body part. Ask once whether you can command it to stay. Note the answer.",
+      },
+
+      {
+        id: "5.2", track: 5, order: 2, ref: "SN 35.28", pali: "Ādittapariyāyasutta",
+        title: "Everything Is Burning", minutes: 11,
+        hook: "A sermon delivered to fire-worshippers, using their own element against them.",
+        oneIdea: "Experience is on fire with craving, aversion, and confusion — which changes what 'enjoying' means.",
+        context:
+          "The setting matters. The Buddha is at Gayā Head, addressing a thousand ascetics who had been fire-worshippers. The metaphor of burning is not decorative; it takes the central image of their practice and turns it into a diagnosis. The list runs through every sense door and what arises there — consciousness, contact, feeling — and then names the fuel. What is being described is not the world but the way experience is consumed.",
+        blocks: [
+          {
+            uids: ["sn35.28:1.3", "sn35.28:1.4", "sn35.28:1.5", "sn35.28:1.6", "sn35.28:1.7"],
+            para: "The claim is total: the senses, their objects, and the feelings they produce are all burning.",
+            mark: "all is burning",
+          },
+          {
+            uids: ["sn35.28:1.8"],
+            para: "The same analysis is then run through every sense door.",
+          },
+          {
+            uids: ["sn35.28:1.11", "sn35.28:1.12", "sn35.28:1.13"],
+            para: "The fire is not literal. It is greed, hate, and delusion, and what they keep producing.",
+            mark: "Burning with the fires of greed, hate, and delusion",
+          },
+          {
+            uids: ["sn35.28:1.14", "sn35.28:1.15", "sn35.28:1.16"],
+            para: "The response is not to flee experience but to cool it: seeing this, desire fades.",
+            mark: "grow disillusioned",
+          },
+        ],
+        inference:
+          "The image is often heard as 'the world is bad', but the burning is located in the relation — sense, contact, feeling — and the fuel is craving, hate, and delusion. Nothing here says the world is illusory; that is a later development. The practical claim is narrower and testable: notice what a pleasant experience is doing while you are having it. The title's pun is real, too: nibbāna means extinguishment, and this sermon is where the cooling begins.",
+        terms: ["tanha", "vedana", "nibbana"],
+        reflection:
+          "Take one thing you enjoyed today. What was it actually doing — feeding what?",
+        practice:
+          "Eat or scroll once this week and narrate the fuel in three lines: what was wanted, what was feared, what went blurry.",
+      },
+
+      {
+        id: "5.3", track: 5, order: 3, ref: "SN 12.2", pali: "Vibhaṅgasutta",
+        title: "The Chain You Can Watch", minutes: 13,
+        hook: "Suffering is manufactured, in a specific order, and the order is observable.",
+        oneIdea: "Suffering is produced by a chain of conditions, not inflicted — and a chain has joints you can interrupt.",
+        context:
+          "This is an analysis, not a sermon: the Buddha takes dependent origination, a formula already in use, and defines each link in turn. The chain runs from ignorance through choices, consciousness, name and form, the sense fields, contact, and feeling, then turns at craving and grasping toward existence, rebirth, and the whole mass of suffering. The turn at feeling is the part a practitioner can actually observe.",
+        blocks: [
+          {
+            uids: ["sn12.2:1.2", "sn12.2:1.3", "sn12.2:1.4", "sn12.2:1.5", "sn12.2:2.1"],
+            para: "He offers an analysis rather than a doctrine: dependent origination, defined one link at a time.",
+          },
+          {
+            uids: ["sn12.2:2.2", "sn12.2:2.3", "sn12.2:2.4", "sn12.2:2.5", "sn12.2:2.6", "sn12.2:2.7"],
+            para: "It begins in the dark: ignorance conditions choices, and choices shape what can be known and felt.",
+          },
+          {
+            uids: ["sn12.2:2.8", "sn12.2:2.9", "sn12.2:2.10", "sn12.2:2.11", "sn12.2:2.12"],
+            para: "The turn happens at feeling: craving is where a sensation becomes a demand.",
+            mark: "Feeling is a requirement for craving",
+          },
+          {
+            uids: ["sn12.2:2.13"],
+            para: "The conclusion is a claim about origin, not blame: this is how suffering is put together.",
+            mark: "mass of suffering originates",
+          },
+        ],
+        inference:
+          "The chain is not a timeline you can put years on, and the commentarial traditions disagree about how literally to read the links across lives. What the text makes plain is structural: craving depends on feeling, and feeling depends on contact, so there are joints before the demand forms. The list is diagnostic, not devotional; memorising twelve items without locating one joint has missed the point.",
+        terms: ["paticcasamuppada", "avijja", "tanha", "vedana"],
+        reflection:
+          "Trace one bad mood backwards: what was the contact, the feeling, and the demand?",
+        practice:
+          "Once this week, catch a mood early and write the chain backwards in three steps: contact, feeling, demand. Stop at demand.",
+      },
+
+      {
+        id: "5.4", track: 5, order: 4, ref: "Ud 8.3", pali: "Nibbānasutta",
+        title: "The Unborn", minutes: 9,
+        hook: "Nibbāna is described by what it is not, and the text is very short about it.",
+        oneIdea: "Nibbāna is described by negation because it is not a place or a state you can picture — and the refusal is the teaching.",
+        context:
+          "This is one of the canon's shortest and most quoted statements about extinguishment, delivered as a heartfelt utterance after a talk. It does not describe nibbāna; it argues that an escape from the conditioned must exist, on the grounds that experience would otherwise have no way out. The logic is spare, and the text leaves almost everything else unsaid — which is the point, and also the difficulty.",
+        blocks: [
+          {
+            uids: ["ud8.3:3.1"],
+            para: "The claim is bare: there is a freedom from rebirth and from everything produced, made, and conditioned.",
+            mark: "freedom from what has been produced, made, and conditioned",
+          },
+          {
+            uids: ["ud8.3:3.2"],
+            para: "The argument is conditional: if there were no such freedom, there would be no escape from the made.",
+          },
+          {
+            uids: ["ud8.3:3.3"],
+            para: "And since there is such a freedom, the text concludes that an escape is found.",
+            mark: "an escape is found",
+          },
+        ],
+        inference:
+          "The passage describes by absence and by logic, not by picture. It does not say where nibbāna is, what it feels like, or whether it is a kind of consciousness, and the traditions genuinely differ on those questions. What the text insists on is that the unconditioned is not simply the conditioned switched off. Any sentence that turns this into a spa has added what the sutta refused to add — including sentences in this app.",
+        terms: ["nibbana", "sankhara", "nirodha"],
+        reflection:
+          "Write your own picture of 'being at peace'. Which parts of the picture would this text refuse?",
+        practice:
+          "Write one sentence about what you hope 'the end of suffering' is. Read it again in a week and cross out what you have added.",
+      },
+
+      {
+        id: "5.5", track: 5, order: 5, ref: "SN 45.8", pali: "Vibhaṅgasutta",
+        title: "Eight Practices, Not Eight Virtues", minutes: 12,
+        hook: "The eightfold path, defined one item at a time — and the definitions are concrete.",
+        oneIdea: "The path is eight practices with working definitions, not eight abstract virtues.",
+        context:
+          "The eightfold path is usually presented as a list of noble qualities. This sutta analyses it, and the analysis is procedural: right view is knowing four things, right speech is refusing four kinds of talk, right effort is four moves. Reading the definitions is a corrective to the misty version. It also shows the order doing work — view shapes purpose, purpose shapes speech and action, and the last three items describe the effort that holds the rest.",
+        blocks: [
+          {
+            uids: ["sn45.8:2.1", "sn45.8:2.2"],
+            para: "First the list, in order: view, purpose, speech, action, livelihood, effort, mindfulness, immersion.",
+            mark: "right view, right purpose, right speech",
+          },
+          {
+            uids: ["sn45.8:3.1", "sn45.8:3.2", "sn45.8:3.3"],
+            para: "Right view is not optimism. It is knowing suffering, its origin, its cessation, and the practice.",
+          },
+          {
+            uids: ["sn45.8:4.1", "sn45.8:4.2"],
+            para: "Right purpose is three orientations: letting go, good will, and harmlessness.",
+          },
+          {
+            uids: ["sn45.8:5.2", "sn45.8:5.3"],
+            para: "Right speech is defined by four refusals: false, divisive, harsh, and pointless talk.",
+            mark: "false, backbiting, harsh, or nonsensical",
+          },
+          {
+            uids: ["sn45.8:7.1", "sn45.8:7.2", "sn45.8:7.3"],
+            para: "Right livelihood is the one definition that points elsewhere: give up wrong livelihood — and session 3.5 names the five trades.",
+            mark: "gives up wrong livelihood",
+          },
+          {
+            uids: ["sn45.8:8.2", "sn45.8:8.3", "sn45.8:8.4", "sn45.8:8.5"],
+            para: "Right effort is four moves: prevent, abandon, arouse, and maintain.",
+          },
+        ],
+        inference:
+          "The definitions are procedural because the path is a set of things to do, not states to admire. Right speech is not a personality trait but four refusals you can check at the end of a day. The ordering is also a claim — view first — which is why the path is not a menu. The factors support each other; the text treats them as a system, not a ladder.",
+        terms: ["magga", "sammaditthi", "sammavaca"],
+        reflection:
+          "Score yourself 1–5 on each of the eight. Which number is lowest — and is it a practice you have never actually defined?",
+        practice:
+          "Score yourself 1–5 on all eight. Do not fix anything this week. Keep the card and look at it once.",
+      },
+
+      {
+        id: "5.6", track: 5, order: 6, ref: "MN 72", pali: "Vacchagottasutta",
+        title: "The Questions Left Alone", minutes: 12,
+        hook: "The Buddha refuses to answer, and the refusal is the lesson.",
+        oneIdea: "A teaching that knows its limits is more trustworthy than one that answers everything.",
+        context:
+          "The wanderer Vacchagotta asks whether a realized one exists after death, does not exist, both, or neither. The Buddha refuses all four, and when pressed explains why: these views are a thicket, a fever, and they do not lead to peace. The fire simile that follows is the canon's clearest statement that some questions are not answered because the categories do not apply. This is the ethical centre of the app's method.",
+        blocks: [
+          {
+            uids: ["mn72:14.1"],
+            para: "The reason is stated: these convictions are a thicket, a fever, and they do not lead to peace.",
+            mark: "thicket of views",
+          },
+          {
+            uids: ["mn72:16.1", "mn72:16.2", "mn72:16.3", "mn72:16.4", "mn72:16.5", "mn72:16.6", "mn72:16.7", "mn72:16.8"],
+            para: "Vacchagotta runs the four options — reborn, not, both, neither — and each is refused.",
+            mark: "doesn't apply",
+          },
+          {
+            uids: ["mn72:19.11", "mn72:19.12", "mn72:19.13", "mn72:19.14", "mn72:19.15", "mn72:19.16", "mn72:19.17", "mn72:19.18"],
+            para: "The simile: ask which direction an extinguished fire went, and the question has no answer.",
+          },
+          {
+            uids: ["mn72:20.1", "mn72:20.2", "mn72:20.3", "mn72:20.4"],
+            para: "The point is not that the answer is secret. It is that the categories do not fit.",
+            mark: "like the ocean",
+          },
+        ],
+        inference:
+          "This is the session to cite against the idea that Buddhism is a set of answers. The refusal is methodological: the four options all presuppose a thing to be located, and the teaching has undercut that presupposition. It also sets the app's own boundary — where the canon is silent, we say so rather than filling the gap. Later traditions did develop answers to some of these questions; we are describing the sutta, not adjudicating between schools.",
+        terms: ["ditthi", "avijja", "nibbana"],
+        reflection:
+          "Name one question you keep demanding an answer to. What would stopping the demand cost you?",
+        practice:
+          "Write the question you will stop demanding this week. When it returns, note what the demand was doing.",
+      },
+
+      {
+        id: "6.1", track: 6, order: 1, ref: "MN 58", pali: "Abhayarājakumārasutta",
+        title: "True, Useful, Timely", minutes: 11,
+        hook: "Truth alone is not a licence to speak.",
+        oneIdea: "Speech is judged by truth, benefit, and timing together — and even then, gently.",
+        context:
+          "Prince Abhaya is sent by a rival sect with a question built as a trap: does the Buddha say things people dislike? A yes makes him ordinary; a no contradicts the obvious. The Buddha refuses the frame — 'this matter is not categorical' — and then gives the four-case analysis that has been quoted ever since. The image used to explain it is a child with something stuck in their throat: the point is help, not victory.",
+        blocks: [
+          {
+            uids: ["mn58:6.2", "mn58:6.3"],
+            para: "The question is built as a trap: yes or no. He refuses the frame.",
+            mark: "This matter is not categorical",
+          },
+          {
+            uids: ["mn58:8.1", "mn58:8.2"],
+            para: "Speech that is false and pointless is out. So is speech that is true but harmful.",
+          },
+          {
+            uids: ["mn58:8.3"],
+            para: "What remains is true, beneficial, and timely — even when it is unwelcome.",
+            mark: "knows the right time to speak",
+          },
+          {
+            uids: ["mn58:8.4", "mn58:8.5", "mn58:8.6"],
+            para: "The same test runs the other way: being liked is not a licence either.",
+          },
+        ],
+        inference:
+          "The three-part test is usually quoted as a green light, but the sutta is equally a brake. Notice the two refusals that do not depend on the listener's reaction: false speech is out even when popular, and harmful speech is out even when true. The hardest case is the one the text keeps returning to — true, beneficial, and still disliked. There the only variable is timing, a judgement rather than a rule.",
+        terms: ["sammavaca", "sila", "metta"],
+        reflection:
+          "Catch one true thing you said this week that did not need saying. What was it for?",
+        practice:
+          "Before one difficult sentence this week, run the three tests — true, beneficial, timely. If it fails one, wait a day.",
+      },
+
+      {
+        id: "6.2", track: 6, order: 2, ref: "SN 45.2", pali: "Upaḍḍhasutta",
+        title: "Half Is Not Enough", minutes: 9,
+        hook: "Ānanda offers a modest estimate of friendship. The Buddha overrules him twice.",
+        oneIdea: "Good friendship is not a support to the path; the sutta calls it the whole of the path.",
+        context:
+          "Ānanda, usually the most careful of the disciples, proposes that good friendship is half of the spiritual life. The Buddha's reply is unusually emphatic — 'not so, Ānanda, not so' — and the correction is total. What follows is not sentiment but an argument: people are freed by relying on a good friend, and a mendicant with good friends can be expected to develop the whole eightfold path. It is a structural claim about how teaching is transmitted.",
+        blocks: [
+          {
+            uids: ["sn45.2:1.4"],
+            para: "Ānanda proposes that good friends, companions, and associates are half of the spiritual life.",
+            mark: "half the spiritual life",
+          },
+          {
+            uids: ["sn45.2:2.1", "sn45.2:2.2", "sn45.2:2.3"],
+            para: "The Buddha corrects him twice: it is the whole of the spiritual life.",
+            mark: "the whole of the spiritual life",
+          },
+          {
+            uids: ["sn45.2:4.1", "sn45.2:4.2", "sn45.2:4.3"],
+            para: "The argument is by example: people are freed by relying on a good friend.",
+            mark: "by relying on me as a good friend",
+          },
+        ],
+        inference:
+          "The claim is stronger than 'community helps'. It says the path is carried by persons, and that the company you keep is constitutive rather than decorative. That is uncomfortable for an app, which is why the sessions keep pointing outward. It also gives you a usable test: not whether you have friends, but whether anyone you know is good for you in this sense.",
+        terms: ["kalyannamitta", "sangha", "magga"],
+        reflection:
+          "Name the person who is actually good for you in this sense. When did you last tell them?",
+        practice:
+          "Tell one person this week, specifically, what they have changed in you. Not a compliment — an observation.",
+      },
+
+      {
+        id: "6.3", track: 6, order: 3, ref: "MN 21", pali: "Kakacūpamasutta",
+        title: "The Saw Simile", minutes: 12,
+        hook: "The standard is absurd on purpose: even under a saw, speech stays clean.",
+        oneIdea: "Even under extreme provocation, the instruction is to keep mind and speech uncorrupted.",
+        context:
+          "The occasion is a monk, Phagguna, who has become so entangled with a group of nuns that any criticism of either party triggers anger and disciplinary action. The Buddha's response is not a boundary but a training in endurance: criticism comes in five dimensions, none of which changes the instruction, and the limit case is bandits with a two-handed saw. The image is deliberately extreme, and the text says a single malevolent thought is already a failure.",
+        blocks: [
+          {
+            uids: ["mn21:11.1", "mn21:11.2", "mn21:11.3", "mn21:11.4", "mn21:11.5", "mn21:11.6", "mn21:11.7"],
+            para: "Criticism arrives in five dimensions, and none of them change the instruction.",
+            mark: "five ways in which others might criticize you",
+          },
+          {
+            uids: ["mn21:20.1"],
+            para: "Then the extreme case: bandits with a saw. A single malevolent thought means you have left the training.",
+            mark: "two-handed saw",
+          },
+          {
+            uids: ["mn21:20.3"],
+            para: "The standard is stated positively: mind not degenerate, no bad words, a heart of love without secret hate.",
+            mark: "We will blurt out no bad words",
+          },
+          {
+            uids: ["mn21:21.1", "mn21:21.2"],
+            para: "The test is whether any criticism remains unendurable. The answer is meant to be no.",
+            mark: "any criticism, large or small, that you could not endure",
+          },
+        ],
+        inference:
+          "The saw is a thought experiment about the state of your mind under attack, not a policy about staying where harm is happening. Read alongside 3.2's duties and 4.3's harm check, it forbids retaliatory corruption; it does not require passivity, and it certainly does not require you to remain in an abusive situation. That distinction — endure without corrupting yourself versus stay and be harmed — is one the sutta does not resolve, and we should not pretend it does.",
+        terms: ["khanti", "metta", "sammavaca"],
+        reflection:
+          "Which provocation this week would the saw test find hardest — and what would 'no bad words' require of you?",
+        practice:
+          "Choose one provocation you expect this week. Decide in advance what you will not say. Notice what it costs.",
+      },
+
+      {
+        id: "6.4", track: 6, order: 4, ref: "SN 3.8", pali: "Mallikāsutta",
+        title: "Everyone Holds Themselves Dear", minutes: 9,
+        hook: "A queen and a king agree on one thing, and the Buddha turns it into an argument against harm.",
+        oneIdea: "'Everyone holds themselves dearest' is offered as a basis for not harming, not a licence for selfishness.",
+        context:
+          "King Pasenadi and Queen Mallikā are talking privately, and the king asks whether anyone is dearer to her than herself. She says no, and turns the question back; he agrees. When he reports the exchange, the Buddha answers in verse. The reasoning is analogical, and it is one of the canon's few explicit arguments from other minds to ethics — which is why it is so often misquoted.",
+        blocks: [
+          {
+            uids: ["sn3.8:1.4", "sn3.8:1.5", "sn3.8:1.6", "sn3.8:1.7"],
+            para: "The king asks whether anyone is dearer to the queen than herself. No — and the same for him.",
+          },
+          {
+            uids: ["sn3.8:4.1", "sn3.8:4.2"],
+            para: "The verse begins with the search: having explored every quarter, one finds no one dearer than oneself.",
+          },
+          {
+            uids: ["sn3.8:4.3", "sn3.8:4.4"],
+            para: "It then draws the inference: since others hold themselves dear too, harm no one.",
+            mark: "would harm no other",
+          },
+        ],
+        inference:
+          "The move is analogical: what is true of me is true of others, therefore the same protection is owed. It is not a claim that people are selfish; it is a claim that self-regard is universal, and universality is what makes harm indefensible. Read carelessly it becomes 'everyone is out for themselves', the opposite of the argument. The conclusion is an obligation, not an excuse.",
+        terms: ["metta", "sila", "anatta"],
+        reflection:
+          "Where do you treat your own self-regard as reasonable but someone else's as selfish?",
+        practice:
+          "Once this week, when annoyed at someone, say silently: this person wants what I want. Note what changes, if anything.",
+      },
+
+      {
+        id: "6.5", track: 6, order: 5, ref: "AN 5.57", pali: "Abhiṇhapaccavekkhitabbaṭṭhānasutta",
+        title: "Five Things to Remember", minutes: 11,
+        hook: "You will age, sicken, die, lose everyone, and inherit your actions. The sutta thinks this is clarifying.",
+        oneIdea: "Remembering the five facts is a clarity practice, not a gloom practice.",
+        safety:
+          "This session is about clarity, not gloom. If reflecting on ageing, illness, or loss darkens your mood rather than steadying it, stop and skip this one — the path does not depend on it. If you are grieving or unwell, it is reasonable to come back later.",
+        context:
+          "The five recollections are addressed to everyone — lay or monastic, woman or man — and the sutta is explicit about their purpose. Each fact is paired with a vanity it dissolves: youth, health, life, love, ownership. The claim is that these vanities make people careless, and that remembering reduces the carelessness. It is a diagnostic text, not a meditation on death, and the whole instruction is one sentence reviewed often.",
+        blocks: [
+          {
+            uids: ["an5.57:1.1", "an5.57:1.2", "an5.57:1.3"],
+            para: "The five subjects begin with the plainest: you are liable to age.",
+            mark: "I am liable to grow old",
+          },
+          {
+            uids: ["an5.57:1.4", "an5.57:1.5", "an5.57:1.6", "an5.57:1.7", "an5.57:1.8"],
+            para: "Then sickness, death, separation from all you love, and the ownership of your actions.",
+            mark: "I am liable to die, I am not exempt from death",
+          },
+          {
+            uids: ["an5.57:2.2", "an5.57:2.3"],
+            para: "The reason is specific: each recollection dissolves a vanity that makes people careless.",
+            mark: "intoxicated with the vanity of youth",
+          },
+          {
+            uids: ["an5.57:7.2"],
+            para: "The second turn universalises it: not just me, but everyone.",
+            mark: "It's not just me who is liable to grow old",
+          },
+        ],
+        inference:
+          "The five are diagnostics of intoxication, not morbid facts to dwell on. Each names a vanity and says that seeing through it reduces careless harm — which is why the practice is one sentence and a minute, not an hour of brooding. The tradition calls this recollection, and the word is closer to remembering a fact than to ruminating on it. If it makes you feel worse rather than clearer, the instruction has been misapplied.",
+        terms: ["appamada", "kamma", "anicca"],
+        reflection:
+          "Which of the five vanities is currently making you careless, and where?",
+        practice:
+          "Say one of the five plainly, out loud. Sit with it for one minute. Then stop and go do something ordinary.",
+      },
+
+      {
+        id: "6.6", track: 6, order: 6, short: true, ref: "DN 16", pali: "Mahāparinibbānasutta",
+        title: "The Last Words", minutes: 8,
+        hook: "The path ends where it began: the same sutta, the last sentence.",
+        oneIdea: "The final instruction is not a doctrine but an urgency: conditions fall apart; practise with diligence.",
+        context:
+          "This is the end of the long discourse that opened the path in session 1.1 — the same text, the same deathbed. The Buddha has just finished instructing the assembled mendicants, and the last words are addressed to all of them. There is no summary of the teaching here, no final doctrine, only a statement about conditioned things and an imperative. It is the only place in the app where the design allows a sentimental gesture, and it is earned.",
+        blocks: [
+          {
+            uids: ["dn16:6.7.1", "dn16:6.7.2", "dn16:6.7.3"],
+            para: "The last instruction: conditions fall apart; persist with diligence.",
+            mark: "Conditions fall apart. Persist with diligence",
+          },
+          {
+            uids: ["dn16:6.7.4"],
+            para: "And then the text says, plainly, that these were his last words.",
+            mark: "These were the Realized One's last words",
+          },
+        ],
+        inference:
+          "The bookend is deliberate on our part, not the canon's: 1.1 and 6.6 are the same sutta, and the path is arranged so that the first instruction and the last are the same kind of instruction — about practice, not about belief. 'Conditions fall apart' is not a consolation; it is the premise of the urgency. The app ends here because there is nothing left to add that would not be ours rather than the text's.",
+        terms: ["appamada", "sankhara", "anicca"],
+        reflection:
+          "Write your own last line: the one sentence you would want to leave behind.",
+        practice:
+          "Write that sentence. Keep it where you will see it. Do not edit it for a week.",
       },
     ],
 
@@ -1068,6 +1499,35 @@
           "Which of these have you actually used, and which did you only understand?",
         reflection:
           "Name the one you only understood. That is the session to reread before Track 5, and the difference between the two answers is the whole point of the checkpoint.",
+      },
+      {
+        id: "cp3", track: 6, order: 7, type: "checkpoint", ref: "Checkpoint 3",
+        title: "The Whole Path, In Three Passages", minutes: 12,
+        hook: "Three passages from three different tracks. Which one is yours now?",
+        oneIdea: "The end of the path is not completion; it is knowing which passages you can use without notes.",
+        intro:
+          "No commentary, no scoring. Read each passage, answer from memory, then open it. This is the last checkpoint in the path, and the only question that matters is the one at the bottom.",
+        passages: [
+          {
+            label: "Track 1 · AN 4.180",
+            uids: ["an4.180:2.6"],
+            prompt: "What is a teaching checked against, and what happens when a claim fails the test?",
+          },
+          {
+            label: "Track 5 · SN 22.59",
+            uids: ["sn22.59:7.1"],
+            prompt: "What is the argument for not-self, and what is it not saying?",
+          },
+          {
+            label: "Track 6 · DN 16",
+            uids: ["dn16:6.7.1", "dn16:6.7.2", "dn16:6.7.3", "dn16:6.7.4"],
+            prompt: "Why does the path end on this sentence rather than on a doctrine?",
+          },
+        ],
+        question:
+          "Which of these would you now defend, and which would you only repeat?",
+        reflection:
+          "The difference between defending and repeating is the whole of this path. If one of the three is only a repetition, you know exactly what to reread — and you know it without being told.",
       },
     ],
   };

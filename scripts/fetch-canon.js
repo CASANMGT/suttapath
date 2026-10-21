@@ -12,11 +12,12 @@ const path = require("path");
 
 const UIDS = [
   "dn16", "dn31",
-  "mn19", "mn20", "mn22", "mn61", "mn63", "mn118",
-  "sn3.17", "sn36.6", "sn45.8", "sn56.11", "sn56.31",
-  "an3.65", "an4.62", "an4.180", "an4.192", "an5.177", "an6.55", "an6.63", "an8.54",
+  "mn19", "mn20", "mn21", "mn22", "mn58", "mn61", "mn63", "mn72", "mn118",
+  "sn3.8", "sn3.17", "sn12.2", "sn22.59", "sn35.28", "sn36.6", "sn45.2", "sn45.8", "sn56.11", "sn56.31",
+  "an3.65", "an4.62", "an4.180", "an4.192", "an5.57", "an5.177", "an6.55", "an6.63", "an8.54",
   "snp2.4",
   "dhp1-20",
+  "ud8.3",
 ];
 
 const OUT = path.join(__dirname, "..", "content", "canon");

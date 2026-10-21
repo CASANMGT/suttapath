@@ -1,4 +1,4 @@
-const VERSION = "suttapath-v3";
+const VERSION = "suttapath-v4";
 const SHELL = [
   "./",
   "./index.html",

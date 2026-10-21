@@ -1,0 +1,651 @@
+{
+  "uid": "mn72",
+  "title": "",
+  "translator": "Bhikkhu Sujato",
+  "segments": [
+    {
+      "uid": "mn72:0.1",
+      "text": "Middle Discourses 72"
+    },
+    {
+      "uid": "mn72:0.2",
+      "text": "With Vacchagotta on Fire"
+    },
+    {
+      "uid": "mn72:1.1",
+      "text": "So I have heard."
+    },
+    {
+      "uid": "mn72:1.2",
+      "text": "At one time the Buddha was staying near Sāvatthī in Jeta's Grove, Anāthapiṇḍika's monastery."
+    },
+    {
+      "uid": "mn72:2.1",
+      "text": "Then the wanderer Vacchagotta went up to the Buddha and exchanged greetings with him."
+    },
+    {
+      "uid": "mn72:2.2",
+      "text": "When the greetings and polite conversation were over, he sat down to one side and said to the Buddha:"
+    },
+    {
+      "uid": "mn72:3.1",
+      "text": "\"Worthy Gotama, is this your view: 'The cosmos is eternal. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:3.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:3.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:3.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:4.1",
+      "text": "\"Then is this your view: 'The cosmos is not eternal. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:4.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:4.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:4.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:5.1",
+      "text": "\"Then is this your view: 'The cosmos is finite. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:5.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:5.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:5.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:6.1",
+      "text": "\"Then is this your view: 'The cosmos is infinite. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:6.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:6.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:6.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:7.1",
+      "text": "\"Then is this your view: 'The soul and the body are one and the same. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:7.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:7.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:7.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:8.1",
+      "text": "\"Then is this your view: 'The soul is one thing, the body another. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:8.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:8.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:8.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:9.1",
+      "text": "\"Then is this your view: 'A realized one still exists after death. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:9.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:9.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:9.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:10.1",
+      "text": "\"Then is this your view: 'A realized one no longer exists after death. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:10.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:10.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:10.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:11.1",
+      "text": "\"Then is this your view: 'A realized one both still exists and no longer exists after death. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:11.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:11.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:11.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:12.1",
+      "text": "\"Then is this your view: 'A realized one neither still exists nor no longer exists after death. This is the only truth, anything else is futile'?\""
+    },
+    {
+      "uid": "mn72:12.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:12.3",
+      "text": "\"That's not my view, Vaccha.\""
+    },
+    {
+      "uid": "mn72:12.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.1",
+      "text": "\"Worthy Gotama, when asked these ten questions, you say: 'That's not my view.'"
+    },
+    {
+      "uid": "mn72:13.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.3",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.5",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.6",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.7",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.8",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.9",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.10",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.11",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.12",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.13",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.14",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.15",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.16",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.17",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.18",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.19",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.20",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.21",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.22",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.23",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.24",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.25",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.26",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.27",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.28",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.29",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.30",
+      "text": ""
+    },
+    {
+      "uid": "mn72:13.31",
+      "text": "Seeing what drawback do you avoid all these convictions?\""
+    },
+    {
+      "uid": "mn72:14.1",
+      "text": "\"Each of these ten convictions is the thicket of views, the desert of views, the twist of views, the dodge of views, the fetter of views. They're beset with suffering, distress, anguish, and fever. They don't lead to disillusionment, dispassion, cessation, peace, insight, awakening, and extinguishment."
+    },
+    {
+      "uid": "mn72:14.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.3",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.5",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.6",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.7",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.8",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.9",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.10",
+      "text": ""
+    },
+    {
+      "uid": "mn72:14.11",
+      "text": "Seeing this drawback I avoid all these convictions.\""
+    },
+    {
+      "uid": "mn72:15.1",
+      "text": "\"But does the worthy Gotama have any convictions at all?\""
+    },
+    {
+      "uid": "mn72:15.2",
+      "text": "\"A realized one has done away with convictions."
+    },
+    {
+      "uid": "mn72:15.3",
+      "text": "For a realized one has seen:"
+    },
+    {
+      "uid": "mn72:15.4",
+      "text": "'Such is form, such is the origin of form, such is the disappearance of form."
+    },
+    {
+      "uid": "mn72:15.5",
+      "text": "Such is feeling, such is the origin of feeling, such is the disappearance of feeling."
+    },
+    {
+      "uid": "mn72:15.6",
+      "text": "Such is perception, such is the origin of perception, such is the disappearance of perception."
+    },
+    {
+      "uid": "mn72:15.7",
+      "text": "Such are choices, such is the origin of choices, such is the disappearance of choices."
+    },
+    {
+      "uid": "mn72:15.8",
+      "text": "Such is consciousness, such is the origin of consciousness, such is the disappearance of consciousness.'"
+    },
+    {
+      "uid": "mn72:15.9",
+      "text": "That's why a Realized One is freed by not grasping with the ending, fading away, cessation, giving up, and letting go of all conceiving, all churning, and all I-making, mine-making, or underlying tendency to conceit, I say.\""
+    },
+    {
+      "uid": "mn72:16.1",
+      "text": "\"But worthy Gotama, when a mendicant's mind is freed like this, where are they reborn?\""
+    },
+    {
+      "uid": "mn72:16.2",
+      "text": "\"'They're reborn' doesn't apply, Vaccha.\""
+    },
+    {
+      "uid": "mn72:16.3",
+      "text": "\"Well then, are they not reborn?\""
+    },
+    {
+      "uid": "mn72:16.4",
+      "text": "\"'They're not reborn' doesn't apply, Vaccha.\""
+    },
+    {
+      "uid": "mn72:16.5",
+      "text": "\"Well then, are they both reborn and not reborn?\""
+    },
+    {
+      "uid": "mn72:16.6",
+      "text": "\"'They're both reborn and not reborn' doesn't apply, Vaccha.\""
+    },
+    {
+      "uid": "mn72:16.7",
+      "text": "\"Well then, are they neither reborn nor not reborn?\""
+    },
+    {
+      "uid": "mn72:16.8",
+      "text": "\"'They're neither reborn nor not reborn' doesn't apply, Vaccha.\""
+    },
+    {
+      "uid": "mn72:17.1",
+      "text": "\"Worthy Gotama, when asked all these questions, you say: 'It doesn't apply.'"
+    },
+    {
+      "uid": "mn72:17.2",
+      "text": ""
+    },
+    {
+      "uid": "mn72:17.3",
+      "text": ""
+    },
+    {
+      "uid": "mn72:17.4",
+      "text": ""
+    },
+    {
+      "uid": "mn72:17.5",
+      "text": "I fail to understand this point, worthy Gotama; I've fallen into confusion."
+    },
+    {
+      "uid": "mn72:17.6",
+      "text": "And I've now lost even the degree of clarity I had from previous discussions with the worthy Gotama.\""
+    },
+    {
+      "uid": "mn72:18.1",
+      "text": "\"No wonder you don't understand, Vaccha, no wonder you're confused."
+    },
+    {
+      "uid": "mn72:18.2",
+      "text": "For this principle is deep, hard to see, hard to understand, peaceful, sublime, beyond the scope of logic, subtle, comprehensible to the astute."
+    },
+    {
+      "uid": "mn72:18.3",
+      "text": "It's hard for you to understand, since you have a different view, creed, and belief, and another discipline and denomination."
+    },
+    {
+      "uid": "mn72:18.4",
+      "text": "Well then, Vaccha, I'll ask you about this in return, and you can answer as you like."
+    },
+    {
+      "uid": "mn72:19.1",
+      "text": "What do you think, Vaccha?"
+    },
+    {
+      "uid": "mn72:19.2",
+      "text": "Suppose a fire was burning in front of you. Would you know:"
+    },
+    {
+      "uid": "mn72:19.3",
+      "text": "'This fire is burning in front of me'?\""
+    },
+    {
+      "uid": "mn72:19.4",
+      "text": "\"Yes, I would, worthy Gotama.\""
+    },
+    {
+      "uid": "mn72:19.5",
+      "text": ""
+    },
+    {
+      "uid": "mn72:19.6",
+      "text": "\"But Vaccha, suppose they were to ask you:"
+    },
+    {
+      "uid": "mn72:19.7",
+      "text": "'This fire burning in front of you: what does it depend on to burn?' How would you answer?\""
+    },
+    {
+      "uid": "mn72:19.8",
+      "text": ""
+    },
+    {
+      "uid": "mn72:19.9",
+      "text": "\"I would answer like this:"
+    },
+    {
+      "uid": "mn72:19.10",
+      "text": "'This fire burning in front of me burns in dependence on grass and logs as fuel.'\""
+    },
+    {
+      "uid": "mn72:19.11",
+      "text": "\"Suppose that fire burning in front of you was extinguished. Would you know:"
+    },
+    {
+      "uid": "mn72:19.12",
+      "text": "'This fire in front of me is quenched'?\""
+    },
+    {
+      "uid": "mn72:19.13",
+      "text": "\"Yes, I would, worthy Gotama.\""
+    },
+    {
+      "uid": "mn72:19.14",
+      "text": ""
+    },
+    {
+      "uid": "mn72:19.15",
+      "text": "\"But Vaccha, suppose they were to ask you:"
+    },
+    {
+      "uid": "mn72:19.16",
+      "text": "'This fire in front of you that is quenched: in what direction did it go—"
+    },
+    {
+      "uid": "mn72:19.17",
+      "text": "east, south, west, or north?' How would you answer?\""
+    },
+    {
+      "uid": "mn72:19.18",
+      "text": "\"It doesn't apply, worthy Gotama. The fire depended on grass and logs as fuel. When that runs out, and no more fuel is added, the fire is reckoned to have become quenched due to lack of fuel.\""
+    },
+    {
+      "uid": "mn72:20.1",
+      "text": "\"In the same way, Vaccha, any form by which a realized one might be described has been given up, cut off at the root, made like a palm stump, obliterated, and unable to arise in the future."
+    },
+    {
+      "uid": "mn72:20.2",
+      "text": "A realized one is freed from reckoning in terms of form. They're deep, immeasurable, and hard to fathom,"
+    },
+    {
+      "uid": "mn72:20.3",
+      "text": "like the ocean."
+    },
+    {
+      "uid": "mn72:20.4",
+      "text": "'They're reborn', 'they're not reborn', 'they're both reborn and not reborn', 'they're neither reborn nor not reborn'—none of these apply."
+    },
+    {
+      "uid": "mn72:20.5",
+      "text": "Any feeling …"
+    },
+    {
+      "uid": "mn72:20.6",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.7",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.8",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.9",
+      "text": "perception …"
+    },
+    {
+      "uid": "mn72:20.10",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.11",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.12",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.13",
+      "text": "choices …"
+    },
+    {
+      "uid": "mn72:20.14",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.15",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.16",
+      "text": ""
+    },
+    {
+      "uid": "mn72:20.17",
+      "text": "consciousness by which a realized one might be described has been given up, cut off at the root, made like a palm stump, obliterated, and unable to arise in the future."
+    },
+    {
+      "uid": "mn72:20.18",
+      "text": "A realized one is freed from reckoning in terms of consciousness. They're deep, immeasurable, and hard to fathom,"
+    },
+    {
+      "uid": "mn72:20.19",
+      "text": "like the ocean."
+    },
+    {
+      "uid": "mn72:20.20",
+      "text": "'They're reborn', 'they're not reborn', 'they're both reborn and not reborn', 'they're neither reborn nor not reborn'—none of these apply.\""
+    },
+    {
+      "uid": "mn72:21.1",
+      "text": "When he said this, the wanderer Vacchagotta said to the Buddha:"
+    },
+    {
+      "uid": "mn72:21.2",
+      "text": "\"Worthy Gotama, suppose there was a large sal tree not far from a town or village."
+    },
+    {
+      "uid": "mn72:21.3",
+      "text": "And because it's impermanent, its branches and foliage, bark and shoots, and softwood would fall off."
+    },
+    {
+      "uid": "mn72:21.4",
+      "text": "After some time it would be rid of branches and foliage, bark and shoots, and softwood, pure, and consolidated in the core."
+    },
+    {
+      "uid": "mn72:21.5",
+      "text": "In the same way, worthy Gotama's dispensation is rid of branches and foliage, bark and shoots, and softwood, pure, and consolidated in the core."
+    },
+    {
+      "uid": "mn72:22.1",
+      "text": "Excellent, worthy Gotama! …"
+    },
+    {
+      "uid": "mn72:22.2",
+      "text": "From this day forth, may the worthy Gotama remember me as a lay follower who has gone for refuge for life.\""
+    },
+    {
+      "uid": "mn72:22.3",
+      "text": ""
+    }
+  ]
+}

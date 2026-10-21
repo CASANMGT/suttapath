@@ -94,6 +94,13 @@ function checkContiguous(uids, label) {
 /* ---------- sessions ---------- */
 const ids = new Set();
 const terms = appendix.glossary;
+
+for (const [key, t] of Object.entries(terms)) {
+  if (!t.pali || !t.literal || !t.here) fail(`glossary "${key}": needs pali, literal, and here`);
+  for (const r of t.related || []) {
+    if (!terms[r]) fail(`glossary "${key}": related term "${r}" not in glossary`);
+  }
+}
 const seenUidPerSession = new Map();
 
 for (const s of sessionsSrc.sessions) {
@@ -117,7 +124,6 @@ for (const s of sessionsSrc.sessions) {
   if ((s.oneIdea || "").split(/\s+/).length > 24) warnings.push(`${where}: oneIdea over 24 words`);
 
   for (const t of s.terms || []) if (!terms[t]) fail(`${where}: term "${t}" not in glossary`);
-
   const seen = new Set();
   s.blocks.forEach((b, i) => {
     const label = `${where} block ${i + 1}`;

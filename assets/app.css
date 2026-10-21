@@ -178,6 +178,7 @@ a { color: inherit; }
   text-transform: uppercase;
   color: var(--ink-3);
   white-space: nowrap;
+  flex: 0 0 auto;
 }
 .topbar__title {
   font-family: var(--serif);
@@ -425,9 +426,17 @@ a { color: inherit; }
   color: var(--ink-3);
   display: flex;
   gap: 10px;
+  row-gap: 4px;
   align-items: center;
+  flex-wrap: wrap;
 }
-.session-head__ref b { color: var(--accent); font-weight: 500; }
+.session-head__ref b { color: var(--accent); font-weight: 500; flex: 0 0 auto; }
+.session-head__pali {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .session-head__ref i {
   font-style: normal;
   width: 14px; height: 1px;

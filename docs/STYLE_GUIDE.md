@@ -54,7 +54,7 @@ inference. Label it.
 | Field | Limit | Why |
 |---|---|---|
 | `hook` | ~1 sentence, italic, no doctrine | it is a doorway, not a lesson |
-| `context` | 60–120 words | history, speaker, audience, occasion |
+| `context` | 40–120 words (target 60–120) | history, speaker, audience, occasion; lean is better than padded |
 | `oneIdea` | ≤ 24 words, epoch falsifiable | if it needs "and", it is two ideas |
 | `para` (per block) | ≤ 40 words | it translates, it does not lecture |
 | `inference` | 40–80 words | name the move, credit the reading |
