@@ -1,10 +1,11 @@
-const VERSION = "suttapath-v1";
+const VERSION = "suttapath-v2";
 const SHELL = [
   "./",
   "./index.html",
   "./assets/app.css",
+  "./assets/v02.css",
   "./assets/app.js",
-  "./assets/sessions.js",
+  "./assets/data/content.js",
   "./manifest.webmanifest",
   "./icons/icon-180.png",
   "./icons/icon-192.png",

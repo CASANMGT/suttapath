@@ -1,0 +1,87 @@
+{
+  "generatedAt": "2026-10-21T19:24:53.436Z",
+  "translator": "Bhikkhu Sujato",
+  "license": "CC0",
+  "suttas": [
+    {
+      "uid": "dn16",
+      "title": "",
+      "segments": 1664
+    },
+    {
+      "uid": "dn31",
+      "title": "",
+      "segments": 267
+    },
+    {
+      "uid": "mn22",
+      "title": "",
+      "segments": 359
+    },
+    {
+      "uid": "mn63",
+      "title": "",
+      "segments": 182
+    },
+    {
+      "uid": "sn3.17",
+      "title": "",
+      "segments": 30
+    },
+    {
+      "uid": "sn56.11",
+      "title": "",
+      "segments": 60
+    },
+    {
+      "uid": "sn56.31",
+      "title": "",
+      "segments": 21
+    },
+    {
+      "uid": "an3.65",
+      "title": "",
+      "segments": 108
+    },
+    {
+      "uid": "an4.62",
+      "title": "",
+      "segments": 33
+    },
+    {
+      "uid": "an4.180",
+      "title": "",
+      "segments": 99
+    },
+    {
+      "uid": "an4.192",
+      "title": "",
+      "segments": 76
+    },
+    {
+      "uid": "an5.177",
+      "title": "",
+      "segments": 8
+    },
+    {
+      "uid": "an6.63",
+      "title": "",
+      "segments": 142
+    },
+    {
+      "uid": "an8.54",
+      "title": "",
+      "segments": 82
+    },
+    {
+      "uid": "snp2.4",
+      "title": "",
+      "segments": 55
+    },
+    {
+      "uid": "dhp1-20",
+      "title": "",
+      "segments": 108
+    }
+  ]
+}
