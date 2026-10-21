@@ -19,7 +19,8 @@ to intervene.
   can name exactly where the canon ranks goods and what it leaves open.
 
 **Scenario ↔ session pairs:** s1 3.1 · s2 1.3 · s3 2.3 · s4 3.2 · s5 2.5 ·
-s6 3.1 · s7 2.5 · s8 3.5 · s9 2.3 · s10 3.2 · s11 1.6 · s12 2.5
+s6 3.1 · s7 2.5 · s8 3.5 · s9 2.3 · s10 3.2 · s11 1.6 · s12 2.5 ·
+s13 3.4 · s14 3.5
 
 ---
 
@@ -147,3 +148,34 @@ above debtlessness) structures the choice but does not settle it, because
 refusing a gift can itself create a debt. The two counter-positions
 genuinely conflict here, which makes this the best scenario to end
 unresolved. Plan for it, and tell the room it is unresolved on purpose.
+
+## s13 · The loan to a friend · Money → session 3.4
+
+Open with the number, not the ethics: "how much could you lose without the
+friendship changing?" That question exposes the real variable — not whether
+to be generous, but whether the amount on the table can be given without
+resentment. AN 8.54's balanced-finances duty and DN 31's duties of friendship
+pull in opposite directions, which is the point. Expect the room to offer
+"lend half" as a compromise; press on what half means as a message. The
+scenario's honesty lies in what the canon leaves open: no contracts, no
+interest, no procedure for non-repayment.
+
+## s14 · The good job you'd hate · Career → session 3.5
+
+Open on the dinner table: "what would you have to avoid saying about this
+job?" That makes the cost social and specific, which is where right
+livelihood actually bites. The trap is treating this as a debate between
+idealism and rent — the canon ranks neither above the other. Use the five
+forbidden trades as a test: if none applies, the question becomes what your
+days are made of, and that is not a question the text answers for you. Give
+the provider's position a full hearing; it is the one most students will
+actually live by.
+
+## Closing note for instructors
+
+The two new scenarios are deliberately unresolved in different ways. s13
+has a clear moral structure but no procedure; s14 has no clear moral
+structure at all, only competing goods. Running them back-to-back after
+Track 3 (s13) and Track 4 (s14) tests whether the path has taught students
+to tell the two kinds of difficulty apart. If they cannot, revisit session
+3.5's inference note before the seminar.

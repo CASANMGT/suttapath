@@ -398,6 +398,28 @@
   .term-card:hover .term-card__hint { color: var(--accent); border-color: var(--accent); }
 }
 
+.safety {
+  margin: 26px 0 0;
+  padding: 15px 17px;
+  border: 1px solid var(--line-2);
+  border-radius: 10px;
+  background: var(--paper-2);
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+.safety__label {
+  display: block;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
 /* ---------- glossary ---------- */
 
 .search { display: block; margin: 26px 0 8px; }

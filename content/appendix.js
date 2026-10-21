@@ -268,6 +268,52 @@
           { label: "The refuser", text: "Return it. Not because you would be bribed, but because the process now has to be explained, and explanation is a cost the vendor imposed." },
         ],
       },
+      {
+        id: "s13", n: 13, domain: "Money", title: "The loan to a friend",
+        prompt:
+          "A close friend asks to borrow three months' worth of your savings to cover a deposit. They have always paid you back before, in small amounts. They will not sign anything, and asking would damage the friendship. You may need that money yourself within the year — you have no other buffer. They are asking today, and they are already embarrassed.",
+        anchor: {
+          session: "3.4",
+          uids: ["an8.54:5.2", "dn31:31.1", "dn31:31.2"],
+          inference:
+            "The canon treats friends as a direction with duties on both sides: giving is one, but so is protecting what you have. Balanced finances are a duty to yourself before they are a favour to anyone else.",
+        },
+        leavesOpen:
+          "Whether generosity requires lending, whether a verbal loan is a duty, and who bears the risk of an unwritten agreement. The canon has no contract law.",
+        question: "Do you lend, lend less, or decline — and what do you say?",
+        seminar: [
+          "Is refusing a loan a failure of the friendship, or a condition of it?",
+          "What changes if the friend would be hurt but not in danger?",
+          "Which is worse: the money lost, or the friendship conducted as a transaction?",
+        ],
+        counter: [
+          { label: "The lender with limits", text: "Lend only what you can lose without resenting it, and say the number plainly. Generosity that ruins you is not generosity; it is a debt you will collect later in resentment." },
+          { label: "The friend first", text: "Lend what is asked, without terms, and treat it as a gift you may get back. A friendship that survives only by keeping accounts has already become a business." },
+        ],
+      },
+      {
+        id: "s14", n: 14, domain: "Career", title: "The good job you'd hate",
+        prompt:
+          "You are offered a secure, well-paid job in an industry you find pointless, at a company you would not defend at dinner. It would take you out of debt and let you support family. The work is legal, and no one is harmed in any way you can name. A second offer, less secure and a third less money, is work you believe in. You have a month to decide, and the secure offer will not wait.",
+        anchor: {
+          session: "3.5",
+          uids: ["sn45.8:7.1", "sn45.8:7.2", "sn45.8:7.3", "an8.54:2.1", "an8.54:2.2", "an8.54:2.3"],
+          inference:
+            "Right livelihood is defined as giving up wrong livelihood, not as finding work you love. But the canon also insists that welfare in this life is real, and that initiative and balance are part of it. The two claims are held together, not ranked by the text.",
+        },
+        leavesOpen:
+          "Whether work that is merely pointless counts as wrong livelihood, and whether a good salary can outweigh dullness. The canon names five forbidden trades, not a theory of meaningful work.",
+        question: "Which offer do you take — and what do you tell yourself about why?",
+        seminar: [
+          "Is 'I would hate it' a moral reason, or only a preference?",
+          "If the work harms no one, what exactly is wrong with it?",
+          "What would you need to be able to say about your job at dinner?",
+        ],
+        counter: [
+          { label: "The provider", text: "Take the secure job. Debt and insecurity are real harms to real people, and the canon counts ordinary welfare as a good. Meaning is not a duty you can pay rent with." },
+          { label: "The conscientious worker", text: "Take the poorer job. Right livelihood is not only about the five forbidden trades; it is about what your days are made of. A life spent on pointless work is a quiet form of the harm the precepts exist to prevent." },
+        ],
+      },
     ],
 
     glossary: {
@@ -342,6 +388,12 @@
       buddha: { pali: "buddha", respelling: "BOOD-dha", literal: "awakened one", here: "One who has woken up without a teacher in this world. A title, not a name.", related: ["dhamma", "sangha"] },
       phassa: { pali: "phassa", respelling: "PHAS-sa", literal: "touching", here: "Contact: the meeting of sense faculty, object, and attention. The canon places it at the start of the causal chain that leads to feeling.", related: ["vedana", "sankhara"] },
       khanti: { pali: "khanti", respelling: "KHAN-ti", literal: "patience, endurance", here: "The capacity to bear difficulty without reacting. Listed among the highest blessings and as a perfection.", related: ["upekkha", "mangala"] },
+      vitakka: { pali: "vitakka", respelling: "vi-TAK-ka", literal: "thinking, applying the mind", here: "The initial movement of attention toward an object — the mind turning to something and beginning to work on it. In MN 19 it is the unit that gets sorted into two classes.", related: ["sati", "samadhi", "vicara"] },
+      vicara: { pali: "vicāra", respelling: "vi-CHA-ra", literal: "examining, keeping the mind connected", here: "The sustained part of thought: attention staying with an object and turning it over. Paired with vitakka as the two factors of ordinary thinking.", related: ["vitakka", "samadhi"] },
+      anapanasati: { pali: "ānāpānassati", respelling: "a-na-PA-na-SSA-ti", literal: "mindfulness of breathing", here: "Attention to the in-breath and out-breath as a trainable object. Presented in MN 118 as an ordinary skill of noticing, not a special state.", related: ["sati", "samadhi", "satipatthana"] },
+      upekkha: { pali: "upekkhā", respelling: "u-PEK-kha", literal: "looking on; equanimity", here: "The steady middle: neither pushing away nor grabbing. Not indifference — it is what remains when reactivity has quieted.", related: ["khanti", "metta", "jhana"] },
+      passaddhi: { pali: "passaddhi", respelling: "pas-SAD-dhi", literal: "calming, tranquility", here: "The settling of body and mind that follows right effort. In MN 19 the Buddha stops thinking not for doctrine but so the mind will not be stressed.", related: ["samadhi", "viriya", "jhana"] },
+      viriya: { pali: "viriya", respelling: "vi-RI-ya", literal: "energy, effort", here: "The effort that keeps a practice going. In AN 6.55 it is a tension to be tuned, not a quantity to be maximised: too much becomes restlessness, too little becomes laziness.", related: ["passaddhi", "samadhi", "appamada"] },
     },
   };
 

@@ -161,7 +161,7 @@
           <div class="later-track__head"><span class="later-track__num">${t.id}</span><b>${esc(t.title)}</b><span>${esc(t.subtitle)}</span><em>in production</em></div>
         </section>`;
       }
-      const cpd = t.id === 2 ? CP[0] : null;
+      const cpd = CP.find((c) => c.track === t.id) || null;
       const rows = list.map((s) => rowHtml(s)).join("");
       const cpRow = cpd ? rowHtml(cpd) : "";
       return `<section class="track" aria-labelledby="track-${t.id}">
@@ -179,7 +179,7 @@
       <header class="masthead">
         <div class="eyebrow">Theravāda · Pali Canon</div>
         <h1 class="display">The oldest Buddhist texts,<br><em>one page at a time.</em></h1>
-        <p class="dek">A guided path for complete beginners. Eighteen sessions are open: how to read a sutta, what the teaching claims, and what it asks of a life. No Pali required.</p>
+        <p class="dek">A guided path for complete beginners. ${S.length} sessions are open: how to read a sutta, what the teaching claims, what it asks of a life, and how the mind works. No Pali required.</p>
         <a class="canon-link" href="#/canon">What is the Pali Canon? <span>→</span></a>
       </header>
 
@@ -193,7 +193,7 @@
         <span class="continue__bar"><i style="width:${Math.max(pct(done, PATH.length), 2)}%"></i></span>
       </a>` : `<div class="continue continue--done">
         <span class="continue__top"><span class="continue__label">Path complete</span><span class="continue__meta">${done} of ${PATH.length}</span></span>
-        <span class="continue__title">All eighteen sessions read.</span>
+        <span class="continue__title">All ${S.length} sessions read.</span>
         <span class="continue__hook">The integrity lab is the place to put them to work.</span>
       </div>`}
 
@@ -207,7 +207,7 @@
             <b>What would you actually do?</b>
             <span>Real situations, no correct answer, and the passage that makes each one harder.</span>
           </span>
-          <span class="big-card__count">${labDone}/12</span>
+          <span class="big-card__count">${labDone}/${LAB.length}</span>
         </a>
         <a class="big-card" href="#/glossary">
           <span class="big-card__icon">${ICON.book}</span>
@@ -224,7 +224,7 @@
         <span>Translation: Bhikkhu Sujato, CC0 · SuttaCentral</span>
         <a class="linkish" href="#/about">About</a>
         <a class="linkish" href="#/canon">The canon</a>
-        <span>${done}/${PATH.length} sessions · ${labDone}/12 scenarios</span>
+        <span>${done}/${PATH.length} sessions · ${labDone}/${LAB.length} scenarios</span>
       </footer>
     </div>`;
   }
@@ -275,6 +275,8 @@
         <h1 class="session-title">${esc(s.title)}</h1>
         <p class="session-hook">${esc(s.hook)}</p>
       </header>
+
+      ${s.safety ? `<div class="safety"><span class="safety__label">Before you start</span>${esc(s.safety)}</div>` : ""}
 
       <section class="panel panel--read" data-panel="read">
         <div class="reader">
@@ -430,7 +432,7 @@
       </div>
       <div class="finish-row">
         <button class="btn" data-finish="${c.id}">${isDone(c.id) ? "Completed" : "Mark checkpoint complete"}</button>
-        ${nextInPath(c.id) ? `<a class="btn btn--ghost" href="#/s/${nextInPath(c.id).id}">Start Track 3 <span aria-hidden="true">→</span></a>` : ""}
+        ${nextInPath(c.id) ? `<a class="btn btn--ghost" href="#/s/${nextInPath(c.id).id}">Continue <span aria-hidden="true">→</span></a>` : ""}
       </div>
       ${isDone(c.id) ? `<div class="completion">${ICON.check}<span><b>Marked complete.</b></span></div>` : ""}
       <p class="source-line" style="margin-top:30px">${esc(c.reflection)}</p>
@@ -453,9 +455,9 @@
 
     $("#main").innerHTML = `<div class="home wrap">
       <header class="masthead masthead--small">
-        <div class="eyebrow">Integrity Lab · ${done}/12 answered</div>
+        <div class="eyebrow">Integrity Lab · ${done}/${LAB.length} answered</div>
         <h1 class="display display--sm">What would you<br><em>actually do?</em></h1>
-        <p class="dek">Twelve situations with no clean answer. Each one is anchored to a passage you have read, and each leaves something the canon does not decide. Write your answer before opening the seminar notes.</p>
+        <p class="dek">${LAB.length} situations with no clean answer. Each one is anchored to a passage you have read, and each leaves something the canon does not decide. Write your answer before opening the seminar notes.</p>
       </header>
       <div class="lab-list">
         ${LAB.map((s) => `<a class="lab-row ${isDone(s.id) ? "is-done" : ""}" href="#/lab/${s.id}">
@@ -626,7 +628,7 @@
       </ul>
 
       <h2>What this path uses</h2>
-      <p>Eighteen sessions from the four main <em>nikāyas</em> and the Sutta Nipāta. We do not pretend this is a survey. It is a sequence chosen so that each session gives you one usable idea and the vocabulary to read the next one. The full curriculum is thirty-six sessions across six tracks; three tracks are open.</p>
+      <p>${S.length} sessions from the four main <em>nikāyas</em> and the Sutta Nipāta. We do not pretend this is a survey. It is a sequence chosen so that each session gives you one usable idea and the vocabulary to read the next one. The full curriculum is thirty-six sessions across six tracks; four tracks are open.</p>
 
       <h2>Whose Buddhism is this?</h2>
       <p>Theravāda. That matters: the canon is shared, but the commentarial tradition, the meditation instructions, and the monastic culture are specific. Where a passage is interpreted differently by other schools, we say so. We do not present a modernist or secular reading as if it were the text.</p>
@@ -659,8 +661,8 @@
       <p class="dek">A beginner's path through the Pali Canon. Built as an installable web app; works offline once loaded.</p>
 
       <h2>What this is</h2>
-      <p>Thirty-six sessions in six tracks are planned. Eighteen are written: <em>How to Read This</em>, <em>What the Teaching Claims</em>, and <em>The Ethical Life</em>. Each session has one short passage, a plain paraphrase, a context note, a labelled inference, four terms, a reflection, and a practice that fits in a week.</p>
-      <p>The Integrity Lab has twelve scenarios. They are not quizzes. Each is anchored to a passage and each leaves something the canon does not decide.</p>
+      <p>Thirty-six sessions in six tracks are planned. ${S.length} are written: <em>How to Read This</em>, <em>What the Teaching Claims</em>, <em>The Ethical Life</em>, and <em>The Mind</em>. Each session has one short passage, a plain paraphrase, a context note, a labelled inference, four terms, a reflection, and a practice that fits in a week.</p>
+      <p>The Integrity Lab has ${LAB.length} scenarios. They are not quizzes. Each is anchored to a passage and each leaves something the canon does not decide.</p>
 
       <h2>What it is not</h2>
       <p>Not a meditation app. Not a course with a teacher. Not a complete survey of the canon, and not a claim that the Theravāda reading is the only one. The sessions are written for an adult reading alone, in English, with no Pali.</p>
@@ -669,7 +671,7 @@
       <p>Progress and notes are stored in this browser's local storage. Nothing is sent anywhere. Clearing site data deletes them.</p>
 
       <h2>Status</h2>
-      <p>${done} of ${PATH.length} sessions complete · ${countDone(LAB.map((x) => x.id))} of 12 scenarios answered.</p>
+      <p>${done} of ${PATH.length} sessions complete · ${countDone(LAB.map((x) => x.id))} of ${LAB.length} scenarios answered.</p>
       <p class="small">Version ${esc(DATA.meta.version)} · Built ${esc((DATA.builtAt || "").slice(0, 10))} · Translation: ${esc(DATA.meta.translationLabel)}</p>
 
       <p style="margin-top:26px"><button class="btn btn--ghost" data-reset>Reset local progress</button></p>

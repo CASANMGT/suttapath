@@ -10,18 +10,18 @@
 (function (root) {
   const data = {
     meta: {
-      version: "0.2.0",
+      version: "0.3.0",
       translationLabel: "Bhikkhu Sujato · CC0",
       totalSessions: 36,
-      builtSessions: 18,
-      builtTracks: [1, 2, 3],
+      builtSessions: 24,
+      builtTracks: [1, 2, 3, 4],
     },
 
     tracks: [
       { id: 1, title: "How to Read This", subtitle: "No doctrine. Just the instrument.", status: "ready" },
       { id: 2, title: "What the Teaching Claims", subtitle: "The frame, before the ethics.", status: "ready" },
       { id: 3, title: "The Ethical Life", subtitle: "Relationships, not rules.", status: "ready" },
-      { id: 4, title: "The Mind", subtitle: "Attention, habit, and the second arrow.", status: "later" },
+      { id: 4, title: "The Mind", subtitle: "Attention, habit, and the second arrow.", status: "ready" },
       { id: 5, title: "The Deep End", subtitle: "Not-self, conditionality, and the unknown.", status: "later" },
       { id: 6, title: "Living With Others", subtitle: "Speech, friendship, and the last words.", status: "later" },
     ],
@@ -780,6 +780,234 @@
         practice:
           "Pick one person you are about to trust with something. Name which of the four tests you have evidence for, and which you are assuming.",
       },
+
+      {
+        id: "4.1", track: 4, order: 1, ref: "MN 19", pali: "Dvedhāvitakkasutta",
+        title: "Two Kinds of Thought", minutes: 11,
+        hook: "Before his awakening, the Buddha sorted his thoughts into two piles.",
+        oneIdea: "Whatever the mind rehearses becomes its inclination; attention is not a neutral act.",
+        context:
+          "This is a rare first-person account. Before his awakening, the Buddha ran an experiment on his own mind: he divided the thoughts that arose into two classes, and watched where each class led. What follows is not a rule about which thoughts are forbidden but a report on what repeated thinking does to a mind. The cowherd simile makes the stakes ordinary — a herd kept out of the crops because the cost of wandering is real.",
+        blocks: [
+          {
+            uids: ["mn19:2.3", "mn19:2.4", "mn19:2.5", "mn19:2.6"],
+            para: "He assigned sensual, malicious, and cruel thoughts to one class; thoughts of renunciation, good will, and harmlessness to the other.",
+            mark: "to one class",
+          },
+          {
+            uids: ["mn19:3.1", "mn19:3.2", "mn19:3.3", "mn19:3.4", "mn19:3.5"],
+            para: "When a sensual thought arose, he checked what it led to — harm to himself, to others, to both — and it faded on its own.",
+            mark: "It leads to hurting myself, hurting others, and hurting both",
+          },
+          {
+            uids: ["mn19:6.1", "mn19:6.2"],
+            para: "Then the general law: whatever you think about and consider often becomes the mind's inclination.",
+            mark: "becomes their heart's inclination",
+          },
+          {
+            uids: ["mn19:7.1", "mn19:7.2", "mn19:7.3", "mn19:7.4", "mn19:7.5"],
+            para: "The cowherd keeps the herd out of the crops because the penalty is real, not because wandering is abstractly wrong.",
+          },
+        ],
+        inference:
+          "The claim is causal, not moralistic: attention trains inclination. Notice what the sutta does not say — that thoughts are deeds to be punished, or that the goal is to stop thinking. He lets a thought go once he sees where it leads, and the seeing is what does the work. That is why the practice asks you to name the destination of a thought rather than to suppress it.",
+        terms: ["vitakka", "sati", "samadhi"],
+        reflection:
+          "Which thought do you rehearse most often, and where is it leading? Not what you believe about it — where it actually goes.",
+        practice:
+          "For one day, when a recurring thought appears, name it as leading somewhere or nowhere. Write the name once, not the analysis.",
+      },
+
+      {
+        id: "4.2", track: 4, order: 2, ref: "MN 20", pali: "Vitakkasaṇṭhānasutta",
+        title: "Five Ways to Put a Thought Down", minutes: 12,
+        hook: "The canon's manual for a thought you cannot stop thinking.",
+        oneIdea: "A stuck thought is not fought with one technique; the sutta gives five, ordered by cost.",
+        context:
+          "The title means 'the settling of thoughts'. The Buddha lists five strategies for an unskillful thought that will not leave, each with its own image, and each presented as a fallback for when the previous one failed. The order matters: the first is cheap and gentle, the last is physical and ugly. Commentaries describe it as a ladder you descend only as far as you must, which is why the sequence runs from substitution to force.",
+        blocks: [
+          {
+            uids: ["mn20:2.1", "mn20:2.2", "mn20:3.1", "mn20:3.2", "mn20:3.3", "mn20:3.4"],
+            para: "First, substitution: move attention to a different, skillful subject, the way a mason knocks out a peg with a finer peg.",
+            mark: "focus on five subjects",
+          },
+          {
+            uids: ["mn20:4.1", "mn20:4.2"],
+            para: "Second, look at the cost: these thoughts are unskillful, blameworthy, and end in suffering.",
+            mark: "examine the drawbacks",
+          },
+          {
+            uids: ["mn20:5.1", "mn20:5.2", "mn20:5.3", "mn20:5.4", "mn20:5.5"],
+            para: "Third, look away: not every thought deserves engagement. Shut your eyes, or turn them elsewhere.",
+          },
+          {
+            uids: ["mn20:6.1", "mn20:6.2", "mn20:6.3"],
+            para: "Fourth, still the formation: step the mind down to something subtler, as a walker slows, stands, sits, and lies down.",
+          },
+          {
+            uids: ["mn20:7.1", "mn20:7.2", "mn20:7.3"],
+            para: "Fifth and last: teeth clenched, tongue to the palate, crush the thought by force. The emergency option, not the opening move.",
+            mark: "squeeze, squash, and crush mind with mind",
+          },
+          {
+            uids: ["mn20:8.11", "mn20:8.12"],
+            para: "The result is not a blank mind but a trained one: to think what you intend to think.",
+            mark: "master of the ways of thought",
+          },
+        ],
+        inference:
+          "The last technique is deliberately ugly, and the text does not apologise for it. That honesty is the point: some thoughts do not yield to gentle substitution, and pretending otherwise leaves people feeling like failures. What the sutta does not promise is that any technique works every time. It presents the five as a set you try in order, which is closer to how stuckness actually behaves than a single remedy would be.",
+        terms: ["vitakka", "kilesa", "samadhi"],
+        reflection:
+          "Which technique do you reach for first — and is it the cheapest one, or the one that feels most like trying?",
+        practice:
+          "Take one recurring thought this week. Try substitution first. Go to the next technique only if it returns, and note which one actually worked.",
+      },
+
+      {
+        id: "4.3", track: 4, order: 3, ref: "MN 61", pali: "Ambalaṭṭhikārāhulovādasutta",
+        title: "The Mirror", minutes: 11,
+        hook: "Before, during, and after: the canon's three-time check on any action.",
+        oneIdea: "Actions are checked three times — before, during, and after — against harm to yourself, to others, and to both.",
+        context:
+          "The Buddha is teaching his son Rāhula, and he begins with something a child can answer: what is a mirror for? The answer, checking your reflection, becomes the frame for the whole instruction. Deeds of body, speech, and mind are to be done only after repeated checking. The criterion is not a rule list but a question about harm, asked in three tenses, with a repair procedure for when the answer is bad.",
+        blocks: [
+          {
+            uids: ["mn61:8.1", "mn61:8.2", "mn61:8.3", "mn61:8.4"],
+            para: "He asks his son what a mirror is for, and gets the obvious answer: to check yourself.",
+            mark: "What is the purpose of a mirror",
+          },
+          {
+            uids: ["mn61:9.1", "mn61:9.2", "mn61:9.3"],
+            para: "Before acting with the body, check: does this lead to harm for me, for others, or for both?",
+            mark: "lead to hurting myself, hurting others, or hurting both",
+          },
+          {
+            uids: ["mn61:10.1", "mn61:10.2", "mn61:10.3"],
+            para: "While acting, check again — the same question, in the present tense.",
+          },
+          {
+            uids: ["mn61:11.1", "mn61:11.2", "mn61:11.3", "mn61:11.4", "mn61:11.5", "mn61:11.6", "mn61:11.7"],
+            para: "Afterwards, check once more. If it harmed, confess and reveal it, and restrain yourself in future.",
+            mark: "confess, reveal, and clarify",
+          },
+        ],
+        inference:
+          "Three tenses is the unusual part: most systems check intention beforehand and consequences afterwards, but this one also asks in the middle of the act. It also assumes failure — the repair procedure is confession and restraint, not absolution. And the criterion is harm rather than rule-compliance, which makes the check portable to situations the canon never imagined. That portability is a strength and a difficulty: you have to judge.",
+        terms: ["kamma", "sila", "sati"],
+        reflection:
+          "Which recurring action of yours would fail the mid-act check — the one you never pause inside of?",
+        practice:
+          "Run one real decision through all three checks this week. Write one line before, one during, one after.",
+      },
+
+      {
+        id: "4.4", track: 4, order: 4, ref: "SN 36.6", pali: "Sallathasutta",
+        title: "Two Arrows", minutes: 10,
+        hook: "Pain is the first arrow. The story you tell about it is the second.",
+        oneIdea: "Pain is unavoidable; the resistance and commentary added to it are a second, optional suffering.",
+        context:
+          "The sutta compares an ordinary person with a trained disciple, and both are struck by pain. The difference is not the sensation but what is added to it. The image is exact and has been reused for two thousand years: one arrow is the pain, the second is the reaction. Read the careful phrasing — the disciple still feels the first arrow; what is dropped is the second.",
+        blocks: [
+          {
+            uids: ["sn36.6:1.5", "sn36.6:1.6", "sn36.6:1.7", "sn36.6:1.8", "sn36.6:1.9", "sn36.6:1.10"],
+            para: "An untrained person struck by pain sorrows and resists, and so feels two feelings — physical and mental.",
+            mark: "only to be struck with a second arrow",
+          },
+          {
+            uids: ["sn36.6:2.1", "sn36.6:2.2", "sn36.6:2.3"],
+            para: "The trained disciple feels the same pain without the wailing: one feeling, physical, not mental.",
+            mark: "physical, not mental",
+          },
+          {
+            uids: ["sn36.6:3.1", "sn36.6:3.2", "sn36.6:3.3", "sn36.6:3.4", "sn36.6:3.5", "sn36.6:3.6"],
+            para: "The image is exact: struck with one arrow, not two.",
+          },
+          {
+            uids: ["sn36.6:3.7", "sn36.6:3.8", "sn36.6:3.9", "sn36.6:3.10", "sn36.6:3.11"],
+            para: "What is dropped is the resistance — and with it the scramble for a distraction.",
+            mark: "they don't resist it",
+          },
+        ],
+        inference:
+          "The sutta is narrower than its modern reputation. It does not say pain is optional, or that the disciple feels nothing; the first arrow remains. What is optional is the second — aversion, narrative, and the search for a sensual escape. That distinction is useful precisely because it is modest: you cannot always change the sensation, but the reaction is trainable, and the text says so without promising bliss.",
+        terms: ["vedana", "dukkha", "tanha"],
+        reflection:
+          "Take one discomfort from today. Which part was the sensation, and which part was the story about the sensation?",
+        practice:
+          "Next time something hurts — something small is fine — separate it in words: this is the sensation; this is what I am adding.",
+      },
+
+      {
+        id: "4.5", track: 4, order: 5, ref: "AN 6.55", pali: "Soṇasutta",
+        title: "The Lute String", minutes: 10,
+        hook: "Too tight, too slack, or tuned: the canon's argument against grinding.",
+        oneIdea: "Effort has a tuning; too forceful leads to restlessness, too slack to laziness.",
+        context:
+          "Soṇa has been practising hard and getting nowhere. He considers disrobing and going home to his family's wealth. The Buddha does not tell him to try harder. He asks about Soṇa's old skill, playing the arched harp, and draws the analogy from the strings. The advice that follows is about balance, but notice who it is addressed to: someone already straining, not someone avoiding the work.",
+        blocks: [
+          {
+            uids: ["an6.55:3.3", "an6.55:3.4"],
+            para: "Soṇa, straining in practice, considers giving it up and returning to his family's wealth.",
+            mark: "return to a lesser life",
+          },
+          {
+            uids: ["an6.55:4.2", "an6.55:4.3", "an6.55:4.4"],
+            para: "The Buddha asks about his harp: were the strings playable when tuned too tight?",
+          },
+          {
+            uids: ["an6.55:5.1", "an6.55:5.2"],
+            para: "Or when tuned too slack?",
+          },
+          {
+            uids: ["an6.55:6.1", "an6.55:6.2"],
+            para: "Only at even tension was the sound resonant.",
+            mark: "neither too tight nor too slack",
+          },
+          {
+            uids: ["an6.55:7.1", "an6.55:7.2"],
+            para: "The application: forceful energy breeds restlessness, slack energy breeds laziness. Balance energy and serenity.",
+            mark: "when energy is too forceful it leads to restlessness",
+          },
+        ],
+        inference:
+          "This is a permission slip, but a conditional one. The sutta names two failure modes, and it does not pretend that rest is always the answer — slack energy has its own name and its own cost. It is also worth noticing that the teaching comes with a diagnosis of Soṇa's specific problem, not a general rule for everyone. Where you are on the tuning is something you have to judge, and the sutta gives you the vocabulary to judge it.",
+        terms: ["viriya", "samadhi", "passaddhi"],
+        reflection:
+          "Where are you over-tight right now — and what would even tension look like there, concretely?",
+        practice:
+          "Pick the practice you have been forcing. Halve it for one week. Note whether you do it more or less often.",
+      },
+
+      {
+        id: "4.6", track: 4, order: 6, short: true, ref: "MN 118", pali: "Ānāpānassatisutta",
+        title: "Breathing, Plainly", minutes: 8,
+        hook: "The canon's most famous meditation instruction is almost boringly simple.",
+        oneIdea: "Attention to breathing is trainable, ordinary, and starts with noticing whether the breath is heavy or light.",
+        safety:
+          "Breath practice can surface difficult material, especially for people with trauma histories or panic disorder. Stop if this destabilises you; you do not need this exercise. If breath-focused attention has distressed you before, skip this session — the practice in session 4.4 does similar work without it. If you are in crisis, contact your local emergency number or a crisis line.",
+        context:
+          "This is the opening of the Ānāpānassati Sutta, the canonical instruction on mindfulness of breathing. The full text has sixteen steps; this excerpt is the first four. Nothing here is exotic: the method assumes you can already breathe and can already notice. The sutta is not a promise of calm. It is a description of a trainable attention, starting at the most ordinary possible object.",
+        blocks: [
+          {
+            uids: ["mn118:17.1", "mn118:17.2"],
+            para: "Sit down, straighten up, and bring attention to the present. Breathe in mindfully; breathe out mindfully.",
+            mark: "Just mindful, they breathe in",
+          },
+          {
+            uids: ["mn118:18.1", "mn118:18.2", "mn118:18.3", "mn118:18.4"],
+            para: "Notice whether the breath is heavy or light. Then the whole body, then let the body settle.",
+            mark: "experiencing the whole body",
+          },
+        ],
+        inference:
+          "The entry point is deliberately mundane, which is the opposite of how meditation is usually sold. The claim is that attention is trainable in the ordinary sense — repeated, unspectacular, cumulative — and that the breath is a suitable first object because it is always present and requires no belief. The sixteen steps continue into feeling, mind, and principles, but this session stops at the body, and that stopping point is a boundary worth respecting.",
+        terms: ["anapanasati", "sati", "samadhi"],
+        reflection:
+          "What did you notice about the breath that you had not noticed before — and how quickly did attention leave?",
+        practice:
+          "Five minutes, once. Sit, straighten up, and follow the breath. Not more than five minutes, and not every day unless you want to.",
+      },
     ],
 
     checkpoints: [
@@ -811,6 +1039,35 @@
           "Which of these three claims would change something you do this week — and what would you have to stop doing for it to change?",
         reflection:
           "If you could not answer one of the three from memory, that is information, not failure. Note which one, and reread only that session before Track 3.",
+      },
+      {
+        id: "cp2", track: 4, order: 7, type: "checkpoint", ref: "Checkpoint 2",
+        title: "What You Actually Used", minutes: 10,
+        hook: "Three passages you have met. Which one changed a week?",
+        oneIdea: "Understanding a passage and using it are different tests; this checkpoint asks for the second.",
+        intro:
+          "No commentary this time. Read each passage, then answer from memory before opening it. Nothing here is scored, and nothing is stored anywhere but your own device.",
+        passages: [
+          {
+            label: "Track 2 · AN 6.63",
+            uids: ["an6.63:33.3", "an6.63:33.4", "an6.63:33.5"],
+            prompt: "What does the sutta call a deed, and what does that make of an intention you never acted on?",
+          },
+          {
+            label: "Track 3 · DN 31",
+            uids: ["dn31:27.2", "dn31:27.3"],
+            prompt: "What are the six directions, and what does the mapping do to the word 'duty'?",
+          },
+          {
+            label: "Track 4 · SN 36.6",
+            uids: ["sn36.6:3.1", "sn36.6:3.2", "sn36.6:3.3"],
+            prompt: "What is the second arrow, and who is said to feel only one?",
+          },
+        ],
+        question:
+          "Which of these have you actually used, and which did you only understand?",
+        reflection:
+          "Name the one you only understood. That is the session to reread before Track 5, and the difference between the two answers is the whole point of the checkpoint.",
       },
     ],
   };

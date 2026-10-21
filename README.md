@@ -4,7 +4,7 @@ A study app for the Theravāda Pali Canon, for English-speaking adults with no b
 
 **Live: https://casanmgt.github.io/suttapath/**
 
-This repository holds the built app (Phases 0–2 of the content plan): eighteen written sessions, one checkpoint, twelve integrity-lab scenarios, and a 71-term glossary, all wired to a pinned, citation-verified snapshot of Bhikkhu Sujato's CC0 translation.
+This repository holds the built app (Phases 0–3 of the content plan): twenty-four written sessions, two checkpoints, fourteen integrity-lab scenarios, and a 76-term glossary, all wired to a pinned, citation-verified snapshot of Bhikkhu Sujato's CC0 translation.
 
 ---
 
@@ -30,14 +30,15 @@ The path: *How to Read This → What the Teaching Claims → The Ethical Life �
 
 The **Integrity Lab** applies the same passages to twelve deliberately hard scenarios — academic, work, career, money — each anchored to a session, each ending with journaling rather than correct answers, plus seminar notes with two defensible counter-positions for instructors.
 
-## What is built (Phases 0–2)
+## What is built (Phases 0–3)
 
 - **Track 1 — How to Read This** (6 sessions): what a sutta is, how to test one, why translation is interpretation.
 - **Track 2 — What the Teaching Claims** (6 sessions + checkpoint cp1): intention, diligence, the four truths — each as a claim, not a comfort.
 - **Track 3 — The Ethical Life** (6 sessions): the Sigālovāda, the Maṅgala list, household economics, five ruled-out trades, and how to actually judge a person.
-- **Integrity Lab**: 12 scenarios anchored to Track 2/3 passages.
-- **Glossary**: 71 terms with literal sense, usage sense, and confusions.
-- Tracks 4–6 (`The Mind`, `The Deep End`, `Living With Others`) are planned in the content plan, not yet written.
+- **Track 4 — The Mind** (6 sessions + checkpoint cp2): sorting thoughts, five ways to drop a stuck thought, the mirror check, the two arrows, the lute string, and a plain breathing exercise with an explicit safety note.
+- **Integrity Lab**: 14 scenarios anchored to Track 2/3/4 passages (academic, work, career, money).
+- **Glossary**: 76 terms with literal sense, usage sense, and confusions.
+- Tracks 5–6 (`The Deep End`, `Living With Others`) are planned in the content plan, not yet written.
 
 ## Architecture
 
@@ -89,5 +90,7 @@ Everything works from the filesystem except the service worker, which needs `htt
 
 - [x] Phase 0 — canon ingest + citation pipeline (build fails on broken citation)
 - [x] Phase 1 — Track 1 (6 sessions)
-- [x] Phase 2 — Tracks 2–3 (12 sessions), checkpoint, Integrity Lab (12 scenarios), glossary (71 terms)
-- [ ] Phases 3–5 — Tracks 4–6, checkpoint system, review pass — see `docs/PRD.md` and the content plan in the PRD repository
+- [x] Phase 2 — Tracks 2–3 (12 sessions), checkpoint, Integrity Lab, glossary
+- [x] Phase 3 — Track 4 (6 sessions), checkpoint 2, scenarios 13–14, glossary 76
+- [ ] Phase 4 — Track 6, checkpoint 3, scenarios 21–24 — see the content plan in the PRD repository
+- [ ] Phase 5 — full review pass (scholar + style), remaining scenarios to 24
