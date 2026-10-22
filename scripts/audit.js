@@ -112,6 +112,13 @@ for (const [k, t] of Object.entries(glossary)) {
   if (!t.respelling) add("warn", `glossary:${k}`, "missing respelling");
 }
 const orphans = Object.keys(glossary).filter((k) => !usedTerms.has(k));
+const adv = (DATA.advanced && DATA.advanced.sessions) || [];
+for (const s of adv) {
+  if ((s.retrieval || []).length !== 5) add("warn", `adv ${s.id}`, `${(s.retrieval || []).length} retrieval items (need 5)`);
+  for (const t of s.terms || []) if (!glossary[t]) add("warn", `adv ${s.id}`, `term ${t} missing from glossary`);
+  if (s.kind === "whole" && !(s.sections || []).length) add("warn", `adv ${s.id}`, "whole text has no sections");
+  if (s.kind === "essay" && !(s.essay || []).length) add("warn", `adv ${s.id}`, "essay has no paragraphs");
+}
 
 console.log("SuttaPath content audit");
 console.log("=======================");
@@ -121,6 +128,7 @@ console.log(`Scenario domains: ${Object.entries(domainCount).map(([d, n]) => d +
 const totalMinutes = DATA.sessions.reduce((n, s) => n + s.minutes, 0) + DATA.checkpoints.reduce((n, c) => n + c.minutes, 0);
 console.log(`Plan: ${totalMinutes} min (${(totalMinutes / 60).toFixed(1)} h) · ${Math.ceil(DATA.sessions.length / 2)} weeks at 2 sessions/week · ${Math.ceil(DATA.sessions.length / 3)} at 3`);
 console.log(`Glossary: ${usedTerms.size} terms attached to sessions, ${orphans.length} reference-only`);
+if (adv.length) console.log(`Level 2: ${adv.length} sessions (${adv.filter((s) => s.kind === "whole").length} whole texts, ${adv.reduce((n, s) => n + (s.sections || []).length, 0)} sections)`);
 
 const order = { warn: 0, info: 1 };
 report.sort((a, b) => order[a.level] - order[b.level]);

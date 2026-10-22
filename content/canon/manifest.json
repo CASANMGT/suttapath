@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-21T22:24:51.730Z",
+  "generatedAt": "2026-10-22T10:44:37.124Z",
   "translator": "Bhikkhu Sujato",
   "license": "CC0",
   "suttas": [
@@ -12,6 +12,11 @@
       "uid": "dn31",
       "title": "",
       "segments": 267
+    },
+    {
+      "uid": "mn10",
+      "title": "",
+      "segments": 235
     },
     {
       "uid": "mn19",
@@ -72,6 +77,11 @@
       "uid": "sn12.2",
       "title": "",
       "segments": 79
+    },
+    {
+      "uid": "sn12.23",
+      "title": "",
+      "segments": 93
     },
     {
       "uid": "sn22.59",

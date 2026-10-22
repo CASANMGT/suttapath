@@ -134,6 +134,8 @@
     if (parts[0] === "s" && parts[1]) return renderSession(parts[1]);
     if (parts[0] === "lab" && parts[1]) return renderLabItem(parts[1]);
     if (parts[0] === "lab") return renderLab();
+    if (parts[0] === "adv" && parts[1]) return renderAdvSession(parts[1]);
+    if (parts[0] === "adv") return renderAdvHome();
     if (parts[0] === "glossary") return renderGlossary();
     if (parts[0] === "canon") return renderCanon();
     if (parts[0] === "changelog") return renderChangelog();
@@ -156,6 +158,7 @@
     const next = PATH.find((x) => !isDone(x.id));
     const done = countDone(PATH.map((x) => x.id));
     const labDone = countDone(LAB.map((x) => x.id));
+    const advDone = countDone(DATA.advanced.sessions.map((x) => x.id));
 
     const trackHtml = TRACKS.map((t) => {
       const list = trackSessions(t.id);
@@ -211,6 +214,15 @@
             <span>Real situations, no correct answer, and the passage that makes each one harder.</span>
           </span>
           <span class="big-card__count">${labDone}/${LAB.length}</span>
+        </a>
+        <a class="big-card" href="#/adv">
+          <span class="big-card__icon">${ICON.book}</span>
+          <span class="big-card__body">
+            <span class="big-card__kicker">Level 2 · pilot</span>
+            <b>Read a sutta whole.</b>
+            <span>Collections, formulas, and two complete texts — no paraphrase underneath.</span>
+          </span>
+          <span class="big-card__count">${advDone}/${DATA.advanced.sessions.length}</span>
         </a>
         <a class="big-card" href="#/glossary">
           <span class="big-card__icon">${ICON.book}</span>
@@ -274,9 +286,7 @@
     const parallel = s.parallel ? `<div class="parallel">${s.parallel.map((p) => `<div class="parallel__col"><span class="parallel__label">${esc(p.label)}</span><p>${esc(p.text)}</p></div>`).join("")}</div>` : "";
     const recip = s.directions ? `<div class="recip">${s.directions.map((d) => `<div class="recip__row"><span class="recip__dir">${esc(d.dir)}</span><span class="recip__who">${esc(d.who)}</span><span class="recip__ex"><b>give</b> ${esc(d.serve)}<br><b>receive</b> ${esc(d.receive)}</span></div>`).join("")}</div>` : "";
     const diagram = s.diagram ? diagramHtml(s.diagram) : "";
-    const recall = s.retrieval && s.retrieval.length ? `<h2 class="section-label">Check yourself</h2>
-        <p class="recall-hint">Answer from memory, then open the answer. Nothing is scored, and nothing is stored.</p>
-        <div class="recall">${s.retrieval.map((r, i) => `<details class="recall__item"><summary><span class="recall__n">${String(i + 1).padStart(2, "0")}</span>${esc(r.q)}</summary><p class="recall__a">${esc(r.a)}</p></details>`).join("")}</div>` : "";
+    const recall = s.retrieval && s.retrieval.length ? recallHtml(s.retrieval) : "";
 
     $("#main").innerHTML = `<article class="session wrap">
       <header class="session-head">
@@ -334,6 +344,12 @@
     renderDock(s);
     bindSession(s);
     setMode(state.mode, { instant: true });
+  }
+
+  function recallHtml(items) {
+    return `<h2 class="section-label">Check yourself</h2>
+      <p class="recall-hint">Answer from memory, then open the answer. Nothing is scored, and nothing is stored.</p>
+      <div class="recall">${items.map((r, i) => `<details class="recall__item"><summary><span class="recall__n">${String(i + 1).padStart(2, "0")}</span>${esc(r.q)}</summary><p class="recall__a">${esc(r.a)}</p></details>`).join("")}</div>`;
   }
 
   function diagramHtml(d) {
@@ -666,6 +682,217 @@
     $("#dockSlot").innerHTML = "";
   }
 
+  /* ---------- level 2 reader ---------- */
+
+  function advAll() {
+    return DATA.advanced.sessions.slice().sort((a, b) => {
+      const ta = DATA.advanced.tracks.findIndex((t) => t.code === a.track);
+      const tb = DATA.advanced.tracks.findIndex((t) => t.code === b.track);
+      return ta - tb || a.order - b.order;
+    });
+  }
+  function advNext(id) {
+    const all = advAll();
+    const i = all.findIndex((s) => s.id === id);
+    return i >= 0 ? all[i + 1] : null;
+  }
+
+  function paragraphize(text) {
+    const parts = String(text || "").split(/(?<=[.!?])\s+/).filter(Boolean);
+    const out = [];
+    let buf = [];
+    for (const p of parts) {
+      buf.push(p);
+      if (buf.length >= 3) { out.push(buf.join(" ")); buf = []; }
+    }
+    if (buf.length) out.push(buf.join(" "));
+    return out;
+  }
+
+  function markPhrase(text, mark) {
+    if (!mark) return esc(text);
+    const i = text.indexOf(mark);
+    if (i < 0) return esc(text);
+    return esc(text.slice(0, i)) + '<mark class="hl">' + esc(mark) + "</mark>" + esc(text.slice(i + mark.length));
+  }
+
+  function advText(section) {
+    if (section.verse) return `<p class="whole-verse">${esc(section.text)}</p>`;
+    return paragraphize(section.text).map((p) => `<p>${markPhrase(p, section.mark)}</p>`).join("");
+  }
+
+  function advRow(s) {
+    const done = isDone(s.id);
+    const sub = `${s.kind === "whole" ? esc(s.ref) + " · " : ""}${s.minutes} min${done ? " · read" : ""}`;
+    return `<a class="session-row ${done ? "is-done" : ""}" href="#/adv/${s.id}">
+      <span class="session-row__num">${esc(s.code)}</span>
+      <span>
+        <span class="session-row__title">${esc(s.title)}</span>
+        <span class="session-row__sub">${sub}</span>
+      </span>
+      <span class="session-row__arrow">${done ? '<span class="done-mark">' + ICON.check + "</span>" : ICON.next}</span>
+    </a>`;
+  }
+
+  function renderAdvHome() {
+    const A = DATA.advanced;
+    const done = countDone(A.sessions.map((s) => s.id));
+    const next = advAll().find((s) => !isDone(s.id));
+    topbar([
+      `<a class="icon-btn" href="#/" aria-label="Back to the path">${ICON.back}</a>`,
+      `<span class="topbar__ref">Level 2</span>`,
+      `<span class="topbar__spacer"></span>`,
+      settingsBtn(),
+    ]);
+
+    $("#main").innerHTML = `<div class="home wrap">
+      <header class="masthead masthead--small">
+        <div class="eyebrow">Level 2 · pilot</div>
+        <h1 class="display display--sm">Read the canon<br><em>whole.</em></h1>
+        <p class="dek">The advanced tier begins with the apparatus — collections, formulas, forms — then two complete suttas, read with a map instead of a paraphrase.</p>
+        <p class="adv-status">${esc(A.status)}</p>
+      </header>
+
+      ${next ? `<a class="continue" href="#/adv/${next.id}">
+        <span class="continue__top">
+          <span class="continue__label">${done ? "Continue" : "Start here"}</span>
+          <span class="continue__meta">${done} of ${A.sessions.length}</span>
+        </span>
+        <span class="continue__title">${esc(next.title)}</span>
+        <span class="continue__hook">${esc(next.hook)}</span>
+        <span class="continue__bar"><i style="width:${Math.max(pct(done, A.sessions.length), 2)}%"></i></span>
+      </a>` : `<div class="continue continue--done">
+        <span class="continue__top"><span class="continue__label">Pilot complete</span><span class="continue__meta">${done} of ${A.sessions.length}</span></span>
+        <span class="continue__title">Apparatus and two whole texts, read.</span>
+        <span class="continue__hook">Tracks C and D are still planned. See the full design.</span>
+      </div>`}
+
+      ${A.tracks.map((t) => {
+        const list = A.sessions.filter((s) => s.track === t.code).sort((a, b) => a.order - b.order);
+        if (!list.length) {
+          return `<section class="later-track">
+            <div class="later-track__head"><span class="later-track__num">${esc(t.code)}</span><b>${esc(t.name)}</b><span>${esc(t.goal)}</span><em>in production</em></div>
+          </section>`;
+        }
+        const planned = t.status === "pilot" ? `<p class="adv-more">B2, B4–B6 are in production.</p>` : "";
+        return `<section class="track">
+          <div class="track__head">
+            <span class="track__num">${esc(t.code)}</span>
+            <h2>${esc(t.name)}</h2>
+            <span class="track__count">${list.length} of ${t.code === "B" ? 6 : 6} sessions</span>
+            <p>${esc(t.goal)}</p>
+          </div>
+          ${list.map(advRow).join("")}${planned}
+        </section>`;
+      }).join("")}
+
+      <p class="adv-links"><a class="linkish" href="#/level2">The full Level 2 design</a> · <a class="linkish" href="#/plan">Study plan</a></p>
+      <footer class="home-foot">
+        <span>Translation: Bhikkhu Sujato, CC0 · SuttaCentral</span>
+        <span>${done}/${A.sessions.length} Level 2 sessions</span>
+      </footer>
+    </div>`;
+    $("#dockSlot").innerHTML = "";
+  }
+
+  function renderAdvSession(id) {
+    const s = DATA.advanced.sessions.find((x) => x.id === id);
+    if (!s) { location.hash = "#/adv"; return; }
+    currentSession = s;
+    topbar([
+      `<a class="icon-btn" href="#/adv" aria-label="Back to Level 2">${ICON.back}</a>`,
+      `<span class="topbar__ref">Level 2 · ${esc(s.code)}</span>`,
+      `<span class="topbar__title">${esc(s.title)}</span>`,
+      settingsBtn(),
+    ]);
+
+    const terms = (s.terms || []).map((k) => termCard(k)).join("");
+    const diagram = s.diagram ? diagramHtml(s.diagram) : "";
+    const recall = recallHtml(s.retrieval || []);
+
+    const read = s.kind === "whole"
+      ? `<nav class="toc" aria-label="Sections">
+          <span class="toc__label">Contents</span>
+          <ol>${s.sections.map((sec, i) => `<li><button class="toc__link" data-toc="sec-${i + 1}">${esc(sec.label)}</button></li>`).join("")}</ol>
+        </nav>
+        <p class="read-hint">Read it once for shape, then again with the section notes. The notes are ours; the text is not.</p>
+        ${s.sections.map((sec, i) => `<section class="whole-sec" id="sec-${i + 1}">
+          <h3 class="whole-sec__label">${esc(sec.label)}</h3>
+          <div class="whole-text">${advText(sec)}</div>
+          <p class="whole-note">${esc(sec.note)}</p>
+        </section>`).join("")}
+        <p class="source-line">Bhikkhu Sujato, CC0 · SuttaCentral · ${esc(s.ref)}</p>`
+      : `${s.essay.map((p) => `<p>${esc(p)}</p>`).join("")}
+        ${(s.excerpts || []).map((ex) => `<figure class="excerpt">
+          <blockquote class="${ex.verse ? "is-verse" : ""}">${esc(ex.text)}</blockquote>
+          <figcaption>${esc(ex.note)}</figcaption>
+        </figure>`).join("")}
+        <p class="source-line">Canon passages: Bhikkhu Sujato, CC0 · SuttaCentral. Essay: SuttaPath.</p>`;
+
+    $("#main").innerHTML = `<article class="session wrap adv">
+      <header class="session-head">
+        <div class="session-head__ref"><b>${esc(s.code)}${s.ref ? " · " + esc(s.ref) : ""}</b><i></i><span class="session-head__pali">${esc(s.pali || s.track)}</span><i></i>${s.minutes} min</div>
+        <h1 class="session-title">${esc(s.title)}</h1>
+        <p class="session-hook">${esc(s.hook)}</p>
+        <span class="adv-chip">${s.kind === "whole" ? "Whole text" : "Apparatus"}</span>
+      </header>
+
+      ${s.safety ? `<div class="safety"><span class="safety__label">Before you start</span>${esc(s.safety)}</div>` : ""}
+
+      <section class="panel panel--read" data-panel="read">${read}</section>
+
+      <section class="panel panel--understand" data-panel="understand" hidden>
+        <div class="one-idea"><span class="one-idea__label">The one idea</span><p>${esc(s.oneIdea)}</p></div>
+        <div class="note"><span class="note__label">Context</span>${esc(s.context)}</div>
+        ${diagram}
+        <div class="note note--inference"><span class="note__label">Our reading, not the text</span>${esc(s.inference)}</div>
+        ${terms ? `<h2 class="section-label">Words in this session</h2><div class="term-list">${terms}</div>` : ""}
+        ${recall}
+        <p class="source-line">Passages from SuttaCentral (CC0). Apparatus, notes and inference are SuttaPath's.</p>
+      </section>
+
+      <section class="panel panel--live" data-panel="live" hidden>
+        <div class="live-block">
+          <h3>For you, not for a grade</h3>
+          <p class="live-q">${esc(s.reflection)}</p>
+        </div>
+        <div class="live-block">
+          <div class="practice"><span class="practice__meta">This week</span>${esc(s.practice)}</div>
+        </div>
+        <div class="live-block">
+          <label class="field-label" for="note">Your note · saved on this device</label>
+          <textarea class="journal" id="note" data-note="${s.id}" placeholder="One sentence is enough.">${esc(state.notes[s.id] || "")}</textarea>
+          <span class="save-state" data-save="${s.id}">Saved</span>
+        </div>
+        <div class="finish-row">
+          <button class="btn" data-finish="${s.id}">${isDone(s.id) ? "Completed" : "Mark session complete"}</button>
+          ${advNext(s.id) ? `<a class="btn btn--ghost" href="#/adv/${advNext(s.id).id}">Next <span aria-hidden="true">→</span></a>` : ""}
+        </div>
+        ${isDone(s.id) ? `<div class="completion">${ICON.check}<span><b>Marked complete.</b> You can reopen it any time.</span></div>` : ""}
+      </section>
+    </article>`;
+
+    const nxt = advNext(s.id);
+    $("#dockSlot").innerHTML = `<div class="dock">
+      <div class="modes" role="tablist" aria-label="Reading mode">
+        <span class="modes__pill" aria-hidden="true"></span>
+        <button class="mode-btn" role="tab" data-mode="read">Read</button>
+        <button class="mode-btn" role="tab" data-mode="understand">Understand</button>
+        <button class="mode-btn" role="tab" data-mode="live">Live</button>
+      </div>
+      ${nxt ? `<span class="dock__divider"></span><a class="icon-btn" href="#/adv/${nxt.id}" aria-label="Next: ${esc(nxt.title)}">${ICON.next}</a>` : ""}
+    </div>`;
+
+    $$("[data-toc]").forEach((b) =>
+      b.addEventListener("click", () => {
+        const el = document.getElementById(b.dataset.toc);
+        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+      })
+    );
+    bindSession(s);
+    setMode(state.mode, { instant: true });
+  }
+
   /* ---------- study plan ---------- */
 
   function renderPlan() {
@@ -746,6 +973,7 @@
         <h1 class="display display--sm">After the path,<br><em>the canon.</em></h1>
         <p class="dek">${esc(l.intro)}</p>
         <p class="level2-status">${esc(l.status)}</p>
+        <p class="level2-start"><a class="btn" href="#/adv">Open the pilot <span aria-hidden="true">→</span></a></p>
       </header>
 
       <div class="note"><span class="note__label">Entry</span>${esc(l.entry)}</div>

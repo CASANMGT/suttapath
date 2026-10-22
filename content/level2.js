@@ -9,7 +9,7 @@ module.exports = {
     "After the beginner path, the question stops being what to read and becomes how to read it whole. Level 2 moves from guided excerpts to complete suttas, from one translation to comparison, and from Pali as vocabulary to Pali as a tool.",
   entry:
     "Entry is earned, not bought: finish the 36-session path, or pass the entry check — read MN 63 unaided and state what it claims, what it refuses, and where its argument turns.",
-  status: "Plan, not shipped content. The design is complete; the pilot has not been built.",
+  status: "Pilot shipped: Track A (six apparatus sessions) and two whole texts, MN 10 and SN 12.23. Tracks C and D remain planned.",
   doc: "docs/ADVANCED_TRACK.md",
   docUrl: "https://github.com/CASANMGT/suttapath/blob/main/docs/ADVANCED_TRACK.md",
   shift: [
@@ -98,8 +98,8 @@ module.exports = {
     ],
   },
   pilot: {
-    title: "Build the pilot first",
-    body: "2.0 ships Track A and two whole texts (MN 10, SN 12.23) with a new renderer. The gate: ten Level-1 graduates read MN 10 unaided, and six can state its structure without the map. If it fails, Level 1 is the product — not a reason to write twenty more sessions.",
+    title: "The pilot is shipped — now test it",
+    body: "Track A and two whole texts are live. The gate is unchanged: ten Level-1 graduates read MN 10 unaided, and six can state its structure without the map. If that fails, Level 1 is the product — not a reason to write twenty more sessions.",
   },
   notAdd: [
     "A full Pali grammar course",

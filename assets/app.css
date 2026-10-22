@@ -256,6 +256,7 @@ a { color: inherit; }
   display: block;
   width: 100%;
   text-align: left;
+  text-decoration: none;
   margin: 32px 0 8px;
   padding: 20px 20px 18px;
   border: 1px solid var(--line);
@@ -354,6 +355,7 @@ a { color: inherit; }
   text-align: left;
   padding: 17px 4px;
   border-bottom: 1px solid var(--line);
+  text-decoration: none;
   transition: background-color 150ms ease, transform 150ms var(--ease-out);
   border-radius: 8px;
 }

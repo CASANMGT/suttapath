@@ -8,6 +8,38 @@ module.exports = {
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   releases: [
     {
+      version: "1.4",
+      date: "22 October 2026",
+      name: "Level 2, shipped",
+      summary:
+        "The advanced pilot is live: six apparatus sessions and two whole suttas, with a reader that puts a section map and our notes beside the text — not a paraphrase under it.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "A Level 2 reader at #/adv, with its own progress, contents navigation, and section notes.",
+            "Track A — How the Canon Is Built: the four collections, formulas and the ellipsis, three reading protocols, the verse books, Vinaya orientation, Abhidhamma and commentary orientation.",
+            "Two whole texts: MN 10 (Satipaṭṭhāna) and SN 12.23 (Vital Conditions), read in full and in sections.",
+            "A Level 2 card on the home page, and a start button on the Level 2 plan.",
+          ],
+        },
+        {
+          label: "Content",
+          items: [
+            "The whole-text reader omits only the source's own section headings; every other line is present, and the build refuses a text that leaves a passage uncovered.",
+            "MN 10 carries a safety note about the charnel-ground contemplations.",
+          ],
+        },
+        {
+          label: "Build",
+          items: [
+            "New invariant: a whole-text session must cover every non-empty segment of its sutta, or declare the omission with a reason.",
+            "Canon snapshot grows to 35 suttas; 200 citations verified.",
+          ],
+        },
+      ],
+    },
+    {
       version: "1.3",
       date: "22 October 2026",
       name: "The advanced plan",

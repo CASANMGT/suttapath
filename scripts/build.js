@@ -21,6 +21,7 @@ const retrieval = require(path.join(ROOT, "content", "retrieval.js"));
 const visuals = require(path.join(ROOT, "content", "visuals.js"));
 const changelog = require(path.join(ROOT, "content", "changelog.js"));
 const level2 = require(path.join(ROOT, "content", "level2.js"));
+const advanced = require(path.join(ROOT, "content", "advanced.js"));
 
 const errors = [];
 const warnings = [];
@@ -227,7 +228,71 @@ else {
   if (!level2.capstone || !level2.pilot || !level2.effort) fail("level2: missing capstone, pilot, or effort");
 }
 
-/* ---------- emit ---------- */
+/* ---------- level 2 shipped pilot ---------- */
+if (!advanced || !advanced.tracks || !advanced.sessions) fail("advanced: missing tracks or sessions");
+else {
+  const advIds = new Set();
+  const advTracks = new Set(advanced.tracks.map((t) => t.code));
+  for (const s of advanced.sessions) {
+    const where = `advanced ${s.id}`;
+    if (advIds.has(s.id)) fail(`${where}: duplicate id`);
+    advIds.add(s.id);
+    if (!advTracks.has(s.track)) fail(`${where}: unknown track ${s.track}`);
+    if (!["essay", "whole"].includes(s.kind)) fail(`${where}: kind must be essay or whole`);
+    for (const field of ["title", "hook", "oneIdea", "context", "reflection", "practice"]) {
+      if (!s[field] || String(s[field]).trim().length < 8) fail(`${where}: missing or short "${field}"`);
+    }
+    for (const t of s.terms || []) if (!terms[t]) fail(`${where}: term "${t}" not in glossary`);
+
+    const items = s.retrieval || [];
+    if (items.length !== 5) fail(`${where}: needs 5 retrieval items (has ${items.length})`);
+    items.forEach((it, i) => {
+      if (!it.q || String(it.q).trim().length < 10) fail(`${where}: retrieval ${i + 1} has no question`);
+      if (!it.a || String(it.a).trim().length < 3) fail(`${where}: retrieval ${i + 1} has no answer`);
+    });
+
+    if (s.kind === "essay") {
+      if (!Array.isArray(s.essay) || !s.essay.length) fail(`${where}: essay needs paragraphs`);
+      for (const ex of s.excerpts || []) {
+        ex.text = resolve(ex.uids || [], { verse: ex.verse });
+        checkContiguous(ex.uids || [], `${where} excerpt`);
+      }
+    }
+
+    if (s.kind === "whole") {
+      if (!Array.isArray(s.sections) || !s.sections.length) fail(`${where}: whole text needs sections`);
+      const suttas = new Set();
+      const covered = new Set();
+      for (const sec of s.sections) {
+        if (!sec.label || !(sec.uids || []).length) fail(`${where}: section needs a label and uids`);
+        for (const u of sec.uids) suttas.add(suttaOf(u));
+        checkContiguous(sec.uids, `${where} · ${sec.label}`);
+        sec.text = resolve(sec.uids, { verse: sec.verse });
+        if (!sec.text) fail(`${where}: section "${sec.label}" resolved empty`);
+        if (sec.mark && !sec.text.includes(sec.mark)) fail(`${where}: mark "${sec.mark}" not in section "${sec.label}"`);
+        sec.uids.forEach((u) => covered.add(u));
+      }
+      for (const o of s.omit || []) {
+        for (const u of o.uids || []) {
+          if (!canon.has(suttaOf(u))) fail(`${where}: omitted uid "${u}" does not exist`);
+          covered.add(u);
+        }
+      }
+      if (suttas.size !== 1) fail(`${where}: whole text spans ${[...suttas].join(", ")}`);
+      const sutta = [...suttas][0];
+      const rec = canon.get(sutta);
+      if (!rec) fail(`${where}: sutta "${sutta}" not in snapshot`);
+      else {
+        const missing = rec.segments
+          .filter((x) => x.text && !covered.has(x.uid))
+          .map((x) => x.uid);
+        if (missing.length) fail(`${where}: whole text does not cover ${missing.slice(0, 4).join(", ")}${missing.length > 4 ? " …" : ""}`);
+      }
+      s.sutta = sutta;
+    }
+  }
+}
+
 if (errors.length) {
   console.error(`\nBUILD FAILED — ${errors.length} error(s):\n`);
   for (const e of errors) console.error("  ✗ " + e);
@@ -253,6 +318,7 @@ const payload = {
   glossary: terms,
   changelog,
   level2,
+  advanced,
   builtAt: new Date().toISOString(),
 };
 
@@ -283,6 +349,7 @@ console.log(`Built ${OUT}`);
 console.log(`  ${payload.sessions.length} sessions · ${payload.checkpoints.length} checkpoint · ${payload.scenarios.length} scenarios · ${Object.keys(payload.glossary).length} terms`);
 console.log(`  ${rows.length - 1} citations verified against ${canon.size} suttas`);
 console.log(`  ${Object.keys(retrieval).length} retrieval sets · ${Object.keys(visuals).length} diagrams`);
+if (advanced && advanced.sessions) console.log(`  Level 2 pilot: ${advanced.sessions.length} sessions (${advanced.sessions.filter((s) => s.kind === "whole").length} whole texts)`);
 if (warnings.length) {
   console.log(`  ${warnings.length} warning(s):`);
   warnings.forEach((w) => console.log("    · " + w));

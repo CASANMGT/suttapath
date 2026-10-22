@@ -7,6 +7,12 @@ Companion to `CURRICULUM.md` (Level 1: 36 sessions) and `CONTENT_PLAN.md`
 (production phasing). This document is the design for what comes after a
 reader finishes the beginner path.
 
+**Status (2026-10-22): the 2.0 pilot is shipped as v1.4** — Track A
+(six apparatus sessions) plus MN 10 and SN 12.23 read whole, with a
+long-read surface at `#/adv`. Tracks B2/B4–B6, C, D, the capstone, and the
+Pali labs remain planned. The pilot gate is now a reader test, not a build
+task.
+
 ---
 
 ## 1. Who this is for
@@ -251,11 +257,12 @@ does: teach a person to read the canon.
 
 ## 9. Recommendation
 
-Build **2.0 only**, as a pilot: Track A and two whole texts. It is the
-cheapest way to learn whether the Level-1 reader actually wants to read a
-3,000-word sutta, and it produces the renderer and schema that everything
-else depends on.
+**2.0 is shipped.** Track A and two whole texts are live. What remains is
+the gate: do ten Level-1 graduates read MN 10 unaided, and can six state its
+structure without the map?
 
-If the pilot gate fails, the answer is not more content. It is that Level 1
-is the product, and the advanced tier should be a reading list with a
-protocol — not a second curriculum.
+If the gate fails, the answer is not more content. It is that Level 1 is the
+product, and the advanced tier should be a reading list with a protocol —
+not a second curriculum. If it passes, build 2.1 (Tracks B and C) before
+Track D; the comparative and Pali work is the most expensive and the most
+dependent on a specialist.

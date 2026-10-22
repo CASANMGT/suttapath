@@ -4,7 +4,7 @@ A study app for the Theravāda Pali Canon, for English-speaking adults with no b
 
 **Live: https://casanmgt.github.io/suttapath/**
 
-This repository holds the complete v1.0 app (content Phases 0–4, plus the internal review pass): thirty-six written sessions across six tracks, three checkpoints, twenty-four integrity-lab scenarios, and a 120-term glossary, all wired to a pinned, citation-verified snapshot of Bhikkhu Sujato's CC0 translation.
+This repository holds the complete Level 1 app (content Phases 0–4, plus the internal review pass) and the **Level 2 pilot**: thirty-six guided sessions across six tracks, three checkpoints, twenty-four integrity-lab scenarios, a 120-term glossary, and an advanced tier with six apparatus sessions and two whole suttas — all wired to a pinned, citation-verified snapshot of Bhikkhu Sujato's CC0 translation.
 
 ---
 
@@ -44,6 +44,15 @@ The **Integrity Lab** applies the same passages to twelve deliberately hard scen
 - **Structural diagrams** where the argument is a structure: the two arrows, dependent origination, and the eightfold path.
 - **Print stylesheet**: the full path survives as paper (Read, Understand, and Live panels print in sequence).
 
+## Level 2 — pilot
+
+A separate advanced tier, not a continuation of the 36 sessions:
+
+- **Track A, How the Canon Is Built** (6 sessions): the four nikāyas, formula and ellipsis, three reading protocols, the verse books, Vinaya orientation, Abhidhamma/commentary orientation.
+- **Two whole texts**: MN 10 (Satipaṭṭhāna) and SN 12.23 (Vital Conditions), read complete, in sections, with a contents list and marginal-style notes.
+- The build refuses a "whole text" that omits any non-empty segment without declaring it.
+- The rest of Level 2 (Tracks B–D, capstone, Pali labs) is designed in `docs/ADVANCED_TRACK.md` and not yet written.
+
 ## Architecture
 
 Two layers, never mixed:
@@ -64,7 +73,9 @@ content/appendix.js         editorial source: 24 scenarios + 120 glossary terms
 content/retrieval.js        editorial source: 180 retrieval prompts (5/session)
 content/visuals.js          editorial source: 3 structural diagrams
 content/changelog.js        editorial source: reader-facing release notes
-content/canon/*.json        pinned Sujato CC0 snapshot (33 suttas)
+content/level2.js           editorial source: the Level 2 plan
+content/advanced.js         editorial source: Level 2 pilot sessions
+content/canon/*.json        pinned Sujato CC0 snapshot (35 suttas)
 scripts/fetch-canon.js      refresh the snapshot from SuttaCentral
 scripts/build.js            resolver + validator + emitter (fails on bad citation)
 scripts/audit.js            editorial budget, coverage, and hygiene report
@@ -111,4 +122,6 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] v1.1 — comprehension pass: three structural diagrams, 180 retrieval prompts, release notes, print fixes
 - [x] v1.2 — study plan page, track goals, lab anchor provenance (every passage is taught)
 - [x] v1.3 — Level 2 advanced plan published in-app and as `docs/ADVANCED_TRACK.md`
+- [x] v1.4 — Level 2 pilot shipped: Track A (6) + MN 10 + SN 12.23, long-read surface
 - [ ] Outside gates — Buddhist-studies sign-off on 5.1–5.6; clinical read of 4.6/6.5; real-reader pilot
+- [ ] Level 2 gates — ten Level-1 graduates read MN 10 unaided (six can state its structure); then Tracks C–D

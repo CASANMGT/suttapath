@@ -8,6 +8,35 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
+## [1.4] — 2026-10-22 — Level 2, shipped
+
+### New
+- **Level 2 reader** (`#/adv`): its own progress, contents navigation, section
+  notes, and a long-read surface with no paraphrase between the reader and
+  the text.
+- **Track A — How the Canon Is Built** (6 sessions): the four collections,
+  formula/repetition/the ellipsis, three reading protocols, the verse books,
+  Vinaya orientation, Abhidhamma and commentary orientation.
+- **Whole texts**: MN 10 (Satipaṭṭhāna, 3,143 words) and SN 12.23 (Vital
+  Conditions, 694 words), read in full, in sections.
+- Level 2 card on the home page; start button on the Level 2 plan.
+
+### Content
+- Whole-text sessions omit only the source's own section headings (declared,
+  with a reason); every other non-empty segment is rendered.
+- MN 10 carries a safety note about the charnel-ground contemplations.
+
+### Fixed
+- Home session rows and the continue card no longer inherit the browser's
+  link underline (pre-existing; affected Level 1 too).
+
+### Build
+- New invariant: a whole-text session must cover every non-empty segment of
+  its sutta, or declare the omission. Build fails otherwise.
+- Canon snapshot 35 suttas; 200 citations. Service worker `suttapath-v8`.
+
+---
+
 ## [1.3] — 2026-10-22 — The advanced plan
 
 ### New
