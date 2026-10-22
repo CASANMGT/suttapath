@@ -1204,7 +1204,7 @@
       <p>Release notes: <a class="linkish" href="#/changelog">what changed in each version</a>. How to pace it: <a class="linkish" href="#/plan">the study plan</a>. After it: <a class="linkish" href="#/level2">the Level 2 plan</a>.</p>
 
       <h2>For reviewers and instructors</h2>
-      <p>The review and pilot packets are public: <a class="linkish" href="docs/review/SCHOLAR_REVIEW.md">scholar review</a> · <a class="linkish" href="docs/review/CLINICAL_REVIEW.md">safety review</a> · <a class="linkish" href="docs/pilot/PILOT_KIT.md">reader pilot</a>. They state what is being checked, what is out of scope, and what a verdict looks like.</p>
+      <p>The review and pilot packets are public: <a class="linkish" href="docs/review/SCHOLAR_REVIEW.md">scholar review</a> · <a class="linkish" href="docs/review/CLINICAL_REVIEW.md">safety review</a> · <a class="linkish" href="docs/pilot/PILOT_KIT.md">reader pilot</a>. They state what is being checked, what is out of scope, and what a verdict looks like. Instructors: <a class="linkish" href="docs/session-guides.md">session guides</a> · <a class="linkish" href="docs/guides.md">lab guides</a>.</p>
 
       <h2>Status</h2>
       <p>${done} of ${PATH.length} sessions complete · ${countDone(LAB.map((x) => x.id))} of ${LAB.length} scenarios answered.</p>

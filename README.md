@@ -94,6 +94,7 @@ docs/review/                generic scholar + clinical review packets (v2.2)
 docs/review/VERDICTS.md      verdict registry instructions; verdicts.json alongside
 docs/pilot/                 reader-pilot protocol and tracker (v2.2)
 docs/guides.md              instructor guides for the 24 lab scenarios
+docs/session-guides.md      one instructor guide per Level 1 session (36 + checkpoints)
 docs/citations.csv          per-citation audit report (generated)
 docs/PRD.md · CURRICULUM.md · CONTENT_SCHEMA.md · CONTENT_PLAN.md   the full design
 CHANGELOG.md                version history (engineering-facing)
@@ -136,6 +137,7 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] v2.1 — citations, section deep links, spaced review (3/10/30 days)
 - [x] v2.2 — generic scholar, clinical, and reader-pilot kits (`docs/review`, `docs/pilot`)
 - [x] v2.3 — verdict registry, review-status gate, pilot report generator
+- [x] v2.4 — instructor guide for every session and checkpoint
 - [ ] Outside gates — run the packets; record verdicts for 5.1–5.6, Level 2 doctrinal, 4.6/6.5/C5
 - [ ] Level 2 reader gate — ten Level-1 graduates read MN 10 unaided (six can state its structure)
 

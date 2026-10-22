@@ -8,6 +8,29 @@ module.exports = {
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   releases: [
     {
+      version: "2.4",
+      date: "22 October 2026",
+      name: "Session guides",
+      summary:
+        "An instructor guide for every session and checkpoint: how to open it, the misreading to correct, and what to do if the room goes quiet.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "Thirty-six session guides plus three checkpoint guides, in docs/session-guides.md.",
+            "Each guide gives the session's job, an opening move, the common misreading, and a fallback if discussion stalls.",
+            "Linked from the About page alongside the lab-scenario guides.",
+          ],
+        },
+        {
+          label: "Note",
+          items: [
+            "This closes the last editorial deliverable. External review and pilot gates remain open.",
+          ],
+        },
+      ],
+    },
+    {
       version: "2.3",
       date: "22 October 2026",
       name: "Gate operations",

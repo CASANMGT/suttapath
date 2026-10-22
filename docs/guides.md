@@ -1,9 +1,12 @@
-# Instructor Guides — Integrity Lab
+﻿# Instructor Guides — Integrity Lab
 
-Twelve guides, one per lab scenario. Each assumes the seminar questions and
+Twenty-four guides, one per lab scenario. Each assumes the seminar questions and
 both `counter` positions are already on the scenario page; this document adds
 what those cannot say: how to open the room, what usually happens, and when
 to intervene.
+
+**Session-level guides (all 36 sessions) are in `session-guides.md`.** This
+file covers the lab scenarios only.
 
 **Format rules for using the lab in class**
 
@@ -269,3 +272,4 @@ scrolling, and Dhp 1–2 makes the mind's direction causal. Expect a fast
 consensus that social media is bad; that is not the exercise. Press on
 whether the comparison ever carries information, and let the "listener"
 counter-position have its say — sometimes the sting is a real ambition.
+

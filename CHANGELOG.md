@@ -8,6 +8,20 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
+## [2.4] — 2026-10-22 — Session guides
+
+### New
+- **`docs/session-guides.md`**: one instructor guide for each of the 36
+  sessions plus the three checkpoints — purpose, opening move, the common
+  misreading to correct, and a move if the room stalls.
+- Linked from About and from the lab guides.
+
+### Note
+- This closes the last Phase 4 editorial deliverable. The external review and
+  pilot gates remain open.
+
+---
+
 ## [2.3] — 2026-10-22 — Gate operations
 
 ### New
