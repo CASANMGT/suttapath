@@ -8,6 +8,25 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
+## [2.3] — 2026-10-22 — Gate operations
+
+### New
+- **Verdict registry** (`docs/review/verdicts.json` + `VERDICTS.md`): one
+  record for 18 scholar and 5 clinical sessions, with `pending / pass /
+  minor / revise` statuses.
+- **`scripts/review-status.js`**: validates the registry, reports signed,
+  pending, and returned sessions; `--require` exits non-zero while gates are
+  open.
+- **`scripts/pilot-report.js`**: parses `docs/pilot/pilot_tracker.csv` and
+  produces the Level 1/Level 2 gate decision using the thresholds in
+  `PILOT_KIT.md`, including confusions and a final decision.
+
+### Note
+- Tooling only. No verdicts exist; the registry is initialised to `pending`,
+  and the app still says “content-complete, not certified”.
+
+---
+
 ## [2.2] — 2026-10-22 — Review and pilot packets
 
 ### New

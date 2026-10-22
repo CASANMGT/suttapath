@@ -8,6 +8,29 @@ module.exports = {
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   releases: [
     {
+      version: "2.3",
+      date: "22 October 2026",
+      name: "Gate operations",
+      summary:
+        "The external work now has a paper trail: a verdict registry, a status gate, and a pilot report that turns the tracker into a decision.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "A verdict registry for 18 scholar and 5 clinical sessions, with pending / pass / minor / revise.",
+            "A review-status command that reports what is signed and blocks a release while anything is open.",
+            "A pilot report generator that reads the tracker and states whether each gate passed.",
+          ],
+        },
+        {
+          label: "Note",
+          items: [
+            "Tooling only. Nothing has been reviewed yet, and the app still says so.",
+          ],
+        },
+      ],
+    },
+    {
       version: "2.2",
       date: "22 October 2026",
       name: "Review and pilot packets",

@@ -83,12 +83,15 @@ content/canon/*.json        pinned Sujato CC0 snapshot (35 suttas)
 scripts/fetch-canon.js      refresh the snapshot from SuttaCentral
 scripts/build.js            resolver + validator + emitter (fails on bad citation)
 scripts/audit.js            editorial budget, coverage, and hygiene report
+scripts/pilot-report.js     tracker CSV → Level 1/2 gate report
+scripts/review-status.js    verdict registry check (--require for releases)
 scripts/dump.js             segment inspector for choosing ranges
 docs/STYLE_GUIDE.md         editorial voice, layer rules, field budgets
 docs/TRANSLATION_COVERAGE.md  what is cited, segment-level, with totals
 docs/REVIEW.md              the v1.0 review pass: gates, fixes, accepted deviations
 docs/ADVANCED_TRACK.md      Level 2 plan: whole texts, comparison, Pali tools, capstone
 docs/review/                generic scholar + clinical review packets (v2.2)
+docs/review/VERDICTS.md      verdict registry instructions; verdicts.json alongside
 docs/pilot/                 reader-pilot protocol and tracker (v2.2)
 docs/guides.md              instructor guides for the 24 lab scenarios
 docs/citations.csv          per-citation audit report (generated)
@@ -132,6 +135,7 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] v2.0 — Level 2 content-complete: Tracks B–D, 11 whole texts, comparison view, capstone
 - [x] v2.1 — citations, section deep links, spaced review (3/10/30 days)
 - [x] v2.2 — generic scholar, clinical, and reader-pilot kits (`docs/review`, `docs/pilot`)
+- [x] v2.3 — verdict registry, review-status gate, pilot report generator
 - [ ] Outside gates — run the packets; record verdicts for 5.1–5.6, Level 2 doctrinal, 4.6/6.5/C5
 - [ ] Level 2 reader gate — ten Level-1 graduates read MN 10 unaided (six can state its structure)
 

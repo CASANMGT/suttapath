@@ -1,0 +1,47 @@
+{
+  "updated": "2026-10-22",
+  "scholar": {
+    "reviewer": null,
+    "anonymous": true,
+    "date": null,
+    "verdict": "pending",
+    "sessions": {
+      "5.1": "pending",
+      "5.2": "pending",
+      "5.3": "pending",
+      "5.4": "pending",
+      "5.5": "pending",
+      "5.6": "pending",
+      "C1": "pending",
+      "C2": "pending",
+      "C3": "pending",
+      "C4": "pending",
+      "C5": "pending",
+      "C6": "pending",
+      "D1": "pending",
+      "D2": "pending",
+      "D3": "pending",
+      "D4": "pending",
+      "D5": "pending",
+      "D6": "pending"
+    }
+  },
+  "clinical": {
+    "reviewer": null,
+    "anonymous": true,
+    "date": null,
+    "verdict": "pending",
+    "sessions": {
+      "4.6": "pending",
+      "6.5": "pending",
+      "B1": "pending",
+      "B6": "pending",
+      "C5": "pending"
+    }
+  },
+  "pilot": {
+    "level1": "pending",
+    "level2": "pending",
+    "report": null
+  }
+}

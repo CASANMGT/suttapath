@@ -1,4 +1,4 @@
-/* SuttaPath — editorial source (sessions).
+﻿/* SuttaPath — editorial source (sessions).
  *
  * This file contains NO canonical text. Each block lists SuttaCentral
  * segment UIDs; scripts/build.js resolves them against content/canon/ and
@@ -10,7 +10,7 @@
 (function (root) {
   const data = {
     meta: {
-      version: "2.2.0",
+      version: "2.3.0",
       translationLabel: "Bhikkhu Sujato · CC0",
       totalSessions: 36,
       builtSessions: 36,
@@ -1544,3 +1544,4 @@
   if (typeof module !== "undefined" && module.exports) module.exports = data;
   else (root.SP = root.SP || {}), (root.SP.source = data);
 })(typeof globalThis !== "undefined" ? globalThis : this);
+
