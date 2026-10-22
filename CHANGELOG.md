@@ -8,6 +8,25 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
+## [2.2] — 2026-10-22 — Review and pilot packets
+
+### New
+- **Scholar review packet** (`docs/review/SCHOLAR_REVIEW.md`): scope,
+  per-session claim checklists for 5.1–5.6 and Level 2 doctrinal sessions,
+  verdict form, cover letter, and our own list of soft spots.
+- **Clinical review packet** (`docs/review/CLINICAL_REVIEW.md`): 4.6, 6.5, B1,
+  B6, C5 — stop language, eligibility, crisis signposting, mortality and
+  attainment framing.
+- **Reader pilot kit** (`docs/pilot/PILOT_KIT.md`) with a tracker CSV: gates,
+  eligibility, consent script, protocols, rubrics, exit interview, and
+  decision rules.
+- Links to all three from the app's About page.
+
+### Note
+- These are packets, not verdicts. The external gates remain open.
+
+---
+
 ## [2.1] — 2026-10-22 — Citations and review
 
 ### New

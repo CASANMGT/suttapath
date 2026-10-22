@@ -19,6 +19,10 @@ the way to test the format before investing in review.
 **v2.1** adds the study tools from §5: section citations, deep links to
 sections, and spaced retrieval at 3, 10, and 30 days.
 
+**v2.2** adds the review and pilot packets: `REVIEW_KIT_SCHOLAR.md`,
+`REVIEW_KIT_CLINICAL.md`, and `PILOT_KIT.md` (with a tracker). These are the
+forms for the gates, not the gates themselves.
+
 ---
 
 ## 1. Who this is for

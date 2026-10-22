@@ -8,6 +8,30 @@ module.exports = {
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   releases: [
     {
+      version: "2.2",
+      date: "22 October 2026",
+      name: "Review and pilot packets",
+      summary:
+        "The forms for the gates that need people: a scholar packet, a safety packet, and a reader-pilot protocol — all public.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "A scholar review packet with the specific claims we are least sure about, a verdict form, and a cover letter.",
+            "A clinical review packet covering breath practice, mortality and grief content, and the jhāna sessions.",
+            "A reader-pilot kit with gates, consent, scoring rubrics, an exit interview, and a tracker.",
+            "Links to all three from the About page.",
+          ],
+        },
+        {
+          label: "Note",
+          items: [
+            "These are packets, not verdicts. Nothing has been reviewed externally yet, and the app still says so.",
+          ],
+        },
+      ],
+    },
+    {
       version: "2.1",
       date: "22 October 2026",
       name: "Citations and review",

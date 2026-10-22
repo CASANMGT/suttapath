@@ -1,4 +1,4 @@
-# SuttaPath
+﻿# SuttaPath
 
 A study app for the Theravāda Pali Canon, for English-speaking adults with no background in Buddhism.
 
@@ -64,7 +64,7 @@ Two layers, never mixed:
 - **Canon layer** (`content/canon/*.json`): segment-addressed Sujato CC0 text, pinned by snapshot, byte-identical on every rebuild.
 - **Editorial layer** (`content/sessions.js`, `content/appendix.js`): sessions, scenarios, glossary — UIDs only, zero canon text inline.
 
-`scripts/build.js` resolves every editorial UID against the snapshot and **fails the build on a broken citation** — unknown segment, non-contiguous range, missing `mark` string, missing glossary term, unresolved glossary link. `docs/citations.csv` records all 198 citation rows for audit. `scripts/audit.js` re-checks the editorial budgets (context, inference, paraphrase, reading grade, scenario spread). The app (`assets/data/content.js`) is a build artifact; you do not edit it by hand.
+`scripts/build.js` resolves every editorial UID against the snapshot and **fails the build on a broken citation** — unknown segment, non-contiguous range, missing `mark` string, missing glossary term, unresolved glossary link. `docs/citations.csv` records all 200 citation rows for audit. `scripts/audit.js` re-checks the editorial budgets (context, inference, paraphrase, reading grade, scenario spread). The app (`assets/data/content.js`) is a build artifact; you do not edit it by hand.
 
 ## Repository
 
@@ -88,6 +88,8 @@ docs/STYLE_GUIDE.md         editorial voice, layer rules, field budgets
 docs/TRANSLATION_COVERAGE.md  what is cited, segment-level, with totals
 docs/REVIEW.md              the v1.0 review pass: gates, fixes, accepted deviations
 docs/ADVANCED_TRACK.md      Level 2 plan: whole texts, comparison, Pali tools, capstone
+docs/review/                generic scholar + clinical review packets (v2.2)
+docs/pilot/                 reader-pilot protocol and tracker (v2.2)
 docs/guides.md              instructor guides for the 24 lab scenarios
 docs/citations.csv          per-citation audit report (generated)
 docs/PRD.md · CURRICULUM.md · CONTENT_SCHEMA.md · CONTENT_PLAN.md   the full design
@@ -129,5 +131,7 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] v1.4 — Level 2 pilot shipped: Track A (6) + MN 10 + SN 12.23, long-read surface
 - [x] v2.0 — Level 2 content-complete: Tracks B–D, 11 whole texts, comparison view, capstone
 - [x] v2.1 — citations, section deep links, spaced review (3/10/30 days)
-- [ ] Outside gates — Buddhist-studies sign-off on 5.1–5.6 and Level 2 doctrinal sessions; clinical read of 4.6/6.5 and C5
+- [x] v2.2 — generic scholar, clinical, and reader-pilot kits (`docs/review`, `docs/pilot`)
+- [ ] Outside gates — run the packets; record verdicts for 5.1–5.6, Level 2 doctrinal, 4.6/6.5/C5
 - [ ] Level 2 reader gate — ten Level-1 graduates read MN 10 unaided (six can state its structure)
+

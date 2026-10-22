@@ -10,7 +10,7 @@
 (function (root) {
   const data = {
     meta: {
-      version: "2.1.0",
+      version: "2.2.0",
       translationLabel: "Bhikkhu Sujato · CC0",
       totalSessions: 36,
       builtSessions: 36,

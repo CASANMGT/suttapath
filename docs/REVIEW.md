@@ -118,6 +118,22 @@ Resolved since the review above:
 
 Still open: the outside gates (3 and 4 above), session guides, and audio.
 
+## v2.2 follow-up (review infrastructure)
+
+The gates are now packets, not intentions:
+
+- **Scholar kit** (`docs/review/SCHOLAR_REVIEW.md`): scope, per-session claim
+  checklists for 5.1–5.6 and the Level 2 doctrinal sessions, a verdict form,
+  a cover letter, and a list of our own soft spots.
+- **Clinical kit** (`docs/review/CLINICAL_REVIEW.md`): 4.6, 6.5, B1, B6, and
+  C5, with the exact safety questions and a per-session verdict form.
+- **Pilot kit** (`docs/pilot/PILOT_KIT.md` + `pilot_tracker.csv`): gates,
+  eligibility, consent script, protocols, rubrics, exit interview, decision
+  rules, and a tracker.
+
+No verdicts exist yet. The packets make the review runnable; they do not
+substitute for the reviewers.
+
 ## Recommendation
 
 Ship v1.0 as **content-complete for readers**; v1.1 adds the comprehension

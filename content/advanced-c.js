@@ -1,4 +1,4 @@
-/* SuttaPath — Level 2 · Track C (doctrine in depth). */
+﻿/* SuttaPath — Level 2 · Track C (doctrine in depth). */
 module.exports = [
   {
     id: "c1", code: "C1", track: "C", order: 1, kind: "whole",
@@ -155,7 +155,7 @@ module.exports = [
     hook: "The Buddha's own account: a childhood memory, a meal, and three knowledges.",
     oneIdea: "In the Buddha's autobiography, jhāna is not an escape from the path — it is the path he had forgotten.",
     context:
-      "This is the Buddha's first-person account of his awakening in MN 36, selected rather than whole. After years of extreme austerity he remembers a childhood experience of sitting in the shade of a rose-apple tree, enters jhāna, and asks whether that pleasure might be the path. The excerpt follows him through the first absorption to the three knowledges of the night of awakening. It is the canon's clearest statement that absorption and insight are not rivals.",
+      "This is the Buddha's first-person account of his awakening in MN 36, selected rather than whole. After years of extreme austerity he remembers a childhood experience of sitting in the shade of a black plum tree, enters jhāna, and asks whether that pleasure might be the path. The excerpt follows him through the first absorption to the three knowledges of the night of awakening. It is the canon's clearest statement that absorption and insight are not rivals.",
     essay: [
       "The story begins with failure. The Bodhisatta has tried breathless absorption, extreme fasting, and a body reduced to skin and bone, and he concludes that none of it has produced the knowledge he sought. The turning point is a memory from childhood: sitting in the cool shade of a black plum tree while his father worked, he had entered the first absorption. He had forgotten it; now it returns as a question.",
       "The question is whether such pleasure is a danger. He decides it is not — it has nothing to do with sensual pleasure or unskillful qualities — and he eats solid food, which loses him his five companions. Then, secluded, he enters the four absorptions. The text is careful: jhāna is a condition for the knowledges, not a substitute for them.",
@@ -173,7 +173,7 @@ module.exports = [
     reflection: "Where have you treated calm and insight as rivals?",
     practice: "Write the sequence of the three knowledges from memory, then check the excerpts. Note what you added.",
     retrieval: [
-      { q: "What memory turns the Bodhisatta back to jhāna?", a: "Sitting in the shade of a rose-apple (black plum) tree as a child, entering the first absorption." },
+      { q: "What memory turns the Bodhisatta back to jhāna?", a: "Sitting in the shade of a black plum tree as a child, entering the first absorption." },
       { q: "Why does he eat solid food?", a: "Because a body so emaciated cannot achieve that pleasure." },
       { q: "What are the three knowledges?", a: "Past lives; beings passing away and reappearing; the ending of defilements." },
       { q: "What is the relation of jhāna to the knowledges?", a: "Jhāna is the condition in which the knowledges arise, not a substitute for them." },
@@ -181,3 +181,4 @@ module.exports = [
     ],
   },
 ];
+
