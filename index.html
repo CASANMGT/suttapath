@@ -4,9 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>SuttaPath — read the Pali Canon</title>
-<meta name="description" content="A guided path through the Pali Canon for complete beginners. Eighteen sessions, twelve integrity scenarios, and a glossary of the words you actually need.">
+<meta name="description" content="A guided path through the Pali Canon for complete beginners. Thirty-six sessions, an advanced tier of whole suttas, an integrity lab, and a glossary. Works offline.">
 <meta name="theme-color" content="#f4f1e8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#12110e" media="(prefers-color-scheme: dark)">
+<meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="SuttaPath">
@@ -24,6 +25,12 @@
   <main id="main" tabindex="-1"></main>
   <div class="dock-slot" id="dockSlot"></div>
   <div id="popover-root"></div>
+
+  <div class="net-pill" id="netPill" hidden>Offline · cached content only</div>
+  <div class="update-toast" id="updateToast" hidden>
+    <span>A new version is ready.</span>
+    <button class="update-toast__btn" id="reloadApp">Reload</button>
+  </div>
 
   <noscript>
     <p style="padding:2rem;font-family:Georgia,serif">SuttaPath needs JavaScript. The reading experience is worth it.</p>

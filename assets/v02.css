@@ -761,6 +761,85 @@
   text-wrap: pretty;
 }
 
+/* ---------- install & offline ---------- */
+
+.install-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 26px 0 0;
+  padding: 16px 18px;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--field);
+}
+.install-card__body b {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+.install-card__body span {
+  display: block;
+  margin-top: 3px;
+  max-width: 34em;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-3);
+}
+.install-card__how { color: var(--accent) !important; }
+.install-card__actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.net-pill {
+  position: fixed;
+  top: var(--bar);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  padding: 6px 12px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+}
+body.is-offline #main { padding-top: 28px; }
+.update-toast {
+  position: fixed;
+  left: 50%;
+  bottom: calc(env(safe-area-inset-bottom) + 92px);
+  translate: -50% 0;
+  z-index: 70;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: var(--shadow-2);
+  font-family: var(--sans);
+  font-size: 13px;
+}
+.update-toast__btn {
+  font: inherit;
+  color: var(--paper);
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+.net-pill[hidden], .update-toast[hidden] { display: none; }
+
 /* ---------- level 3 ---------- */
 
 .l3-list { border-top: 1px solid var(--line); margin-top: 26px; }

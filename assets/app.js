@@ -25,9 +25,17 @@
     mode: "sp.mode",
     last: "sp.last",
     reviews: "sp.reviews",
+    install: "sp.installDismissed",
   };
   const REVIEW_DAYS = [3, 10, 30];
   const DAY = 86400000;
+  const PWA = {
+    deferred: null,
+    installed: false,
+    standalone:
+      window.matchMedia("(display-mode: standalone)").matches ||
+      window.navigator.standalone === true,
+  };
 
   function read(k, fallback) {
     try {
@@ -73,6 +81,116 @@
     return Object.entries(state.reviews)
       .filter(([, r]) => r.due <= now)
       .map(([id]) => id);
+  }
+
+  /* ---------- install & offline ---------- */
+
+  function isIOS() {
+    const ua = navigator.userAgent || "";
+    const iPadOS = /Macintosh/.test(ua) && navigator.maxTouchPoints > 1;
+    return /iPhone|iPad|iPod/.test(ua) || iPadOS;
+  }
+  function installDismissedRecently() {
+    const t = read(KEY.install, 0);
+    return t && Date.now() - t < 30 * DAY;
+  }
+  function installEligible() {
+    return !PWA.standalone && !installDismissedRecently() && (!!PWA.deferred || isIOS());
+  }
+  function installCardHtml() {
+    const how = !PWA.deferred && isIOS()
+      ? `<span class="install-card__how">Tap Share, then “Add to Home Screen”.</span>`
+      : "";
+    return `<div class="install-card">
+      <div class="install-card__body">
+        <b>Install SuttaPath</b>
+        <span>Reads offline. Opens from your home screen, without browser chrome.</span>
+        ${how}
+      </div>
+      <div class="install-card__actions">
+        ${PWA.deferred ? `<button class="btn" data-install>Install</button>` : ""}
+        <button class="btn btn--ghost" data-install-dismiss>Not now</button>
+      </div>
+    </div>`;
+  }
+  function dismissInstall() {
+    write(KEY.install, Date.now());
+    const card = $(".install-card");
+    if (card) card.remove();
+  }
+  async function promptInstall() {
+    if (!PWA.deferred) return;
+    const ev = PWA.deferred;
+    PWA.deferred = null;
+    ev.prompt();
+    try {
+      const choice = await ev.userChoice;
+      if (choice && choice.outcome === "accepted") PWA.installed = true;
+      else write(KEY.install, Date.now());
+    } catch (_) {}
+    const card = $(".install-card");
+    if (card) card.remove();
+  }
+  function bindInstall(root) {
+    const scope = root || document;
+    $$("[data-install]", scope).forEach((b) => b.addEventListener("click", promptInstall));
+    $$("[data-install-dismiss]", scope).forEach((b) => b.addEventListener("click", dismissInstall));
+  }
+  function showInstallCard() {
+    if (!installEligible() || $(".install-card")) return;
+    const head = $(".home .masthead");
+    if (!head) return;
+    head.insertAdjacentHTML("afterend", installCardHtml());
+    bindInstall();
+  }
+  function updateNetworkPill() {
+    const el = $("#netPill");
+    if (el) el.hidden = navigator.onLine;
+    document.body.classList.toggle("is-offline", !navigator.onLine);
+  }
+  function showUpdateToast() {
+    const el = $("#updateToast");
+    if (el && navigator.onLine) el.hidden = false;
+  }
+  function setupPWA() {
+    updateNetworkPill();
+    window.addEventListener("online", updateNetworkPill);
+    window.addEventListener("offline", updateNetworkPill);
+
+    const reload = $("#reloadApp");
+    if (reload) reload.addEventListener("click", () => location.reload());
+
+    window.addEventListener("beforeinstallprompt", (e) => {
+      e.preventDefault();
+      PWA.deferred = e;
+      showInstallCard();
+    });
+    window.addEventListener("appinstalled", () => {
+      PWA.installed = true;
+      PWA.deferred = null;
+      const card = $(".install-card");
+      if (card) card.remove();
+    });
+
+    if (!("serviceWorker" in navigator)) return;
+    const hadController = !!navigator.serviceWorker.controller;
+    navigator.serviceWorker
+      .register("sw.js")
+      .then((reg) => {
+        reg.addEventListener("updatefound", () => {
+          const worker = reg.installing;
+          if (!worker) return;
+          worker.addEventListener("statechange", () => {
+            if (worker.state === "installed" && navigator.serviceWorker.controller) {
+              showUpdateToast();
+            }
+          });
+        });
+        navigator.serviceWorker.addEventListener("controllerchange", () => {
+          if (hadController || PWA.installed) showUpdateToast();
+        });
+      })
+      .catch(() => {});
   }
 
   function setDone(id, on) {
@@ -291,6 +409,7 @@
         <span>${done}/${PATH.length} sessions · ${labDone}/${LAB.length} scenarios</span>
       </footer>
     </div>`;
+    showInstallCard();
   }
 
   function rowHtml(s) {
@@ -1356,6 +1475,19 @@
         </div>
       </div>
       <div class="setting" style="display:block">
+        <span class="setting__label">App</span>
+        <p class="small" style="color:var(--ink-3);line-height:1.55;margin:4px 0 0">${
+          PWA.standalone
+            ? "Installed. This window is the app."
+            : PWA.deferred
+            ? "Installable. Add it to your home screen and it opens without browser chrome."
+            : isIOS()
+            ? "On iPhone or iPad: tap Share, then “Add to Home Screen”."
+            : "Works offline once loaded. Use your browser's Install option to add it to the home screen."
+        }</p>
+        ${PWA.deferred && !PWA.standalone ? `<button class="btn btn--ghost" data-install style="margin-top:12px">Install app</button>` : ""}
+      </div>
+      <div class="setting" style="display:block">
         <p class="small" style="color:var(--ink-3);line-height:1.55;margin:4px 0 0">Passages: Bhikkhu Sujato, CC0, via SuttaCentral. Paraphrase and notes: SuttaPath. Nothing you write leaves this device.</p>
       </div>
       <div class="setting" style="border-bottom:0;justify-content:flex-end">
@@ -1380,6 +1512,7 @@
       });
     });
     document.addEventListener("keydown", escClose);
+    bindInstall(sheet);
   }
 
   function closeSettings() {
@@ -1474,5 +1607,6 @@
     });
   });
 
+  setupPWA();
   route();
 })();

@@ -10,7 +10,7 @@
 (function (root) {
   const data = {
     meta: {
-      version: "2.6.0",
+      version: "2.7.0",
       translationLabel: "Bhikkhu Sujato · CC0",
       totalSessions: 36,
       builtSessions: 36,
@@ -1544,6 +1544,7 @@
   if (typeof module !== "undefined" && module.exports) module.exports = data;
   else (root.SP = root.SP || {}), (root.SP.source = data);
 })(typeof globalThis !== "undefined" ? globalThis : this);
+
 
 
 

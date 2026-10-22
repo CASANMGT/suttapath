@@ -10,6 +10,28 @@ Every entry carries its commit time, local (+07:00).
 
 ---
 
+## [2.7] — 2026-10-23 00:10 (+07:00) — Installable and offline
+
+### New
+- **Service worker registration** (the file existed but was never registered):
+  the shell, CSS, app code, content, manifest, and icons are precached.
+- **Install prompt**: home-page card and a Reading-settings row. Native prompt
+  where available; Share → Add to Home Screen instructions on iOS; 30-day
+  dismissal; removed after install.
+- **Offline-first fetch**: navigations serve the cached shell immediately and
+  revalidate in the background; assets are stale-while-revalidate.
+- **Offline bar** when the connection drops; **update prompt** when a new
+  worker activates.
+- Manifest refreshed: current description, `display_override`, `orientation:
+  any`, and shortcuts (Continue, Glossary, Level 2).
+
+### Build
+- Service worker `suttapath-v16`; version `2.7.0`.
+- Verified in headless Chrome: SW active, `content.js` cached, synthetic
+  install event shows the card, offline navigation renders the glossary.
+
+---
+
 ## [2.6] — 2026-10-22 22:44 (+07:00) — Level 3 seminars
 
 ### New

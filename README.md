@@ -43,6 +43,7 @@ The **Integrity Lab** applies the same passages to twelve deliberately hard scen
 - **Check yourself**: five retrieval prompts per session, unscored, with answers behind a reveal.
 - **Structural diagrams** where the argument is a structure: the two arrows, dependent origination, and the eightfold path.
 - **Print stylesheet**: the full path survives as paper (Read, Understand, and Live panels print in sequence).
+- **Installable PWA**: register-on-first-load service worker, precached shell, home-screen install prompt (with iOS instructions), offline bar, and an update prompt. Works fully offline after the first visit.
 
 ## Level 2 — content-complete
 
@@ -144,6 +145,7 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] v2.4 — instructor guide for every session and checkpoint
 - [x] v2.5 — commit timestamps in both changelogs
 - [x] v2.6 — Level 3 seminars (six output workshops)
+- [x] v2.7 — installable PWA and offline-first service worker
 - [ ] Outside gates — run the packets; record verdicts for 5.1–5.6, Level 2 doctrinal, 4.6/6.5/C5
 - [ ] Level 2 reader gate — ten Level-1 graduates read MN 10 unaided (six can state its structure)
 
