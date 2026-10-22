@@ -109,4 +109,6 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] Phase 4 — Track 6, checkpoint 3, scenarios 21–24, 120-term glossary, print stylesheet, instructor guides
 - [x] Phase 5 (internal review) — build invariants extended (`related` links), 12 content fixes, `docs/REVIEW.md`
 - [x] v1.1 — comprehension pass: three structural diagrams, 180 retrieval prompts, release notes, print fixes
+- [x] v1.2 — study plan page, track goals, lab anchor provenance (every passage is taught)
+- [x] v1.3 — Level 2 advanced plan published in-app and as `docs/ADVANCED_TRACK.md`
 - [ ] Outside gates — Buddhist-studies sign-off on 5.1–5.6; clinical read of 4.6/6.5; real-reader pilot

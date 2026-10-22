@@ -8,6 +8,28 @@ module.exports = {
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   releases: [
     {
+      version: "1.3",
+      date: "22 October 2026",
+      name: "The advanced plan",
+      summary:
+        "Level 2 is published as a plan: whole suttas, comparison, Pali as a tool, and a capstone — with its own page in the app.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "A Level 2 page at #/level2: four tracks of six sessions, the design shift from excerpts to whole texts, the capstone, effort, and the pilot gate.",
+            "A learning goal for every Level 2 track, and the full design linked as a document.",
+          ],
+        },
+        {
+          label: "Note",
+          items: [
+            "This is a plan, not shipped lessons. The page says so, and nothing in it is presented as content you can study yet.",
+          ],
+        },
+      ],
+    },
+    {
       version: "1.2",
       date: "22 October 2026",
       name: "The study plan",

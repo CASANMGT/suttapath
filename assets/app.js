@@ -138,6 +138,7 @@
     if (parts[0] === "canon") return renderCanon();
     if (parts[0] === "changelog") return renderChangelog();
     if (parts[0] === "plan") return renderPlan();
+    if (parts[0] === "level2") return renderLevel2();
     if (parts[0] === "about") return renderAbout();
     return renderHome();
   }
@@ -721,7 +722,70 @@
         }).join("")}
       </ul>
 
+      <p class="level2-next">Finished, or finishing, and want more depth? <a class="linkish" href="#/level2">The Level 2 plan</a> moves from excerpts to whole suttas, comparison, and Pali tools.</p>
+
       <p class="source-line">Session time is the app's own estimate and includes reading, the reflection, and writing. Translation: Bhikkhu Sujato, CC0.</p>
+    </div>`;
+    $("#dockSlot").innerHTML = "";
+  }
+
+  /* ---------- level 2 plan ---------- */
+
+  function renderLevel2() {
+    const l = DATA.level2;
+    topbar([
+      `<a class="icon-btn" href="#/plan" aria-label="Back to the study plan">${ICON.back}</a>`,
+      `<span class="topbar__ref">Level 2</span>`,
+      `<span class="topbar__spacer"></span>`,
+      settingsBtn(),
+    ]);
+
+    $("#main").innerHTML = `<div class="level2 wrap prose">
+      <header class="masthead masthead--small">
+        <div class="eyebrow">Advanced tier · plan</div>
+        <h1 class="display display--sm">After the path,<br><em>the canon.</em></h1>
+        <p class="dek">${esc(l.intro)}</p>
+        <p class="level2-status">${esc(l.status)}</p>
+      </header>
+
+      <div class="note"><span class="note__label">Entry</span>${esc(l.entry)}</div>
+
+      <h2>The design shift</h2>
+      <div class="shift">
+        ${l.shift.map((r) => `<div class="shift__row"><span class="shift__from">${esc(r.from)}</span><span class="shift__arrow" aria-hidden="true">→</span><span class="shift__to">${esc(r.to)}</span></div>`).join("")}
+      </div>
+
+      ${l.tracks.map((t) => `<section class="level2-track">
+        <header class="level2-track__head">
+          <span class="level2-track__code">${esc(t.code)}</span>
+          <h2>${esc(t.name)}</h2>
+          <span class="level2-track__meta">6 sessions · ${esc(t.minutes)}</span>
+        </header>
+        <p class="level2-track__goal">${esc(t.goal)}</p>
+        <ol class="level2-list">
+          ${t.sessions.map((s) => `<li><span class="level2-list__code">${esc(s.code)}</span><span class="level2-list__body"><b>${esc(s.title)}</b><span>${esc(s.note)}</span></span></li>`).join("")}
+        </ol>
+      </section>`).join("")}
+
+      <div class="level2-capstone">
+        <span class="level2-capstone__label">Capstone</span>
+        <h3>${esc(l.capstone.title)}</h3>
+        ${l.capstone.body.map((p) => `<p>${esc(p)}</p>`).join("")}
+      </div>
+
+      <h2>Effort</h2>
+      <p>${esc(l.effort.summary)}</p>
+      <ul class="level2-effort">
+        ${l.effort.items.map((i) => `<li><span>${esc(i.work)}</span><b>${esc(i.days)}</b></li>`).join("")}
+      </ul>
+
+      <div class="note"><span class="note__label">${esc(l.pilot.title)}</span>${esc(l.pilot.body)}</div>
+
+      <h2>What Level 2 will not add</h2>
+      <ul class="level2-not">${l.notAdd.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
+
+      <p class="level2-doc">Full design: <a class="linkish" href="${esc(l.doc)}">${esc(l.doc)}</a> · <a class="linkish" href="${esc(l.docUrl)}" target="_blank" rel="noopener">read it rendered on GitHub</a></p>
+      <p class="source-line">Plan only — no Level 2 sessions are shipped yet.</p>
     </div>`;
     $("#dockSlot").innerHTML = "";
   }
@@ -782,7 +846,7 @@
       <h2>Your data</h2>
       <p>Progress and notes are stored in this browser's local storage. Nothing is sent anywhere. Clearing site data deletes them.</p>
 
-      <p>Release notes: <a class="linkish" href="#/changelog">what changed in each version</a>. How to pace it: <a class="linkish" href="#/plan">the study plan</a>.</p>
+      <p>Release notes: <a class="linkish" href="#/changelog">what changed in each version</a>. How to pace it: <a class="linkish" href="#/plan">the study plan</a>. After it: <a class="linkish" href="#/level2">the Level 2 plan</a>.</p>
 
       <h2>Status</h2>
       <p>${done} of ${PATH.length} sessions complete · ${countDone(LAB.map((x) => x.id))} of ${LAB.length} scenarios answered.</p>

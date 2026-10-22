@@ -8,6 +8,26 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
+## [1.3] — 2026-10-22 — The advanced plan
+
+### New
+- **Level 2 page** (`#/level2`): the advanced tier as a published plan —
+  four tracks × six sessions, the shift from excerpts to whole texts,
+  comparative reading, Pali tools, the unseen-sutta capstone, effort, and the
+  pilot gate.
+- Level 2 design document linked from the page and published at
+  `docs/ADVANCED_TRACK.md` (rendered on GitHub).
+- `content/level2.js` (editorial source) with build validation: four tracks,
+  six sessions each, codes, goals, capstone, effort.
+
+### Note
+- Plan only. No Level 2 sessions are shipped, and the page states that.
+
+### Build
+- Service worker cache `suttapath-v7`; version `1.3.0`.
+
+---
+
 ## [1.2] — 2026-10-22 — The study plan
 
 ### New

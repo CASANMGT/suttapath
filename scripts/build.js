@@ -20,6 +20,7 @@ const appendix = require(path.join(ROOT, "content", "appendix.js"));
 const retrieval = require(path.join(ROOT, "content", "retrieval.js"));
 const visuals = require(path.join(ROOT, "content", "visuals.js"));
 const changelog = require(path.join(ROOT, "content", "changelog.js"));
+const level2 = require(path.join(ROOT, "content", "level2.js"));
 
 const errors = [];
 const warnings = [];
@@ -213,6 +214,19 @@ if (!changelog || !Array.isArray(changelog.releases) || !changelog.releases.leng
   });
 }
 
+/* ---------- level 2 plan ---------- */
+if (!level2 || !level2.title || !level2.intro) fail("level2: missing title or intro");
+else {
+  if (!Array.isArray(level2.tracks) || level2.tracks.length !== 4) fail("level2: needs four tracks");
+  for (const t of level2.tracks || []) {
+    if (!t.code || !t.name || !t.goal) fail(`level2 track ${t.code || "?"}: needs code, name, goal`);
+    if ((t.sessions || []).length !== 6) fail(`level2 track ${t.code}: needs six sessions`);
+    for (const s of t.sessions || []) if (!s.code || !s.title || !s.note) fail(`level2 track ${t.code}: session needs code, title, note`);
+  }
+  if (!(level2.shift || []).length) fail("level2: missing design-shift rows");
+  if (!level2.capstone || !level2.pilot || !level2.effort) fail("level2: missing capstone, pilot, or effort");
+}
+
 /* ---------- emit ---------- */
 if (errors.length) {
   console.error(`\nBUILD FAILED — ${errors.length} error(s):\n`);
@@ -238,6 +252,7 @@ const payload = {
   scenarios: appendix.scenarios,
   glossary: terms,
   changelog,
+  level2,
   builtAt: new Date().toISOString(),
 };
 
