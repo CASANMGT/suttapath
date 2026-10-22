@@ -10,6 +10,24 @@ Every entry carries its commit time, local (+07:00).
 
 ---
 
+## [2.8] — 2026-10-23 00:29 (+07:00) — Reading key and a cozy theme
+
+### New
+- **Collection key** on the home page (DN, MN, SN, AN, Dhp, Snp, Ud) and a
+  full table at the top of the canon page.
+- Session references carry a tooltip naming the collection and its kind.
+- **Cozy theme**: warmer paper, softer ink, a fleuron under session hooks,
+  flat cards. Theme row is now Auto · Light · Sepia · Cozy · Dark.
+
+### Fixed
+- **Reading settings could not be closed with Done** — the button was focused
+  but never wired; only the backdrop and Escape worked. It now closes.
+
+### Build
+- Service worker `suttapath-v17` (asset cache must roll); version `2.8.0`.
+
+---
+
 ## [2.7] — 2026-10-23 00:10 (+07:00) — Installable and offline
 
 ### New

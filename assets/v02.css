@@ -761,6 +761,58 @@
   text-wrap: pretty;
 }
 
+/* ---------- collection key ---------- */
+
+.ref-key {
+  margin: 16px 0 0;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.ref-key summary {
+  cursor: pointer;
+  color: var(--ink-3);
+  width: fit-content;
+  border-bottom: 1px solid var(--line-2);
+  padding-bottom: 2px;
+}
+.ref-key summary::-webkit-details-marker { display: none; }
+.ref-key p {
+  margin: 10px 0 0;
+  max-width: 40em;
+  line-height: 1.6;
+}
+.ref-key b { color: var(--ink); font-weight: 600; }
+.ref-key__more { margin-top: 6px !important; }
+
+.ref-table {
+  display: grid;
+  gap: 1px;
+  margin: 18px 0 8px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ref-table > div {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 12px;
+  align-items: baseline;
+  padding: 9px 14px;
+  background: var(--field);
+  font-family: var(--sans);
+  font-size: 14px;
+}
+.ref-table b {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+.ref-table span { color: var(--ink-2); }
+
 /* ---------- install & offline ---------- */
 
 .install-card {

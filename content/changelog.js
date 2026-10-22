@@ -7,6 +7,7 @@ module.exports = {
   intro:
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   times: {
+    "2.8": "00:29 (+07:00)",
     "2.7": "00:10 (+07:00)",
     "2.6": "22:44 (+07:00)",
     "2.5": "22:27 (+07:00)",
@@ -25,6 +26,35 @@ module.exports = {
     "0.1": "01:36 (+07:00)",
   },
   releases: [
+    {
+      version: "2.8",
+      date: "23 October 2026",
+      name: "Reading key and a cozy theme",
+      summary:
+        "DN, MN, SN and the rest are explained where you meet them, the settings sheet closes properly, and there is a warmer book theme to read in.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "A collection key on the home page — DN, MN, SN, AN, Dhp, Snp, Ud — with the full table on the canon page.",
+            "Session references now carry a tooltip naming the collection (for example “MN 63 · Majjhima Nikāya · middle-length discourses”).",
+            "A Cozy theme: warmer paper, softer ink, a small fleuron under each session hook, and flatter cards.",
+          ],
+        },
+        {
+          label: "Fixed",
+          items: [
+            "The Done button in Reading settings did nothing; the sheet could only be closed by tapping outside or pressing Escape. It now closes.",
+          ],
+        },
+        {
+          label: "Note",
+          items: [
+            "Theme still defaults to Auto (follows your system). Cozy is in the same row: Auto · Light · Sepia · Cozy · Dark.",
+          ],
+        },
+      ],
+    },
     {
       version: "2.7",
       date: "23 October 2026",

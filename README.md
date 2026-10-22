@@ -146,6 +146,7 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] v2.5 — commit timestamps in both changelogs
 - [x] v2.6 — Level 3 seminars (six output workshops)
 - [x] v2.7 — installable PWA and offline-first service worker
+- [x] v2.8 — collection key, Cozy theme, settings close fix
 - [ ] Outside gates — run the packets; record verdicts for 5.1–5.6, Level 2 doctrinal, 4.6/6.5/C5
 - [ ] Level 2 reader gate — ten Level-1 graduates read MN 10 unaided (six can state its structure)
 

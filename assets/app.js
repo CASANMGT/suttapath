@@ -260,6 +260,23 @@
     return b ? Math.round((a / b) * 100) : 0;
   }
 
+  const COLLECTIONS = {
+    DN: ["Dīgha Nikāya", "long discourses"],
+    MN: ["Majjhima Nikāya", "middle-length discourses"],
+    SN: ["Saṃyutta Nikāya", "connected discourses"],
+    AN: ["Aṅguttara Nikāya", "numbered discourses"],
+    Dhp: ["Dhammapada", "verses"],
+    Snp: ["Sutta Nipāta", "verse collection"],
+    Ud: ["Udāna", "heartfelt sayings"],
+  };
+  function refInfo(ref) {
+    return COLLECTIONS[String(ref || "").split(" ")[0]] || null;
+  }
+  function refTitle(ref) {
+    const c = refInfo(ref);
+    return c ? `${c[0]} · ${c[1]}` : "";
+  }
+
   function trackSessions(trackId) {
     return S.filter((s) => s.track === trackId).sort((a, b) => a.order - b.order);
   }
@@ -338,6 +355,11 @@
         <h1 class="display">The oldest Buddhist texts,<br><em>one page at a time.</em></h1>
         <p class="dek">A guided path for complete beginners. ${S.length} sessions are open: how to read a sutta, what the teaching claims, what it asks of a life, and how the mind works. No Pali required.</p>
         <a class="canon-link" href="#/canon">What is the Pali Canon? <span>→</span></a>
+        <details class="ref-key">
+          <summary>What do DN, MN, SN mean?</summary>
+          <p><b>DN</b> — Dīgha Nikāya: long discourses. <b>MN</b> — Majjhima: middle-length. <b>SN</b> — Saṃyutta: connected by theme. <b>AN</b> — Aṅguttara: numbered. <b>Dhp</b> — Dhammapada. <b>Snp</b> — Sutta Nipāta. <b>Ud</b> — Udāna.</p>
+          <p class="ref-key__more"><a class="linkish" href="#/canon">The canon, briefly →</a></p>
+        </details>
       </header>
 
       ${dueCount ? `<a class="review-banner" href="#/review">
@@ -443,7 +465,7 @@
 
     topbar([
       `<a class="icon-btn" href="#/" aria-label="Back to the path">${ICON.back}</a>`,
-      `<span class="topbar__ref">${esc(s.ref)}</span>`,
+      `<span class="topbar__ref" title="${esc(refTitle(s.ref))}">${esc(s.ref)}</span>`,
       `<span class="topbar__title">${esc(s.title)}</span>`,
       settingsBtn(),
     ]);
@@ -456,7 +478,7 @@
 
     $("#main").innerHTML = `<article class="session wrap">
       <header class="session-head">
-        <div class="session-head__ref"><b>${esc(s.ref)}</b><i></i><span class="session-head__pali">${esc(s.pali)}</span><i></i>${s.minutes} min</div>
+        <div class="session-head__ref"><b title="${esc(refTitle(s.ref))}">${esc(s.ref)}</b><i></i><span class="session-head__pali">${esc(s.pali)}</span><i></i>${s.minutes} min</div>
         <h1 class="session-title">${esc(s.title)}</h1>
         <p class="session-hook">${esc(s.hook)}</p>
       </header>
@@ -821,6 +843,18 @@
     $("#main").innerHTML = `<div class="about wrap prose">
       <h1>What is the Pali Canon?</h1>
       <p class="dek">A library, not a book. Here is what is in it, whose version this is, and what we changed.</p>
+
+      <h2>Reading key</h2>
+      <p>Every session is labelled with a collection abbreviation and a number. This is the whole key you need.</p>
+      <div class="ref-table">
+        <div><b>DN</b><span><em>Dīgha Nikāya</em> · long discourses</span></div>
+        <div><b>MN</b><span><em>Majjhima Nikāya</em> · middle-length discourses</span></div>
+        <div><b>SN</b><span><em>Saṃyutta Nikāya</em> · connected by theme</span></div>
+        <div><b>AN</b><span><em>Aṅguttara Nikāya</em> · numbered discourses</span></div>
+        <div><b>Dhp</b><span><em>Dhammapada</em> · verses</span></div>
+        <div><b>Snp</b><span><em>Sutta Nipāta</em> · verse collection</span></div>
+        <div><b>Ud</b><span><em>Udāna</em> · heartfelt sayings</span></div>
+      </div>
 
       <h2>The three baskets</h2>
       <p>The Pali Canon — the <em>Tipiṭaka</em>, "three baskets" — is the earliest complete collection of Buddhist texts, preserved in Pali and transmitted in the Theravāda tradition of Sri Lanka and Southeast Asia. It is roughly forty times the length of the Bible.</p>
@@ -1463,7 +1497,7 @@
       <div class="setting">
         <span class="setting__label">Theme</span>
         <div class="seg-ctl" data-ctl="theme">
-          ${["auto", "light", "sepia", "dark"].map((t) => `<button data-v="${t}" aria-pressed="${state.theme === t}">${t[0].toUpperCase() + t.slice(1)}</button>`).join("")}
+          ${["auto", "light", "sepia", "cozy", "dark"].map((t) => `<button data-v="${t}" aria-pressed="${state.theme === t}">${t[0].toUpperCase() + t.slice(1)}</button>`).join("")}
         </div>
       </div>
       <div class="setting">
@@ -1495,7 +1529,11 @@
       </div>
     </div>`;
     document.body.appendChild(sheet);
-    $("[data-close-settings]", sheet).focus();
+    const doneBtn = $("[data-close-settings]", sheet);
+    if (doneBtn) {
+      doneBtn.focus();
+      doneBtn.addEventListener("click", closeSettings);
+    }
     sheet.addEventListener("click", (e) => {
       if (e.target === sheet) closeSettings();
     });

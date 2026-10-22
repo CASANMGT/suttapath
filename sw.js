@@ -4,7 +4,7 @@
  * cannot fail the whole install). Navigations are served from the cached
  * shell and revalidated in the background; assets are stale-while-revalidate.
  */
-const VERSION = "suttapath-v16";
+const VERSION = "suttapath-v17";
 const SHELL = [
   "./",
   "./index.html",
@@ -90,3 +90,4 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
