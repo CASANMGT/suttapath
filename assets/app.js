@@ -165,6 +165,8 @@
     if (parts[0] === "adv" && parts[1]) return renderAdvSession(parts[1], parts[2]);
     if (parts[0] === "adv") return renderAdvHome();
     if (parts[0] === "review") return renderReview();
+    if (parts[0] === "l3" && parts[1]) return renderL3Workshop(parts[1]);
+    if (parts[0] === "l3") return renderL3Home();
     if (parts[0] === "glossary") return renderGlossary();
     if (parts[0] === "canon") return renderCanon();
     if (parts[0] === "changelog") return renderChangelog();
@@ -188,6 +190,7 @@
     const done = countDone(PATH.map((x) => x.id));
     const labDone = countDone(LAB.map((x) => x.id));
     const advDone = countDone(DATA.advanced.sessions.map((x) => x.id));
+    const l3Done = countDone(DATA.level3.workshops.map((x) => x.id));
     const dueCount = dueReviewIds().length;
 
     const trackHtml = TRACKS.map((t) => {
@@ -258,6 +261,15 @@
             <span>Collections, formulas, and two complete texts — no paraphrase underneath.</span>
           </span>
           <span class="big-card__count">${advDone}/${DATA.advanced.sessions.length}</span>
+        </a>
+        <a class="big-card" href="#/l3">
+          <span class="big-card__icon">${ICON.lab}</span>
+          <span class="big-card__body">
+            <span class="big-card__kicker">Level 3 · optional</span>
+            <b>Make something checkable.</b>
+            <span>Six workshops: facilitate, plan, write, record, review, and run the capstone for someone else.</span>
+          </span>
+          <span class="big-card__count">${l3Done}/${DATA.level3.workshops.length}</span>
         </a>
         <a class="big-card" href="#/glossary">
           <span class="big-card__icon">${ICON.book}</span>
@@ -1020,6 +1032,98 @@
     setMode(state.mode, { instant: true });
   }
 
+  /* ---------- level 3 workshops ---------- */
+
+  function renderL3Home() {
+    const L = DATA.level3;
+    const done = countDone(L.workshops.map((w) => w.id));
+    topbar([
+      `<a class="icon-btn" href="#/" aria-label="Back to the path">${ICON.back}</a>`,
+      `<span class="topbar__ref">Level 3</span>`,
+      `<span class="topbar__spacer"></span>`,
+      settingsBtn(),
+    ]);
+
+    $("#main").innerHTML = `<div class="home wrap">
+      <header class="masthead masthead--small">
+        <div class="eyebrow">Level 3 · seminar</div>
+        <h1 class="display display--sm">Make something<br><em>checkable.</em></h1>
+        <p class="dek">${esc(L.intro)}</p>
+        <p class="adv-status">${esc(L.note)}</p>
+      </header>
+
+      <div class="l3-list">
+        ${L.workshops.map((w) => {
+          const isDone = state.done.has(w.id);
+          return `<a class="l3-row ${isDone ? "is-done" : ""}" href="#/l3/${w.id}">
+            <span class="l3-row__n">${String(w.n).padStart(2, "0")}</span>
+            <span class="l3-row__body">
+              <b>${esc(w.title)}</b>
+              <span>${esc(w.hook)}</span>
+            </span>
+            <span class="l3-row__meta">${w.minutes} min${isDone ? " · done" : ""}</span>
+          </a>`;
+        }).join("")}
+      </div>
+
+      <p class="adv-links">${done} of ${L.workshops.length} complete · <a class="linkish" href="#/level2">Level 2 design</a> · <a class="linkish" href="#/plan">Study plan</a></p>
+      <footer class="home-foot">
+        <span>Outputs are yours; checks are structural.</span>
+      </footer>
+    </div>`;
+    $("#dockSlot").innerHTML = "";
+  }
+
+  function renderL3Workshop(id) {
+    const L = DATA.level3;
+    const i = L.workshops.findIndex((x) => x.id === id);
+    if (i < 0) { location.hash = "#/l3"; return; }
+    const w = L.workshops[i];
+    const next = L.workshops[i + 1];
+
+    topbar([
+      `<a class="icon-btn" href="#/l3" aria-label="Back to Level 3">${ICON.back}</a>`,
+      `<span class="topbar__ref">Level 3 · Workshop ${w.n}</span>`,
+      `<span class="topbar__title">${esc(w.title)}</span>`,
+      settingsBtn(),
+    ]);
+
+    $("#main").innerHTML = `<article class="session wrap l3">
+      <header class="session-head">
+        <div class="session-head__ref"><b>Workshop ${String(w.n).padStart(2, "0")}</b><i></i><span class="session-head__pali">Seminar</span><i></i>${w.minutes} min</div>
+        <h1 class="session-title">${esc(w.title)}</h1>
+        <p class="session-hook">${esc(w.hook)}</p>
+      </header>
+
+      <p class="l3-purpose">${esc(w.purpose)}</p>
+
+      <h2 class="section-label">Steps</h2>
+      <ol class="l3-steps">${w.steps.map((s) => `<li>${esc(s)}</li>`).join("")}</ol>
+
+      <div class="practice"><span class="practice__meta">Deliverable</span>${esc(w.deliverable)}</div>
+
+      <h2 class="section-label">Checklist</h2>
+      <ul class="l3-check">${w.checklist.map((c) => `<li>${esc(c)}</li>`).join("")}</ul>
+
+      <div class="note"><span class="note__label">If you are working alone</span>${esc(w.solo)}</div>
+
+      <div class="live-block" style="margin-top:32px">
+        <label class="field-label" for="note">Your notes · saved on this device</label>
+        <textarea class="journal" id="note" data-note="${w.id}" placeholder="What you produced, and what you cut.">${esc(state.notes[w.id] || "")}</textarea>
+        <span class="save-state" data-save="${w.id}">Saved</span>
+      </div>
+
+      <div class="finish-row">
+        <button class="btn" data-finish="${w.id}">${isDone(w.id) ? "Completed" : "Mark workshop complete"}</button>
+        ${next ? `<a class="btn btn--ghost" href="#/l3/${next.id}">Next <span aria-hidden="true">→</span></a>` : `<a class="btn btn--ghost" href="#/l3">All workshops <span aria-hidden="true">→</span></a>`}
+      </div>
+      ${isDone(w.id) ? `<div class="completion">${ICON.check}<span><b>Marked complete.</b></span></div>` : ""}
+    </article>`;
+
+    $("#dockSlot").innerHTML = "";
+    bindSession({ id: w.id });
+  }
+
   /* ---------- study plan ---------- */
 
   function renderPlan() {
@@ -1139,6 +1243,8 @@
       <h2>What Level 2 will not add</h2>
       <ul class="level2-not">${l.notAdd.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
 
+      <p class="level2-start"><a class="btn btn--ghost" href="#/l3">Level 3 workshops <span aria-hidden="true">→</span></a></p>
+
       <p class="level2-doc">Full design: <a class="linkish" href="${esc(l.doc)}">${esc(l.doc)}</a> · <a class="linkish" href="${esc(l.docUrl)}" target="_blank" rel="noopener">read it rendered on GitHub</a></p>
       <p class="source-line">Plan only — no Level 2 sessions are shipped yet.</p>
     </div>`;
@@ -1201,7 +1307,7 @@
       <h2>Your data</h2>
       <p>Progress and notes are stored in this browser's local storage. Nothing is sent anywhere. Clearing site data deletes them.</p>
 
-      <p>Release notes: <a class="linkish" href="#/changelog">what changed in each version</a>. How to pace it: <a class="linkish" href="#/plan">the study plan</a>. After it: <a class="linkish" href="#/level2">the Level 2 plan</a>.</p>
+      <p>Release notes: <a class="linkish" href="#/changelog">what changed in each version</a>. How to pace it: <a class="linkish" href="#/plan">the study plan</a>. After it: <a class="linkish" href="#/level2">the Level 2 plan</a> and <a class="linkish" href="#/l3">the Level 3 workshops</a>.</p>
 
       <h2>For reviewers and instructors</h2>
       <p>The review and pilot packets are public: <a class="linkish" href="docs/review/SCHOLAR_REVIEW.md">scholar review</a> · <a class="linkish" href="docs/review/CLINICAL_REVIEW.md">safety review</a> · <a class="linkish" href="docs/pilot/PILOT_KIT.md">reader pilot</a>. They state what is being checked, what is out of scope, and what a verdict looks like. Instructors: <a class="linkish" href="docs/session-guides.md">session guides</a> · <a class="linkish" href="docs/guides.md">lab guides</a>.</p>

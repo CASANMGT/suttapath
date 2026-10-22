@@ -4,7 +4,7 @@ A study app for the Theravāda Pali Canon, for English-speaking adults with no b
 
 **Live: https://casanmgt.github.io/suttapath/**
 
-This repository holds the complete Level 1 app (content Phases 0–4, plus the internal review pass) and the **Level 2 pilot**: thirty-six guided sessions across six tracks, three checkpoints, twenty-four integrity-lab scenarios, a 120-term glossary, and an advanced tier with six apparatus sessions and two whole suttas — all wired to a pinned, citation-verified snapshot of Bhikkhu Sujato's CC0 translation.
+This repository holds the complete Level 1 app, the full Level 2 tier, and the optional Level 3 seminar: thirty-six guided sessions across six tracks, three checkpoints, twenty-four integrity-lab scenarios, a 120-term glossary, an advanced tier with twenty-four sessions and a capstone, and six output-oriented workshops — all wired to a pinned, citation-verified snapshot of Bhikkhu Sujato's CC0 translation.
 
 ---
 
@@ -56,6 +56,10 @@ A separate advanced tier, not a continuation of the 36 sessions:
 - The build refuses a "whole text" that omits any non-empty segment without declaring it.
 - **Not scholar-reviewed.** The Pali sessions are method-only, and the status is stated in the app.
 - **Study tools**: section citations you can copy, deep links to sections, and spaced retrieval at 3/10/30 days after a session.
+
+## Level 3 — optional seminar
+
+Six workshops, each producing something checkable: facilitate a lab scenario and write a debrief; design a six-week reading group for one sutta; write a 1,500-word essay with segment citations and one answered objection; record a ten-minute talk and cut what you cannot support; peer-review two notes against the layer rule; run the capstone for someone else and mark only the citations. No external reviewer required; the checks are structural.
 
 ## Architecture
 
@@ -138,6 +142,8 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] v2.2 — generic scholar, clinical, and reader-pilot kits (`docs/review`, `docs/pilot`)
 - [x] v2.3 — verdict registry, review-status gate, pilot report generator
 - [x] v2.4 — instructor guide for every session and checkpoint
+- [x] v2.5 — commit timestamps in both changelogs
+- [x] v2.6 — Level 3 seminars (six output workshops)
 - [ ] Outside gates — run the packets; record verdicts for 5.1–5.6, Level 2 doctrinal, 4.6/6.5/C5
 - [ ] Level 2 reader gate — ten Level-1 graduates read MN 10 unaided (six can state its structure)
 

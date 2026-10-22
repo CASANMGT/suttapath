@@ -129,6 +129,7 @@ const totalMinutes = DATA.sessions.reduce((n, s) => n + s.minutes, 0) + DATA.che
 console.log(`Plan: ${totalMinutes} min (${(totalMinutes / 60).toFixed(1)} h) · ${Math.ceil(DATA.sessions.length / 2)} weeks at 2 sessions/week · ${Math.ceil(DATA.sessions.length / 3)} at 3`);
 console.log(`Glossary: ${usedTerms.size} terms attached to sessions, ${orphans.length} reference-only`);
 if (adv.length) console.log(`Level 2: ${adv.length} sessions (${adv.filter((s) => s.kind === "whole").length} whole texts, ${adv.reduce((n, s) => n + (s.sections || []).length, 0)} sections)`);
+if (DATA.level3 && DATA.level3.workshops) console.log(`Level 3: ${DATA.level3.workshops.length} workshops`);
 
 const order = { warn: 0, info: 1 };
 report.sort((a, b) => order[a.level] - order[b.level]);

@@ -19,6 +19,7 @@ const sessionsSrc = require(path.join(ROOT, "content", "sessions.js"));
 const appendix = require(path.join(ROOT, "content", "appendix.js"));
 const retrieval = require(path.join(ROOT, "content", "retrieval.js"));
 const visuals = require(path.join(ROOT, "content", "visuals.js"));
+const level3 = require(path.join(ROOT, "content", "level3.js"));
 const changelog = require(path.join(ROOT, "content", "changelog.js"));
 const level2 = require(path.join(ROOT, "content", "level2.js"));
 const advanced = require(path.join(ROOT, "content", "advanced.js"));
@@ -203,6 +204,18 @@ for (const sc of appendix.scenarios) {
   if (!sources.includes(a.session))
     fail(`scenario ${sc.id}: anchor session ${a.session} does not cite its own passage (sources: ${sources.join(", ") || "none"})`);
   a.sources = sources;
+}
+
+/* ---------- level 3 workshops ---------- */
+if (!level3 || !Array.isArray(level3.workshops) || level3.workshops.length !== 6) {
+  fail("level3: needs six workshops");
+} else {
+  for (const w of level3.workshops) {
+    if (!w.id || !w.title || !w.hook || !w.purpose) fail(`level3 ${w.id || "?"}: missing id/title/hook/purpose`);
+    if (!w.deliverable) fail(`level3 ${w.id}: no deliverable`);
+    if (!Array.isArray(w.steps) || w.steps.length < 3) fail(`level3 ${w.id}: needs at least three steps`);
+    if (!Array.isArray(w.checklist) || w.checklist.length < 3) fail(`level3 ${w.id}: needs at least three checks`);
+  }
 }
 
 /* ---------- changelog ---------- */
@@ -393,6 +406,7 @@ const payload = {
   glossary: terms,
   changelog,
   level2,
+  level3,
   advanced,
   builtAt: new Date().toISOString(),
 };
@@ -425,6 +439,7 @@ console.log(`  ${payload.sessions.length} sessions · ${payload.checkpoints.leng
 console.log(`  ${rows.length - 1} citations verified against ${canon.size} suttas`);
 console.log(`  ${Object.keys(retrieval).length} retrieval sets · ${Object.keys(visuals).length} diagrams`);
 if (advanced && advanced.sessions) console.log(`  Level 2: ${advanced.sessions.length} sessions (${advanced.sessions.filter((s) => s.kind === "whole").length} whole texts)`);
+console.log(`  Level 3: ${level3.workshops.length} workshops`);
 if (warnings.length) {
   console.log(`  ${warnings.length} warning(s):`);
   warnings.forEach((w) => console.log("    · " + w));

@@ -7,6 +7,7 @@ module.exports = {
   intro:
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   times: {
+    "2.6": "22:44 (+07:00)",
     "2.5": "22:27 (+07:00)",
     "2.4": "21:56 (+07:00)",
     "2.3": "21:27 (+07:00)",
@@ -23,6 +24,30 @@ module.exports = {
     "0.1": "01:36 (+07:00)",
   },
   releases: [
+    {
+      version: "2.6",
+      date: "22 October 2026",
+      name: "Level 3 seminars",
+      summary:
+        "Six workshops that make you produce something checkable: a facilitated scenario, a reading-group plan, a cited essay, a recorded talk, two peer reviews, and a capstone run.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "A Level 3 tier at #/l3 with six workshops, each with steps, a deliverable, and a checklist.",
+            "A notes field per workshop, saved on your device, for the work you produce.",
+            "A home card and links from the Level 2 page and About.",
+          ],
+        },
+        {
+          label: "Note",
+          items: [
+            "Optional tier. The checks are structural — citations, labels, a second reader — so no external reviewer is required.",
+            "The seminars assume Level 1; the essay workshop assumes Level 2.",
+          ],
+        },
+      ],
+    },
     {
       version: "2.5",
       date: "22 October 2026",

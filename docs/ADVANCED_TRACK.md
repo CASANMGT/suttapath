@@ -23,6 +23,10 @@ sections, and spaced retrieval at 3, 10, and 30 days.
 `REVIEW_KIT_CLINICAL.md`, and `PILOT_KIT.md` (with a tracker). These are the
 forms for the gates, not the gates themselves.
 
+**v2.6** adds Level 3 as an optional seminar tier: six workshops producing a
+debrief, a reading-group plan, a cited essay, a recorded talk, two peer
+reviews, and a capstone run.
+
 ---
 
 ## 1. Who this is for

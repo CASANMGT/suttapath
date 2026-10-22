@@ -10,6 +10,26 @@ Every entry carries its commit time, local (+07:00).
 
 ---
 
+## [2.6] — 2026-10-22 22:44 (+07:00) — Level 3 seminars
+
+### New
+- **Level 3 tier** (`#/l3`): six workshops — facilitate a lab scenario, design
+  a six-week reading group, write a 1,500-word cited essay, record a
+  ten-minute talk, peer-review two notes, run the capstone for someone else.
+- Each workshop has steps, a deliverable, a checklist, a solo variant, and a
+  notes field saved on the device.
+- Home card; links from the Level 2 page and About.
+
+### Note
+- Optional tier; no external review required because the checks are
+  structural (citations, labels, a second reader).
+
+### Build
+- `content/level3.js` validated (six workshops, steps, checklist, deliverable).
+- Version `2.6.0`; service worker `suttapath-v15`.
+
+---
+
 ## [2.5] — 2026-10-22 22:27 (+07:00) — Timestamps
 
 ### New

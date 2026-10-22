@@ -761,6 +761,88 @@
   text-wrap: pretty;
 }
 
+/* ---------- level 3 ---------- */
+
+.l3-list { border-top: 1px solid var(--line); margin-top: 26px; }
+.l3-row {
+  display: grid;
+  grid-template-columns: 42px 1fr auto;
+  gap: 14px;
+  align-items: baseline;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--line);
+  text-decoration: none;
+}
+.l3-row__n { font-family: var(--mono); font-size: 11px; color: var(--accent); }
+.l3-row__body b {
+  display: block;
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.l3-row__body span {
+  display: block;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-3);
+  margin-top: 3px;
+  max-width: 38em;
+}
+.l3-row__meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  white-space: nowrap;
+}
+.l3-row.is-done .l3-row__body b { color: var(--ink-2); }
+.l3-purpose {
+  font-family: var(--serif);
+  font-size: 17.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 22px 0 0;
+  text-wrap: pretty;
+}
+.l3-steps { margin: 10px 0 0; padding-left: 1.2em; }
+.l3-steps li {
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+  text-wrap: pretty;
+}
+.l3-steps li::marker { color: var(--accent); }
+.l3-check { list-style: none; margin: 10px 0 0; padding: 0; border-top: 1px solid var(--line); }
+.l3-check li {
+  position: relative;
+  padding: 10px 0 10px 26px;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--sans);
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.l3-check li::before {
+  content: "□";
+  position: absolute;
+  left: 2px; top: 8px;
+  color: var(--accent);
+  font-size: 14px;
+}
+.l3 .practice { margin-top: 28px; }
+.l3 .note { margin-top: 26px; }
+
+@media (max-width: 640px) {
+  .l3-row { grid-template-columns: 30px 1fr; }
+  .l3-row__meta { grid-column: 2; }
+}
+
 /* ---------- review & citations ---------- */
 
 .cite {
