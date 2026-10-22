@@ -8,6 +8,36 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
+## [2.0] — 2026-10-22 — Level 2, complete
+
+### New
+- **Track B** completed: MN 39, AN 4.41, DN 15, MN 118 (complete) — six
+  whole texts in the track with MN 10 and SN 12.23.
+- **Track C — Doctrine in Depth**: SN 22.59, SN 35.28, SN 12.2, AN 5.28,
+  kamma/rebirth/no-self (AN 3.65 + MN 22), and the Buddha's awakening
+  (MN 36).
+- **Track D — Comparative and Critical Reading**: MN 10 vs DN 22, SN 12.2 vs
+  DN 15, translation as evidence, Pali tools I–II, commentary vs sutta.
+- **Capstone** on AN 8.30: read an unseen sutta, write a cited 400-word note,
+  then open a model note.
+- **Compare view** for the two comparative sessions.
+- **Section builders**: whole texts can be defined by section-start segments
+  or by the text's own numbered headings; coverage is still enforced.
+
+### Content
+- 25 advanced sessions (24 + capstone), 11 whole texts.
+- Pali sessions are method-only — dictionary/concordance use and term
+  clusters — with no unreviewed parsing claims.
+- Safety/map notes on C5 and the capstone (attainments are described, not
+  prescribed).
+
+### Build
+- Canon snapshot 42 suttas; 200 citations.
+- `audit.js` counts Level 2 sessions, whole texts, and sections.
+- Service worker `suttapath-v9`; version `2.0.0`.
+
+---
+
 ## [1.4] — 2026-10-22 — Level 2, shipped
 
 ### New

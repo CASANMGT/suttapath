@@ -747,9 +747,9 @@
 
     $("#main").innerHTML = `<div class="home wrap">
       <header class="masthead masthead--small">
-        <div class="eyebrow">Level 2 · pilot</div>
+        <div class="eyebrow">Level 2 · advanced</div>
         <h1 class="display display--sm">Read the canon<br><em>whole.</em></h1>
-        <p class="dek">The advanced tier begins with the apparatus — collections, formulas, forms — then two complete suttas, read with a map instead of a paraphrase.</p>
+        <p class="dek">The advanced tier: the apparatus, whole suttas, doctrine in depth, and comparative reading — ending in a capstone on a text you have not seen.</p>
         <p class="adv-status">${esc(A.status)}</p>
       </header>
 
@@ -774,12 +774,12 @@
             <div class="later-track__head"><span class="later-track__num">${esc(t.code)}</span><b>${esc(t.name)}</b><span>${esc(t.goal)}</span><em>in production</em></div>
           </section>`;
         }
-        const planned = t.status === "pilot" ? `<p class="adv-more">B2, B4–B6 are in production.</p>` : "";
+        const planned = "";
         return `<section class="track">
           <div class="track__head">
             <span class="track__num">${esc(t.code)}</span>
             <h2>${esc(t.name)}</h2>
-            <span class="track__count">${list.length} of ${t.code === "B" ? 6 : 6} sessions</span>
+            <span class="track__count">${list.length} session${list.length === 1 ? "" : "s"}</span>
             <p>${esc(t.goal)}</p>
           </div>
           ${list.map(advRow).join("")}${planned}
@@ -819,10 +819,11 @@
         ${s.sections.map((sec, i) => `<section class="whole-sec" id="sec-${i + 1}">
           <h3 class="whole-sec__label">${esc(sec.label)}</h3>
           <div class="whole-text">${advText(sec)}</div>
-          <p class="whole-note">${esc(sec.note)}</p>
+          ${sec.note ? `<p class="whole-note">${esc(sec.note)}</p>` : ""}
         </section>`).join("")}
         <p class="source-line">Bhikkhu Sujato, CC0 · SuttaCentral · ${esc(s.ref)}</p>`
       : `${s.essay.map((p) => `<p>${esc(p)}</p>`).join("")}
+        ${s.compare ? `<div class="compare">${s.compare.map((c) => `<div class="compare__col"><span class="compare__label">${esc(c.label)}</span><p>${esc(c.text)}</p></div>`).join("")}</div>` : ""}
         ${(s.excerpts || []).map((ex) => `<figure class="excerpt">
           <blockquote class="${ex.verse ? "is-verse" : ""}">${esc(ex.text)}</blockquote>
           <figcaption>${esc(ex.note)}</figcaption>
@@ -834,7 +835,7 @@
         <div class="session-head__ref"><b>${esc(s.code)}${s.ref ? " · " + esc(s.ref) : ""}</b><i></i><span class="session-head__pali">${esc(s.pali || s.track)}</span><i></i>${s.minutes} min</div>
         <h1 class="session-title">${esc(s.title)}</h1>
         <p class="session-hook">${esc(s.hook)}</p>
-        <span class="adv-chip">${s.kind === "whole" ? "Whole text" : "Apparatus"}</span>
+        <span class="adv-chip">${s.kind === "whole" ? "Whole text" : s.track === "A" ? "Apparatus" : "Essay"}</span>
       </header>
 
       ${s.safety ? `<div class="safety"><span class="safety__label">Before you start</span>${esc(s.safety)}</div>` : ""}
@@ -848,6 +849,11 @@
         <div class="note note--inference"><span class="note__label">Our reading, not the text</span>${esc(s.inference)}</div>
         ${terms ? `<h2 class="section-label">Words in this session</h2><div class="term-list">${terms}</div>` : ""}
         ${recall}
+        ${s.capstone ? `<h2 class="section-label">Capstone</h2>
+          <div class="capstone">
+            <p>${esc(s.capstone.prompt)}</p>
+            <details class="reveal capstone__model"><summary>Show the model note (after you have written yours)</summary>${s.capstone.model.map((p) => `<p>${esc(p)}</p>`).join("")}</details>
+          </div>` : ""}
         <p class="source-line">Passages from SuttaCentral (CC0). Apparatus, notes and inference are SuttaPath's.</p>
       </section>
 
@@ -973,7 +979,7 @@
         <h1 class="display display--sm">After the path,<br><em>the canon.</em></h1>
         <p class="dek">${esc(l.intro)}</p>
         <p class="level2-status">${esc(l.status)}</p>
-        <p class="level2-start"><a class="btn" href="#/adv">Open the pilot <span aria-hidden="true">→</span></a></p>
+        <p class="level2-start"><a class="btn" href="#/adv">Open Level 2 <span aria-hidden="true">→</span></a></p>
       </header>
 
       <div class="note"><span class="note__label">Entry</span>${esc(l.entry)}</div>

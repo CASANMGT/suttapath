@@ -1,4 +1,4 @@
-/* SuttaPath — build.
+﻿/* SuttaPath — build.
  *
  * Resolves editorial UIDs against the pinned canon snapshot, validates every
  * citation, and emits assets/data/content.js for the app.
@@ -22,6 +22,11 @@ const visuals = require(path.join(ROOT, "content", "visuals.js"));
 const changelog = require(path.join(ROOT, "content", "changelog.js"));
 const level2 = require(path.join(ROOT, "content", "level2.js"));
 const advanced = require(path.join(ROOT, "content", "advanced.js"));
+advanced.sessions = (advanced.sessions || []).concat(
+  require(path.join(ROOT, "content", "advanced-b.js")),
+  require(path.join(ROOT, "content", "advanced-c.js")),
+  require(path.join(ROOT, "content", "advanced-d.js"))
+);
 
 const errors = [];
 const warnings = [];
@@ -260,6 +265,61 @@ else {
     }
 
     if (s.kind === "whole") {
+      if (!s.sutta) {
+        const first = (s.sections || [])[0] || {};
+        const probe = first.from || (first.uids || [])[0];
+        if (probe) s.sutta = suttaOf(probe);
+      }
+      const rec = canon.get(s.sutta);
+      if (!rec) fail(`${where}: sutta "${s.sutta || "?"}" not in snapshot`);
+
+      const isHeading = (t) => /^\d+(\.\d+)*\.\s+\S/.test(t);
+      const isMeta = (uid) => /:0\.\d+$/.test(uid);
+
+      if (rec && s.autoHeadings) {
+        const notes = s.notes || {};
+        const labels = new Set();
+        const secs = [];
+        let cur = null;
+        for (const seg of rec.segments) {
+          if (!seg.text) continue;
+          if (isMeta(seg.uid)) continue;
+          if (isHeading(seg.text)) {
+            const label = seg.text.replace(/^\d+(\.\d+)*\.\s+/, "");
+            labels.add(label);
+            cur = { label, note: notes[label] || "", uids: [] };
+            secs.push(cur);
+            continue;
+          }
+          if (!cur) {
+            cur = { label: "Opening", note: notes.Opening || "", uids: [] };
+            secs.push(cur);
+          }
+          cur.uids.push(seg.uid);
+        }
+        s.sections = secs.filter((x) => x.uids.length);
+        for (const key of Object.keys(notes)) {
+          if (key !== "Opening" && !labels.has(key)) fail(`${where}: note "${key}" does not match a heading`);
+        }
+      } else if (rec && (s.sections || []).some((x) => x.from)) {
+        const seq = rec.segments.filter((x) => x.text && !isMeta(x.uid));
+        const starts = s.sections.map((x) => {
+          if (!x.from) fail(`${where}: section "${x.label}" needs "from" when any section uses it`);
+          const i = seq.findIndex((y) => y.uid === x.from);
+          if (i < 0) fail(`${where}: section start "${x.from}" not found in ${s.sutta}`);
+          return i;
+        });
+        for (let i = 1; i < starts.length; i++) {
+          if (starts[i] <= starts[i - 1]) fail(`${where}: section starts are out of order`);
+        }
+        s.sections = s.sections.map((x, k) => ({
+          label: x.label,
+          note: x.note,
+          verse: x.verse,
+          uids: seq.slice(starts[k], k + 1 < starts.length ? starts[k + 1] : seq.length).map((y) => y.uid),
+        }));
+      }
+
       if (!Array.isArray(s.sections) || !s.sections.length) fail(`${where}: whole text needs sections`);
       const suttas = new Set();
       const covered = new Set();
@@ -280,15 +340,29 @@ else {
       }
       if (suttas.size !== 1) fail(`${where}: whole text spans ${[...suttas].join(", ")}`);
       const sutta = [...suttas][0];
-      const rec = canon.get(sutta);
-      if (!rec) fail(`${where}: sutta "${sutta}" not in snapshot`);
-      else {
+      if (!rec) {
+        /* already failed above */
+      } else {
         const missing = rec.segments
-          .filter((x) => x.text && !covered.has(x.uid))
+          .filter((x) => x.text && !covered.has(x.uid) && !isMeta(x.uid) && !(s.autoHeadings && isHeading(x.text)))
           .map((x) => x.uid);
         if (missing.length) fail(`${where}: whole text does not cover ${missing.slice(0, 4).join(", ")}${missing.length > 4 ? " …" : ""}`);
       }
       s.sutta = sutta;
+    }
+
+    if (s.compare) {
+      if (!Array.isArray(s.compare) || s.compare.length < 2) fail(`${where}: compare needs two columns`);
+      for (const c of s.compare) {
+        if (!c.label || !(c.uids || []).length) fail(`${where}: compare column needs a label and uids`);
+        checkContiguous(c.uids, `${where} compare · ${c.label}`);
+        c.text = resolve(c.uids, { verse: c.verse });
+      }
+    }
+
+    if (s.capstone) {
+      if (!s.capstone.prompt) fail(`${where}: capstone needs a prompt`);
+      if (!Array.isArray(s.capstone.model) || s.capstone.model.length < 2) fail(`${where}: capstone needs a model note`);
     }
   }
 }
@@ -349,8 +423,9 @@ console.log(`Built ${OUT}`);
 console.log(`  ${payload.sessions.length} sessions · ${payload.checkpoints.length} checkpoint · ${payload.scenarios.length} scenarios · ${Object.keys(payload.glossary).length} terms`);
 console.log(`  ${rows.length - 1} citations verified against ${canon.size} suttas`);
 console.log(`  ${Object.keys(retrieval).length} retrieval sets · ${Object.keys(visuals).length} diagrams`);
-if (advanced && advanced.sessions) console.log(`  Level 2 pilot: ${advanced.sessions.length} sessions (${advanced.sessions.filter((s) => s.kind === "whole").length} whole texts)`);
+if (advanced && advanced.sessions) console.log(`  Level 2: ${advanced.sessions.length} sessions (${advanced.sessions.filter((s) => s.kind === "whole").length} whole texts)`);
 if (warnings.length) {
   console.log(`  ${warnings.length} warning(s):`);
   warnings.forEach((w) => console.log("    · " + w));
 }
+

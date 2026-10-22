@@ -7,11 +7,14 @@ Companion to `CURRICULUM.md` (Level 1: 36 sessions) and `CONTENT_PLAN.md`
 (production phasing). This document is the design for what comes after a
 reader finishes the beginner path.
 
-**Status (2026-10-22): the 2.0 pilot is shipped as v1.4** — Track A
-(six apparatus sessions) plus MN 10 and SN 12.23 read whole, with a
-long-read surface at `#/adv`. Tracks B2/B4–B6, C, D, the capstone, and the
-Pali labs remain planned. The pilot gate is now a reader test, not a build
-task.
+**Status (2026-10-22): Level 2 is content-complete as v2.0** — all four
+tracks (24 sessions) and the capstone are live at `#/adv`, with 11 whole
+texts and a comparison view. It is not scholar-reviewed, and the Pali
+sessions are method-only: no parsing claims. The reader and scholarly gates
+in §7–§8 are still open.
+
+The pilot (Track A + MN 10 + SN 12.23) shipped earlier as v1.4 and remains
+the way to test the format before investing in review.
 
 ---
 

@@ -8,6 +8,41 @@ module.exports = {
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   releases: [
     {
+      version: "2.0",
+      date: "22 October 2026",
+      name: "Level 2, complete",
+      summary:
+        "All four advanced tracks and the capstone are live: 24 sessions, 11 whole texts, comparison views, and a note you write against a model.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "Track B — Reading Whole Suttas: MN 39, AN 4.41, DN 15, and MN 118 complete, alongside MN 10 and SN 12.23.",
+            "Track C — Doctrine in Depth: SN 22.59, SN 35.28, SN 12.2, AN 5.28, kamma and rebirth, and the Buddha's own account of awakening in MN 36.",
+            "Track D — Comparative and Critical Reading: MN 10 against DN 22, SN 12.2 against DN 15, translation as evidence, Pali tools, and commentary versus sutta.",
+            "A capstone on AN 8.30: read an unseen sutta, write a 400-word note with citations, then compare it with a model note.",
+            "A side-by-side comparison view for the two comparative sessions.",
+          ],
+        },
+        {
+          label: "Content",
+          items: [
+            "Eleven whole texts now render complete, with only the source's own section headings omitted.",
+            "The Pali sessions are method-only: dictionary and concordance use, term clusters, no unreviewed parsing claims.",
+            "C5 and the capstone carry explicit notes that the attainments described are a map, not a practice assignment.",
+          ],
+        },
+        {
+          label: "Build",
+          items: [
+            "Whole-text sections can be defined by a start segment or by the text's own headings; coverage is still enforced.",
+            "Canon snapshot grows to 42 suttas; 25 advanced sessions, 11 whole texts.",
+            "The Level 2 status is stated on the page: content-complete, not scholar-reviewed.",
+          ],
+        },
+      ],
+    },
+    {
       version: "1.4",
       date: "22 October 2026",
       name: "Level 2, shipped",

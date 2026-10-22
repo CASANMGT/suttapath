@@ -1,12 +1,22 @@
 {
-  "generatedAt": "2026-10-22T10:44:37.124Z",
+  "generatedAt": "2026-10-22T12:33:23.015Z",
   "translator": "Bhikkhu Sujato",
   "license": "CC0",
   "suttas": [
     {
+      "uid": "dn15",
+      "title": "",
+      "segments": 277
+    },
+    {
       "uid": "dn16",
       "title": "",
       "segments": 1664
+    },
+    {
+      "uid": "dn22",
+      "title": "",
+      "segments": 454
     },
     {
       "uid": "dn31",
@@ -37,6 +47,16 @@
       "uid": "mn22",
       "title": "",
       "segments": 359
+    },
+    {
+      "uid": "mn36",
+      "title": "",
+      "segments": 360
+    },
+    {
+      "uid": "mn39",
+      "title": "",
+      "segments": 191
     },
     {
       "uid": "mn58",
@@ -124,6 +144,11 @@
       "segments": 108
     },
     {
+      "uid": "an4.41",
+      "title": "",
+      "segments": 36
+    },
+    {
       "uid": "an4.62",
       "title": "",
       "segments": 33
@@ -137,6 +162,11 @@
       "uid": "an4.192",
       "title": "",
       "segments": 76
+    },
+    {
+      "uid": "an5.28",
+      "title": "",
+      "segments": 85
     },
     {
       "uid": "an5.57",
@@ -157,6 +187,11 @@
       "uid": "an6.63",
       "title": "",
       "segments": 142
+    },
+    {
+      "uid": "an8.30",
+      "title": "",
+      "segments": 119
     },
     {
       "uid": "an8.54",

@@ -44,14 +44,17 @@ The **Integrity Lab** applies the same passages to twelve deliberately hard scen
 - **Structural diagrams** where the argument is a structure: the two arrows, dependent origination, and the eightfold path.
 - **Print stylesheet**: the full path survives as paper (Read, Understand, and Live panels print in sequence).
 
-## Level 2 — pilot
+## Level 2 — content-complete
 
 A separate advanced tier, not a continuation of the 36 sessions:
 
-- **Track A, How the Canon Is Built** (6 sessions): the four nikāyas, formula and ellipsis, three reading protocols, the verse books, Vinaya orientation, Abhidhamma/commentary orientation.
-- **Two whole texts**: MN 10 (Satipaṭṭhāna) and SN 12.23 (Vital Conditions), read complete, in sections, with a contents list and marginal-style notes.
+- **Track A, How the Canon Is Built** (6): collections, formula and ellipsis, three reading protocols, the verse books, Vinaya orientation, Abhidhamma/commentary orientation.
+- **Track B, Reading Whole Suttas** (6): MN 10, MN 39, AN 4.41, SN 12.23, DN 15, MN 118 — read complete, in sections.
+- **Track C, Doctrine in Depth** (6): SN 22.59, SN 35.28, SN 12.2, AN 5.28, kamma/rebirth/no-self, and MN 36.
+- **Track D, Comparative and Critical Reading** (6): MN 10 vs DN 22, SN 12.2 vs DN 15, translation as evidence, Pali tools, commentary vs sutta.
+- **Capstone**: AN 8.30 — an unseen text, a cited note, and a model note to compare against.
 - The build refuses a "whole text" that omits any non-empty segment without declaring it.
-- The rest of Level 2 (Tracks B–D, capstone, Pali labs) is designed in `docs/ADVANCED_TRACK.md` and not yet written.
+- **Not scholar-reviewed.** The Pali sessions are method-only, and the status is stated in the app.
 
 ## Architecture
 
@@ -123,5 +126,6 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] v1.2 — study plan page, track goals, lab anchor provenance (every passage is taught)
 - [x] v1.3 — Level 2 advanced plan published in-app and as `docs/ADVANCED_TRACK.md`
 - [x] v1.4 — Level 2 pilot shipped: Track A (6) + MN 10 + SN 12.23, long-read surface
-- [ ] Outside gates — Buddhist-studies sign-off on 5.1–5.6; clinical read of 4.6/6.5; real-reader pilot
-- [ ] Level 2 gates — ten Level-1 graduates read MN 10 unaided (six can state its structure); then Tracks C–D
+- [x] v2.0 — Level 2 content-complete: Tracks B–D, 11 whole texts, comparison view, capstone
+- [ ] Outside gates — Buddhist-studies sign-off on 5.1–5.6 and Level 2 doctrinal sessions; clinical read of 4.6/6.5 and C5
+- [ ] Level 2 reader gate — ten Level-1 graduates read MN 10 unaided (six can state its structure)

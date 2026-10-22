@@ -1,11 +1,10 @@
-/* SuttaPath — Level 2 pilot (editorial layer).
+﻿/* SuttaPath — Level 2 sessions (editorial layer).
  *
- * Shipped: Track A (the apparatus) and two whole texts (MN 10, SN 12.23).
- * Tracks C and D are planned, not written. Canon text is resolved by
- * scripts/build.js from the pinned snapshot; nothing here quotes canon.
+ * Tracks A and the first B sessions. The rest live in advanced-b/c/d.js.
+ * Canon text is resolved by scripts/build.js from the pinned snapshot.
  */
 module.exports = {
-  status: "Pilot release: Track A and two whole texts. Tracks C and D remain planned.",
+  status: "Level 2 content-complete: 24 sessions plus a capstone. Not yet scholar-reviewed; the pilot reader gate is still open.",
   tracks: [
     {
       code: "A",
@@ -19,26 +18,25 @@ module.exports = {
       name: "Reading Whole Suttas",
       goal: "Read a complete sutta with a map, stop points, and no paraphrase crutch.",
       minutes: "35–60 min",
-      status: "pilot",
+      status: "ready",
     },
     {
       code: "C",
       name: "Doctrine in Depth",
       goal: "Explain the same doctrines with their joints exposed, not their slogans repeated.",
       minutes: "20–35 min",
-      status: "planned",
+      status: "ready",
     },
     {
       code: "D",
       name: "Comparative and Critical Reading",
       goal: "Compare versions, use Pali tools, and tell a sutta from a commentarial reading.",
       minutes: "30–45 min",
-      status: "planned",
+      status: "ready",
     },
   ],
 
   sessions: [
-    /* ---------------- Track A ---------------- */
     {
       id: "a1", code: "A1", track: "A", order: 1, kind: "essay",
       title: "The four nikāyas, and how to find a text", minutes: 18,
@@ -221,8 +219,6 @@ module.exports = {
         { q: "What is the app's rule about commentary?", a: "Label it; never let it impersonate the sutta." },
       ],
     },
-
-    /* ---------------- Track B pilot ---------------- */
     {
       id: "b1", code: "B1", track: "B", order: 1, kind: "whole",
       ref: "MN 10", pali: "Satipaṭṭhānasutta",
