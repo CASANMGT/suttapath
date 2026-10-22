@@ -6,9 +6,22 @@ code versions: the app ships its editorial layer and its build together.
 Format: **New** (reader-visible features), **Content** (sessions, scenarios,
 glossary), **Fixed**, **Build** (pipeline and validation).
 
+Every entry carries its commit time, local (+07:00).
+
 ---
 
-## [2.4] — 2026-10-22 — Session guides
+## [2.5] — 2026-10-22 22:27 (+07:00) — Timestamps
+
+### New
+- Every release entry now carries its commit time (local, +07:00), in this
+  file and in the app's release notes.
+
+### Build
+- Version `2.5.0`; service worker `suttapath-v14`.
+
+---
+
+## [2.4] — 2026-10-22 21:56 (+07:00) — Session guides
 
 ### New
 - **`docs/session-guides.md`**: one instructor guide for each of the 36
@@ -22,7 +35,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [2.3] — 2026-10-22 — Gate operations
+## [2.3] — 2026-10-22 21:27 (+07:00) — Gate operations
 
 ### New
 - **Verdict registry** (`docs/review/verdicts.json` + `VERDICTS.md`): one
@@ -41,7 +54,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [2.2] — 2026-10-22 — Review and pilot packets
+## [2.2] — 2026-10-22 21:03 (+07:00) — Review and pilot packets
 
 ### New
 - **Scholar review packet** (`docs/review/SCHOLAR_REVIEW.md`): scope,
@@ -60,7 +73,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [2.1] — 2026-10-22 — Citations and review
+## [2.1] — 2026-10-22 20:16 (+07:00) — Citations and review
 
 ### New
 - **Section citations**: every whole-text section shows its segment range
@@ -77,7 +90,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [2.0] — 2026-10-22 — Level 2, complete
+## [2.0] — 2026-10-22 19:57 (+07:00) — Level 2, complete
 
 ### New
 - **Track B** completed: MN 39, AN 4.41, DN 15, MN 118 (complete) — six
@@ -107,7 +120,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [1.4] — 2026-10-22 — Level 2, shipped
+## [1.4] — 2026-10-22 18:15 (+07:00) — Level 2, shipped
 
 ### New
 - **Level 2 reader** (`#/adv`): its own progress, contents navigation, section
@@ -136,7 +149,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [1.3] — 2026-10-22 — The advanced plan
+## [1.3] — 2026-10-22 15:35 (+07:00) — The advanced plan
 
 ### New
 - **Level 2 page** (`#/level2`): the advanced tier as a published plan —
@@ -156,7 +169,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [1.2] — 2026-10-22 — The study plan
+## [1.2] — 2026-10-22 14:49 (+07:00) — The study plan
 
 ### New
 - **Study plan page** (`#/plan`): weekly rhythm, pacing (2/week ≈ 18 weeks,
@@ -190,7 +203,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [1.1] — 2026-10-22 — Understanding pass
+## [1.1] — 2026-10-22 12:24 (+07:00) — Understanding pass
 
 ### New
 - Three structural diagrams in the Understand panel:
@@ -226,7 +239,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [1.0] — 2026-10-22 — The complete path
+## [1.0] — 2026-10-22 06:12 (+07:00) — The complete path
 
 ### Content
 - **Track 5, The Deep End** (6 sessions): SN 22.59 not-self, SN 35.28 Fire
@@ -265,7 +278,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [0.3] — 2026-10-22 — The Mind
+## [0.3] — 2026-10-22 05:20 (+07:00) — The Mind
 
 ### Content
 - **Track 4** (6 sessions): MN 19 two kinds of thought, MN 20 five ways to
@@ -285,7 +298,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [0.2] — 2026-10-22 — The reading path
+## [0.2] — 2026-10-22 02:57 (+07:00) — The reading path
 
 ### Content
 - **Tracks 1–3** (18 sessions), checkpoint 1, 12 integrity scenarios,
@@ -306,7 +319,7 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
-## [0.1] — 2026-10-22 — Prototype
+## [0.1] — 2026-10-22 01:36 (+07:00) — Prototype
 
 - Three sample sessions to test the three-mode reader and the visual system.
 - Deployed to GitHub Pages as `b08a911`.

@@ -1,4 +1,4 @@
-﻿const VERSION = "suttapath-v13";
+﻿const VERSION = "suttapath-v14";
 const SHELL = [
   "./",
   "./index.html",
@@ -56,5 +56,6 @@ self.addEventListener("fetch", (event) => {
     })
   );
 });
+
 
 

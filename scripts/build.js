@@ -213,6 +213,7 @@ if (!changelog || !Array.isArray(changelog.releases) || !changelog.releases.leng
     if (!r.version) fail(`changelog release ${i + 1}: no version`);
     if (!r.name) fail(`changelog ${r.version}: no name`);
     if (!r.summary) fail(`changelog ${r.version}: no summary`);
+    if (!changelog.times || !changelog.times[r.version]) fail(`changelog ${r.version}: no commit time in times`);
     if (!Array.isArray(r.groups) || !r.groups.length) fail(`changelog ${r.version}: no groups`);
     (r.groups || []).forEach((g) => {
       if (!g.label || !(g.items || []).length) fail(`changelog ${r.version}: group needs a label and items`);

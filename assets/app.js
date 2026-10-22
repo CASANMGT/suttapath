@@ -1165,7 +1165,7 @@
       ${rel.releases.map((r) => `<section class="release">
         <header class="release__head">
           <span class="release__v">v${esc(r.version)}</span>
-          <time class="release__date">${esc(r.date)}</time>
+          <time class="release__date">${esc(r.date)}${rel.times && rel.times[r.version] ? " · " + esc(rel.times[r.version]) : ""}</time>
         </header>
         <h2 class="release__name">${esc(r.name)}</h2>
         <p class="release__summary">${esc(r.summary)}</p>

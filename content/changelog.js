@@ -6,7 +6,38 @@
 module.exports = {
   intro:
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
+  times: {
+    "2.5": "22:27 (+07:00)",
+    "2.4": "21:56 (+07:00)",
+    "2.3": "21:27 (+07:00)",
+    "2.2": "21:03 (+07:00)",
+    "2.1": "20:16 (+07:00)",
+    "2.0": "19:57 (+07:00)",
+    "1.4": "18:15 (+07:00)",
+    "1.3": "15:35 (+07:00)",
+    "1.2": "14:49 (+07:00)",
+    "1.1": "12:24 (+07:00)",
+    "1.0": "06:12 (+07:00)",
+    "0.3": "05:20 (+07:00)",
+    "0.2": "02:57 (+07:00)",
+    "0.1": "01:36 (+07:00)",
+  },
   releases: [
+    {
+      version: "2.5",
+      date: "22 October 2026",
+      name: "Timestamps",
+      summary:
+        "Release notes now show the time each version shipped, not only the day.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "Every release entry carries its commit time, local (+07:00), on this page and in CHANGELOG.md.",
+          ],
+        },
+      ],
+    },
     {
       version: "2.4",
       date: "22 October 2026",
