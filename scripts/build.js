@@ -17,6 +17,9 @@ const REPORT = path.join(ROOT, "docs", "citations.csv");
 
 const sessionsSrc = require(path.join(ROOT, "content", "sessions.js"));
 const appendix = require(path.join(ROOT, "content", "appendix.js"));
+const retrieval = require(path.join(ROOT, "content", "retrieval.js"));
+const visuals = require(path.join(ROOT, "content", "visuals.js"));
+const changelog = require(path.join(ROOT, "content", "changelog.js"));
 
 const errors = [];
 const warnings = [];
@@ -124,6 +127,23 @@ for (const s of sessionsSrc.sessions) {
   if ((s.oneIdea || "").split(/\s+/).length > 24) warnings.push(`${where}: oneIdea over 24 words`);
 
   for (const t of s.terms || []) if (!terms[t]) fail(`${where}: term "${t}" not in glossary`);
+
+  const items = retrieval[s.id] || [];
+  if (items.length !== 5) fail(`${where}: needs 5 retrieval items (has ${items.length})`);
+  items.forEach((it, i) => {
+    if (!it.q || String(it.q).trim().length < 10) fail(`${where}: retrieval ${i + 1} has no question`);
+    if (!it.a || String(it.a).trim().length < 3) fail(`${where}: retrieval ${i + 1} has no answer`);
+  });
+  s.retrieval = items;
+
+  if (visuals[s.id]) {
+    const d = visuals[s.id];
+    if (!["flow", "groups"].includes(d.type)) fail(`${where}: diagram type must be flow or groups`);
+    if (!d.title) fail(`${where}: diagram needs a title`);
+    if (d.type === "flow" && !(d.steps || []).every((x) => x.label)) fail(`${where}: flow diagram step missing a label`);
+    if (d.type === "groups" && !(d.groups || []).every((g) => g.name && (g.factors || []).length)) fail(`${where}: group diagram needs a name and factors`);
+    s.diagram = d;
+  }
   const seen = new Set();
   s.blocks.forEach((b, i) => {
     const label = `${where} block ${i + 1}`;
@@ -165,6 +185,21 @@ for (const sc of appendix.scenarios) {
   a.text = resolve(a.uids || []);
 }
 
+/* ---------- changelog ---------- */
+if (!changelog || !Array.isArray(changelog.releases) || !changelog.releases.length) {
+  fail("changelog: no releases");
+} else {
+  changelog.releases.forEach((r, i) => {
+    if (!r.version) fail(`changelog release ${i + 1}: no version`);
+    if (!r.name) fail(`changelog ${r.version}: no name`);
+    if (!r.summary) fail(`changelog ${r.version}: no summary`);
+    if (!Array.isArray(r.groups) || !r.groups.length) fail(`changelog ${r.version}: no groups`);
+    (r.groups || []).forEach((g) => {
+      if (!g.label || !(g.items || []).length) fail(`changelog ${r.version}: group needs a label and items`);
+    });
+  });
+}
+
 /* ---------- emit ---------- */
 if (errors.length) {
   console.error(`\nBUILD FAILED — ${errors.length} error(s):\n`);
@@ -189,6 +224,7 @@ const payload = {
   checkpoints: sessionsSrc.checkpoints || [],
   scenarios: appendix.scenarios,
   glossary: terms,
+  changelog,
   builtAt: new Date().toISOString(),
 };
 
@@ -218,6 +254,7 @@ fs.writeFileSync(REPORT, csv + "\n", "utf8");
 console.log(`Built ${OUT}`);
 console.log(`  ${payload.sessions.length} sessions · ${payload.checkpoints.length} checkpoint · ${payload.scenarios.length} scenarios · ${Object.keys(payload.glossary).length} terms`);
 console.log(`  ${rows.length - 1} citations verified against ${canon.size} suttas`);
+console.log(`  ${Object.keys(retrieval).length} retrieval sets · ${Object.keys(visuals).length} diagrams`);
 if (warnings.length) {
   console.log(`  ${warnings.length} warning(s):`);
   warnings.forEach((w) => console.log("    · " + w));

@@ -40,6 +40,8 @@ The **Integrity Lab** applies the same passages to twelve deliberately hard scen
 - **Track 6 — Living With Others** (6 sessions + checkpoint cp3): the speech test, good friendship, the saw simile, self and other, the five recollections, and the last words of the Buddha — closing on the sutta that opened the path.
 - **Integrity Lab**: 24 scenarios anchored to session passages (academic, work, career, money, speech, relationships, habit), each with instructor seminar notes and two defensible counter-positions.
 - **Glossary**: 120 terms with literal sense, usage sense, and confusions.
+- **Check yourself**: five retrieval prompts per session, unscored, with answers behind a reveal.
+- **Structural diagrams** where the argument is a structure: the two arrows, dependent origination, and the eightfold path.
 - **Print stylesheet**: the full path survives as paper (Read, Understand, and Live panels print in sequence).
 
 ## Architecture
@@ -59,6 +61,9 @@ assets/app.js | app.css | v02.css   router, reader, lab, glossary, styles
 assets/data/content.js      GENERATED build artifact (window.SP_DATA)
 content/sessions.js         editorial source: 36 sessions + cp1–cp3
 content/appendix.js         editorial source: 24 scenarios + 120 glossary terms
+content/retrieval.js        editorial source: 180 retrieval prompts (5/session)
+content/visuals.js          editorial source: 3 structural diagrams
+content/changelog.js        editorial source: reader-facing release notes
 content/canon/*.json        pinned Sujato CC0 snapshot (33 suttas)
 scripts/fetch-canon.js      refresh the snapshot from SuttaCentral
 scripts/build.js            resolver + validator + emitter (fails on bad citation)
@@ -70,6 +75,7 @@ docs/REVIEW.md              the v1.0 review pass: gates, fixes, accepted deviati
 docs/guides.md              instructor guides for the 24 lab scenarios
 docs/citations.csv          per-citation audit report (generated)
 docs/PRD.md · CURRICULUM.md · CONTENT_SCHEMA.md · CONTENT_PLAN.md   the full design
+CHANGELOG.md                version history (engineering-facing)
 manifest.webmanifest · sw.js  installable, offline-first PWA
 ```
 
@@ -101,4 +107,5 @@ Everything works from the filesystem except the service worker, which needs `htt
 - [x] Phase 3 — Track 4 (6 sessions, cp2) and Track 5 (6 sessions), scenarios 13–20, glossary 100→120
 - [x] Phase 4 — Track 6, checkpoint 3, scenarios 21–24, 120-term glossary, print stylesheet, instructor guides
 - [x] Phase 5 (internal review) — build invariants extended (`related` links), 12 content fixes, `docs/REVIEW.md`
-- [ ] Outside gates — Buddhist-studies sign-off on 5.1–5.6; clinical read of 4.6/6.5; real-reader pilot; diagrams for 5.3 and 5.5
+- [x] v1.1 — comprehension pass: three structural diagrams, 180 retrieval prompts, release notes, print fixes
+- [ ] Outside gates — Buddhist-studies sign-off on 5.1–5.6; clinical read of 4.6/6.5; real-reader pilot

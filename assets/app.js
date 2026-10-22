@@ -136,6 +136,7 @@
     if (parts[0] === "lab") return renderLab();
     if (parts[0] === "glossary") return renderGlossary();
     if (parts[0] === "canon") return renderCanon();
+    if (parts[0] === "changelog") return renderChangelog();
     if (parts[0] === "about") return renderAbout();
     return renderHome();
   }
@@ -224,6 +225,7 @@
         <span>Translation: Bhikkhu Sujato, CC0 · SuttaCentral</span>
         <a class="linkish" href="#/about">About</a>
         <a class="linkish" href="#/canon">The canon</a>
+        <a class="linkish" href="#/changelog">Releases</a>
         <span>${done}/${PATH.length} sessions · ${labDone}/${LAB.length} scenarios</span>
       </footer>
     </div>`;
@@ -268,6 +270,10 @@
     const terms = (s.terms || []).map((k) => termCard(k)).join("");
     const parallel = s.parallel ? `<div class="parallel">${s.parallel.map((p) => `<div class="parallel__col"><span class="parallel__label">${esc(p.label)}</span><p>${esc(p.text)}</p></div>`).join("")}</div>` : "";
     const recip = s.directions ? `<div class="recip">${s.directions.map((d) => `<div class="recip__row"><span class="recip__dir">${esc(d.dir)}</span><span class="recip__who">${esc(d.who)}</span><span class="recip__ex"><b>give</b> ${esc(d.serve)}<br><b>receive</b> ${esc(d.receive)}</span></div>`).join("")}</div>` : "";
+    const diagram = s.diagram ? diagramHtml(s.diagram) : "";
+    const recall = s.retrieval && s.retrieval.length ? `<h2 class="section-label">Check yourself</h2>
+        <p class="recall-hint">Answer from memory, then open the answer. Nothing is scored, and nothing is stored.</p>
+        <div class="recall">${s.retrieval.map((r, i) => `<details class="recall__item"><summary><span class="recall__n">${String(i + 1).padStart(2, "0")}</span>${esc(r.q)}</summary><p class="recall__a">${esc(r.a)}</p></details>`).join("")}</div>` : "";
 
     $("#main").innerHTML = `<article class="session wrap">
       <header class="session-head">
@@ -293,9 +299,11 @@
         <div class="one-idea"><span class="one-idea__label">The one idea</span><p>${esc(s.oneIdea)}</p></div>
         <div class="note"><span class="note__label">Context</span>${esc(s.context)}</div>
         ${s.inference ? `<div class="note note--inference"><span class="note__label">Our reading, not the text</span>${esc(s.inference)}</div>` : ""}
+        ${diagram}
         ${parallel ? `<h2 class="section-label">Two renderings</h2>${parallel}` : ""}
         ${recip ? `<h2 class="section-label">The six directions</h2>${recip}` : ""}
         ${terms ? `<h2 class="section-label">Words in this session</h2><div class="term-list">${terms}</div>` : ""}
+        ${recall}
         <p class="source-line">Passages from SuttaCentral (CC0). Paraphrase, context and inference are SuttaPath's.</p>
       </section>
 
@@ -323,6 +331,14 @@
     renderDock(s);
     bindSession(s);
     setMode(state.mode, { instant: true });
+  }
+
+  function diagramHtml(d) {
+    const head = `<figcaption class="diagram__title">${esc(d.title)}</figcaption>${d.note ? `<p class="diagram__note">${esc(d.note)}</p>` : ""}`;
+    if (d.type === "groups") {
+      return `<figure class="diagram">${head}<div class="diagram__groups">${(d.groups || []).map((g) => `<div class="diagram__group"><h4>${esc(g.name)}</h4><ul>${(g.factors || []).map((f) => `<li>${esc(f)}</li>`).join("")}</ul></div>`).join("")}</div></figure>`;
+    }
+    return `<figure class="diagram">${head}<ol class="diagram__flow">${(d.steps || []).map((st) => `<li><b>${esc(st.label)}</b>${st.note ? `<span>${esc(st.note)}</span>` : ""}</li>`).join("")}</ol></figure>`;
   }
 
   function termCard(k) {
@@ -645,6 +661,37 @@
     $("#dockSlot").innerHTML = "";
   }
 
+  /* ---------- changelog ---------- */
+
+  function renderChangelog() {
+    const rel = DATA.changelog;
+    topbar([
+      `<a class="icon-btn" href="#/" aria-label="Back to the path">${ICON.back}</a>`,
+      `<span class="topbar__ref">Release notes</span>`,
+      `<span class="topbar__spacer"></span>`,
+      settingsBtn(),
+    ]);
+
+    $("#main").innerHTML = `<div class="changelog wrap prose">
+      <header class="masthead masthead--small">
+        <div class="eyebrow">Release notes</div>
+        <h1 class="display display--sm">What changed,<br><em>and when.</em></h1>
+        <p class="dek">${esc(rel.intro)}</p>
+      </header>
+      ${rel.releases.map((r) => `<section class="release">
+        <header class="release__head">
+          <span class="release__v">v${esc(r.version)}</span>
+          <time class="release__date">${esc(r.date)}</time>
+        </header>
+        <h2 class="release__name">${esc(r.name)}</h2>
+        <p class="release__summary">${esc(r.summary)}</p>
+        ${(r.groups || []).map((g) => `<div class="release__group"><h3>${esc(g.label)}</h3><ul>${(g.items || []).map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>`).join("")}
+      </section>`).join("")}
+      <p class="source-line">App version ${esc(DATA.meta.version)} · built ${esc((DATA.builtAt || "").slice(0, 10))}</p>
+    </div>`;
+    $("#dockSlot").innerHTML = "";
+  }
+
   /* ---------- about ---------- */
 
   function renderAbout() {
@@ -669,6 +716,8 @@
 
       <h2>Your data</h2>
       <p>Progress and notes are stored in this browser's local storage. Nothing is sent anywhere. Clearing site data deletes them.</p>
+
+      <p>Release notes: <a class="linkish" href="#/changelog">what changed in each version</a>.</p>
 
       <h2>Status</h2>
       <p>${done} of ${PATH.length} sessions complete · ${countDone(LAB.map((x) => x.id))} of ${LAB.length} scenarios answered.</p>

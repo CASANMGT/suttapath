@@ -69,6 +69,17 @@ for (const s of DATA.sessions) {
   const grade = fkGrade(s.blocks.map((b) => b.para).join(" "));
   if (grade > 12) add("info", s.id, `paraphrase reading grade ${grade.toFixed(1)} (target ≤ 10–12)`);
   if (s.minutes > 15) add("warn", s.id, `${s.minutes} min (limit 15)`);
+
+  const items = s.retrieval || [];
+  if (items.length !== 5) add("warn", s.id, `${items.length} retrieval items (need 5)`);
+  items.forEach((it, i) => {
+    if (!it.q || it.q.trim().length < 10) add("warn", s.id, `retrieval ${i + 1} question too short`);
+    if (!it.a || it.a.trim().length < 3) add("warn", s.id, `retrieval ${i + 1} answer missing`);
+  });
+}
+for (const id of ["4.4", "5.3", "5.5"]) {
+  if (!DATA.sessions.find((s) => s.id === id && s.diagram))
+    add("warn", id, "required structural diagram is missing");
 }
 
 const domainCount = {};

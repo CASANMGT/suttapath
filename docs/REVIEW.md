@@ -96,22 +96,31 @@ the number would have cost quality.
 
 ## Open issues (deliberately unresolved)
 
-1. **Structural diagrams for 5.3 (dependent origination) and 5.5 (eightfold
-   path)** are required by `CONTENT_PLAN.md` Phase 3 and are not built. The
-   sessions currently carry the structure in prose and lists. This is the
-   largest known gap against the plan.
-2. **Retrieval items (180) and audio narration** are specified but not
-   implemented; the thin-surface rule says no content should be produced for
-   a feature the learner cannot see.
-3. **Instructor guides** cover the 24 lab scenarios, not all 36 sessions
-   (Phase 4 asks for 36 session guides).
-4. **No real-reader data.** Completion, cold-read comprehension, and the
+1. **Session-level instructor guides** — the 24 scenario guides exist; the
+   plan asks for 36 session guides. Not built.
+2. **Audio narration** is specified but not implemented; the thin-surface
+   rule says no content should be produced for a feature the learner cannot
+   see.
+3. **No real-reader data.** Completion, cold-read comprehension, and the
    "does anyone finish Track 4" gate are unmeasured.
-5. **No scholar sign-off** on 5.1–5.6, and no clinical read of 4.6/6.5.
+4. **No scholar sign-off** on 5.1–5.6, and no clinical read of 4.6/6.5.
+
+## v1.1 follow-up (comprehension pass)
+
+Resolved since the review above:
+
+- **Structural diagrams** for 4.4 (two arrows), 5.3 (dependent origination),
+  and 5.5 (eightfold path as three trainings) — the plan's Phase 3
+  requirement, now data-driven and print-safe.
+- **Retrieval items** — 5 per session (180 total) in `content/retrieval.js`,
+  validated by the build and audited for completeness.
+- Printing now opens collapsed passages and prints marks as underlines.
+
+Still open: the outside gates (3 and 4 above), session guides, and audio.
 
 ## Recommendation
 
-Ship v1.0 as **content-complete for readers**, labelled as such in the README.
-Do not represent it as scholar-reviewed. The next content work, in order:
-diagrams for 5.3 and 5.5, session-level instructor guides, then the outside
-reviews that the plan's gates require.
+Ship v1.0 as **content-complete for readers**; v1.1 adds the comprehension
+layer (diagrams and retrieval). Do not represent either as scholar-reviewed.
+The next content work, in order: session-level instructor guides, then the
+outside reviews that the plan's gates require.
