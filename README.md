@@ -72,6 +72,7 @@ scripts/dump.js             segment inspector for choosing ranges
 docs/STYLE_GUIDE.md         editorial voice, layer rules, field budgets
 docs/TRANSLATION_COVERAGE.md  what is cited, segment-level, with totals
 docs/REVIEW.md              the v1.0 review pass: gates, fixes, accepted deviations
+docs/ADVANCED_TRACK.md      Level 2 plan: whole texts, comparison, Pali tools, capstone
 docs/guides.md              instructor guides for the 24 lab scenarios
 docs/citations.csv          per-citation audit report (generated)
 docs/PRD.md · CURRICULUM.md · CONTENT_SCHEMA.md · CONTENT_PLAN.md   the full design

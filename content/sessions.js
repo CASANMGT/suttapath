@@ -10,7 +10,7 @@
 (function (root) {
   const data = {
     meta: {
-      version: "1.1.0",
+      version: "1.2.0",
       translationLabel: "Bhikkhu Sujato · CC0",
       totalSessions: 36,
       builtSessions: 36,
@@ -18,12 +18,12 @@
     },
 
     tracks: [
-      { id: 1, title: "How to Read This", subtitle: "No doctrine. Just the instrument.", status: "ready" },
-      { id: 2, title: "What the Teaching Claims", subtitle: "The frame, before the ethics.", status: "ready" },
-      { id: 3, title: "The Ethical Life", subtitle: "Relationships, not rules.", status: "ready" },
-      { id: 4, title: "The Mind", subtitle: "Attention, habit, and the second arrow.", status: "ready" },
-      { id: 5, title: "The Deep End", subtitle: "Not-self, conditionality, and the unknown.", status: "ready" },
-      { id: 6, title: "Living With Others", subtitle: "Speech, friendship, and the last words.", status: "ready" },
+      { id: 1, title: "How to Read This", subtitle: "No doctrine. Just the instrument.", goal: "Tell a sutta from a summary, test a claim against the wider teaching, and read a translation as an interpretation.", status: "ready" },
+      { id: 2, title: "What the Teaching Claims", subtitle: "The frame, before the ethics.", goal: "State the central claims — intention, diligence, the four truths — without turning them into comfort.", status: "ready" },
+      { id: 3, title: "The Ethical Life", subtitle: "Relationships, not rules.", goal: "Map a relationship's duties in both directions, and judge a livelihood and a person by the canon's own tests.", status: "ready" },
+      { id: 4, title: "The Mind", subtitle: "Attention, habit, and the second arrow.", goal: "Catch a thought before it becomes an inclination, and separate pain from the story you add to it.", status: "ready" },
+      { id: 5, title: "The Deep End", subtitle: "Not-self, conditionality, and the unknown.", goal: "Explain not-self, conditionality, and the canon's refusals without collapsing them into slogans.", status: "ready" },
+      { id: 6, title: "Living With Others", subtitle: "Speech, friendship, and the last words.", goal: "Test your speech before you speak, and name what you owe the people you live with.", status: "ready" },
     ],
 
     sessions: [
@@ -595,6 +595,15 @@
           {
             uids: ["dn31:30.3", "dn31:30.4"],
             para: "She returns it by managing the work and the household, fidelity, protecting his earnings, and diligence.",
+          },
+          {
+            uids: ["dn31:31.1", "dn31:31.2"],
+            para: "Friends and colleagues are the north: giving, kindly words, care, equality, and not using tricky words.",
+            mark: "not using tricky words",
+          },
+          {
+            uids: ["dn31:31.3", "dn31:31.4"],
+            para: "They return it by guarding you and your property, keeping you safe, not abandoning you in trouble, and honouring your family.",
           },
           {
             uids: ["dn31:32.1", "dn31:32.2"],
@@ -1317,7 +1326,7 @@
             mark: "five ways in which others might criticize you",
           },
           {
-            uids: ["mn21:20.1"],
+            uids: ["mn21:20.1", "mn21:20.2"],
             para: "Then the extreme case: bandits with a saw. A single malevolent thought means you have left the training.",
             mark: "two-handed saw",
           },

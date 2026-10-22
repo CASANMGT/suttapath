@@ -84,6 +84,8 @@ for (const id of ["4.4", "5.3", "5.5"]) {
 
 const domainCount = {};
 const questions = new Map();
+const taught = new Map();
+for (const s of DATA.sessions) for (const b of s.blocks) for (const u of b.uids) taught.set(u, s.id);
 for (const sc of DATA.scenarios) {
   domainCount[sc.domain] = (domainCount[sc.domain] || 0) + 1;
   const q = sc.question.trim().toLowerCase();
@@ -94,6 +96,16 @@ for (const sc of DATA.scenarios) {
   if (!sc.counter || sc.counter.length < 2) add("warn", sc.id, "needs two counter-positions");
   if (String(sc.leavesOpen || "").length < 30)
     add("warn", sc.id, `leavesOpen too short (min 30 chars)`);
+
+  const missing = (sc.anchor.uids || []).filter((u) => !taught.has(u));
+  if (missing.length) add("warn", sc.id, `anchor segments not taught: ${missing.join(", ")}`);
+  const sources = [...new Set((sc.anchor.uids || []).map((u) => taught.get(u)).filter(Boolean))];
+  if (!sources.includes(sc.anchor.session))
+    add("warn", sc.id, `anchor session ${sc.anchor.session} does not teach its passage`);
+}
+
+for (const t of DATA.tracks) {
+  if (!t.goal) add("warn", `track ${t.id}`, "no learning goal");
 }
 
 for (const [k, t] of Object.entries(glossary)) {
@@ -106,6 +118,8 @@ console.log("=======================");
 console.log(`${DATA.sessions.length} sessions · ${DATA.checkpoints.length} checkpoints · ${DATA.scenarios.length} scenarios · ${Object.keys(glossary).length} terms`);
 console.log(`Translation words: ${totalTrans} · Total reading words: ${totalWords}`);
 console.log(`Scenario domains: ${Object.entries(domainCount).map(([d, n]) => d + " " + n).join(" · ")}`);
+const totalMinutes = DATA.sessions.reduce((n, s) => n + s.minutes, 0) + DATA.checkpoints.reduce((n, c) => n + c.minutes, 0);
+console.log(`Plan: ${totalMinutes} min (${(totalMinutes / 60).toFixed(1)} h) · ${Math.ceil(DATA.sessions.length / 2)} weeks at 2 sessions/week · ${Math.ceil(DATA.sessions.length / 3)} at 3`);
 console.log(`Glossary: ${usedTerms.size} terms attached to sessions, ${orphans.length} reference-only`);
 
 const order = { warn: 0, info: 1 };

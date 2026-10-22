@@ -8,6 +8,40 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
+## [1.2] — 2026-10-22 — The study plan
+
+### New
+- **Study plan page** (`#/plan`): weekly rhythm, pacing (2/week ≈ 18 weeks,
+  3/week ≈ 12, 1/week ≈ 9 months), what to cut when behind, what "done"
+  means, and a learning goal per track.
+- **Track goals** — six statements of what a reader can do at the end of each
+  track; rendered in the plan and validated by the build.
+
+### Content
+- **3.2 now teaches the north direction** (DN 31 friends: giving, kindly
+  words, care, equality, honest speech; and the five duties returned). The
+  passage was used by three lab scenarios but had been omitted from the
+  session.
+- **6.3** gains the missing MN 21:20.2 line, so its anchor quotes the full
+  instruction.
+
+### Fixed
+- Lab scenarios now link **every** session that teaches the anchor passage,
+  not only the declared primary session.
+- Four scenarios (s4, s13, s16, s17) cited passages no session contained;
+  fixed by teaching them, not by weakening the check.
+- Scenario 14 anchor moved to 5.5.
+
+### Build
+- New invariant: a scenario's anchor segment must be taught by a session,
+  and the declared anchor session must teach at least one segment of its own
+  passage. Build fails otherwise.
+- `audit.js` reports plan pacing, anchor provenance, and missing track goals.
+- 200 citations verified against 33 suttas. Service worker cache
+  `suttapath-v6`.
+
+---
+
 ## [1.1] — 2026-10-22 — Understanding pass
 
 ### New

@@ -137,6 +137,7 @@
     if (parts[0] === "glossary") return renderGlossary();
     if (parts[0] === "canon") return renderCanon();
     if (parts[0] === "changelog") return renderChangelog();
+    if (parts[0] === "plan") return renderPlan();
     if (parts[0] === "about") return renderAbout();
     return renderHome();
   }
@@ -225,6 +226,7 @@
         <span>Translation: Bhikkhu Sujato, CC0 · SuttaCentral</span>
         <a class="linkish" href="#/about">About</a>
         <a class="linkish" href="#/canon">The canon</a>
+        <a class="linkish" href="#/plan">Study plan</a>
         <a class="linkish" href="#/changelog">Releases</a>
         <span>${done}/${PATH.length} sessions · ${labDone}/${LAB.length} scenarios</span>
       </footer>
@@ -499,7 +501,6 @@
     const i = LAB.indexOf(s);
     const prev = LAB[i - 1];
     const next = LAB[i + 1];
-    const anchorSession = S.find((x) => x.id === s.anchor.session) || CP.find((x) => x.id === s.anchor.session);
 
     topbar([
       `<a class="icon-btn" href="#/lab" aria-label="Back to the lab">${ICON.back}</a>`,
@@ -518,7 +519,10 @@
       <div class="anchor">
         <span class="anchor__label">The passage behind it</span>
         <p class="anchor__text">${esc(s.anchor.text)}</p>
-        <a class="anchor__ref" href="#/s/${s.anchor.session}">${esc(anchorSession ? anchorSession.ref : s.anchor.session)} · ${esc(anchorSession ? anchorSession.title : "")} →</a>
+        <p class="anchor__ref">Taught in ${(s.anchor.sources && s.anchor.sources.length ? s.anchor.sources : [s.anchor.session]).map((id) => {
+          const src = S.find((x) => x.id === id) || CP.find((x) => x.id === id);
+          return src ? `<a href="#/s/${src.id}">${esc(src.ref)} · ${esc(src.title)}</a>` : "";
+        }).filter(Boolean).join('<span class="anchor__sep">·</span>')}</p>
         <p class="anchor__inference">${esc(s.anchor.inference)}</p>
       </div>
 
@@ -661,6 +665,67 @@
     $("#dockSlot").innerHTML = "";
   }
 
+  /* ---------- study plan ---------- */
+
+  function renderPlan() {
+    const minutes = S.reduce((n, s) => n + s.minutes, 0) + CP.reduce((n, c) => n + c.minutes, 0);
+    const hours = Math.round(minutes / 60);
+    topbar([
+      `<a class="icon-btn" href="#/" aria-label="Back to the path">${ICON.back}</a>`,
+      `<span class="topbar__ref">Study plan</span>`,
+      `<span class="topbar__spacer"></span>`,
+      settingsBtn(),
+    ]);
+
+    $("#main").innerHTML = `<div class="plan wrap prose">
+      <header class="masthead masthead--small">
+        <div class="eyebrow">The path, as a plan</div>
+        <h1 class="display display--sm">Eighteen weeks,<br><em>or twelve, or a year.</em></h1>
+        <p class="dek">The order is fixed; the pace is yours. Two sessions a week finishes in about eighteen weeks, three in twelve, one in roughly nine months. Nothing is scored, and the only deadlines are the ones you set.</p>
+      </header>
+
+      <dl class="plan-stats">
+        <div><dt>Sessions</dt><dd>${S.length}</dd></div>
+        <div><dt>Checkpoints</dt><dd>${CP.length}</dd></div>
+        <div><dt>Lab scenarios</dt><dd>${LAB.length}</dd></div>
+        <div><dt>Session time</dt><dd>~${hours} h</dd></div>
+      </dl>
+
+      <h2>The weekly rhythm</h2>
+      <ol class="plan-steps">
+        <li><b>Session A — read, then understand.</b> Read the passage cold. Open the paraphrase only when you have made your own sense of it, then the context and the inference. Finish with Check yourself, from memory.</li>
+        <li><b>Session B — the same, then Live.</b> The second session of the week is where the practice belongs. One practice per week is enough; the point is repetition, not volume.</li>
+        <li><b>One lab scenario every second week.</b> Write the answer before opening the seminar notes. The lab is where the reading becomes a decision, and disagreement is the intended result.</li>
+        <li><b>A checkpoint after Tracks 2, 4, and 6.</b> No new text. If a passage will not come back from memory, reread that one session and move on.</li>
+      </ol>
+
+      <h2>If you fall behind</h2>
+      <p>Cut the lab first. It is the most disposable layer and the one that assumes a group. Then cut the Live practice to one sentence a week. Do not skip the checkpoints: they are the only place the path checks whether the reading stayed. Sessions marked with a shorter time are deliberate breathing room, not lesser material.</p>
+
+      <h2>What "done" means</h2>
+      <p>Marking a session complete is a bookmark, not a credential. The honest test is the checkpoint question: which of these could you defend, and which would you only repeat? If you can tell the difference, the session did its work.</p>
+
+      <h2>What each track gives you</h2>
+      <ul class="plan-tracks">
+        ${TRACKS.map((t) => {
+          const first = trackSessions(t.id)[0];
+          const count = trackSessions(t.id).length;
+          return `<li>
+            <span class="plan-tracks__n">${t.id}</span>
+            <span class="plan-tracks__body">
+              <b>${esc(t.title)}</b>
+              <span class="plan-tracks__meta">${count} sessions${first ? ` · starts with <a href="#/s/${first.id}">${esc(first.ref)}</a>` : ""}</span>
+              <span class="plan-tracks__goal">${esc(t.goal || "")}</span>
+            </span>
+          </li>`;
+        }).join("")}
+      </ul>
+
+      <p class="source-line">Session time is the app's own estimate and includes reading, the reflection, and writing. Translation: Bhikkhu Sujato, CC0.</p>
+    </div>`;
+    $("#dockSlot").innerHTML = "";
+  }
+
   /* ---------- changelog ---------- */
 
   function renderChangelog() {
@@ -717,7 +782,7 @@
       <h2>Your data</h2>
       <p>Progress and notes are stored in this browser's local storage. Nothing is sent anywhere. Clearing site data deletes them.</p>
 
-      <p>Release notes: <a class="linkish" href="#/changelog">what changed in each version</a>.</p>
+      <p>Release notes: <a class="linkish" href="#/changelog">what changed in each version</a>. How to pace it: <a class="linkish" href="#/plan">the study plan</a>.</p>
 
       <h2>Status</h2>
       <p>${done} of ${PATH.length} sessions complete · ${countDone(LAB.map((x) => x.id))} of ${LAB.length} scenarios answered.</p>

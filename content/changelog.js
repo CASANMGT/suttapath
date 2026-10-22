@@ -8,6 +8,37 @@ module.exports = {
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   releases: [
     {
+      version: "1.2",
+      date: "22 October 2026",
+      name: "The study plan",
+      summary:
+        "A page that says how to pace the path — and lab passages that now link every session which actually teaches them.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "A study plan page: the weekly rhythm, pacing at two sessions a week (about eighteen weeks), three (twelve), or one (about nine months), what to cut if you fall behind, and what 'done' means.",
+            "A learning goal for each track, stated as something you can do rather than something you have covered.",
+          ],
+        },
+        {
+          label: "Content",
+          items: [
+            "Session 3.2 now teaches the north direction of the six — the duties friends owe each other. Three lab scenarios relied on that passage, and the session had omitted it.",
+            "Session 6.3 gains the missing line of the saw passage, so its lab scenarios quote what the session actually shows.",
+          ],
+        },
+        {
+          label: "Fixed",
+          items: [
+            "Lab passages now link every session that teaches them, not only the declared anchor.",
+            "Four scenarios (s4, s13, s16, s17) pointed at passages no session taught. The passages are now taught, and the build refuses this class of error.",
+            "Scenario 14's anchor moved to session 5.5, which is where right livelihood is defined.",
+          ],
+        },
+      ],
+    },
+    {
       version: "1.1",
       date: "22 October 2026",
       name: "The understanding pass",

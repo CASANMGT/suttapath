@@ -296,7 +296,7 @@
         prompt:
           "You are offered a secure, well-paid job in an industry you find pointless, at a company you would not defend at dinner. It would take you out of debt and let you support family. The work is legal, and no one is harmed in any way you can name. A second offer, less secure and a third less money, is work you believe in. You have a month to decide, and the secure offer will not wait.",
         anchor: {
-          session: "3.5",
+          session: "5.5",
           uids: ["sn45.8:7.1", "sn45.8:7.2", "sn45.8:7.3", "an8.54:2.1", "an8.54:2.2", "an8.54:2.3"],
           inference:
             "Right livelihood is defined as giving up wrong livelihood, not as finding work you love. But the canon also insists that welfare in this life is real, and that initiative and balance are part of it. The two claims are held together, not ranked by the text.",

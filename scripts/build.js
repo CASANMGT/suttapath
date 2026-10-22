@@ -113,6 +113,7 @@ for (const s of sessionsSrc.sessions) {
   ids.add(s.id);
   if (s.id !== `${s.track}.${s.order}`) fail(`${where}: id does not match track.order`);
   if (!sessionsSrc.tracks.some((t) => t.id === s.track)) fail(`${where}: unknown track ${s.track}`);
+  if (!sessionsSrc.tracks.find((t) => t.id === s.track).goal) fail(`track ${s.track}: no goal`);
 
   if (!s.ref || !String(s.ref).trim()) fail(`${where}: missing "ref"`);
   for (const field of ["title", "hook", "oneIdea", "context", "reflection", "practice"]) {
@@ -183,6 +184,18 @@ for (const sc of appendix.scenarios) {
   if (!a.uids || !a.uids.length) fail(`scenario ${sc.id}: no anchor uids`);
   else checkContiguous(a.uids, `scenario ${sc.id}`);
   a.text = resolve(a.uids || []);
+
+  const sources = [];
+  for (const [sid, seen] of seenUidPerSession) {
+    if (a.uids.some((u) => seen.has(u))) sources.push(sid);
+  }
+  for (const uid of a.uids) {
+    if (!sources.length || ![...seenUidPerSession.values()].some((set) => set.has(uid)))
+      fail(`scenario ${sc.id}: anchor segment "${uid}" is not taught by any session`);
+  }
+  if (!sources.includes(a.session))
+    fail(`scenario ${sc.id}: anchor session ${a.session} does not cite its own passage (sources: ${sources.join(", ") || "none"})`);
+  a.sources = sources;
 }
 
 /* ---------- changelog ---------- */
