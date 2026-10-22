@@ -16,6 +16,9 @@ in §7–§8 are still open.
 The pilot (Track A + MN 10 + SN 12.23) shipped earlier as v1.4 and remains
 the way to test the format before investing in review.
 
+**v2.1** adds the study tools from §5: section citations, deep links to
+sections, and spaced retrieval at 3, 10, and 30 days.
+
 ---
 
 ## 1. Who this is for

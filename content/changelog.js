@@ -8,6 +8,30 @@ module.exports = {
     "Every released version, with what changed for readers. The app ships its content and its code together, so a version number is also a statement about what you can read.",
   releases: [
     {
+      version: "2.1",
+      date: "22 October 2026",
+      name: "Citations and review",
+      summary:
+        "Cite what you read, and see it again at three, ten, and thirty days. The study tools the advanced plan promised.",
+      groups: [
+        {
+          label: "New",
+          items: [
+            "Section citations in every whole-text session: tap the range (for example mn10:1.1–5.4) to copy it.",
+            "Deep links to sections: #/adv/b1/sec-3 opens the text at that section.",
+            "Spaced retrieval: finishing a session schedules it at 3, 10, and 30 days. A banner appears when reviews are due, and #/review shows them with a retrieval question.",
+          ],
+        },
+        {
+          label: "Notes",
+          items: [
+            "Reviews are stored on your device with your notes; there is no account and nothing is sent anywhere.",
+            "If you cannot answer from memory, the review reminds you which session to reread. Nothing is scored.",
+          ],
+        },
+      ],
+    },
+    {
       version: "2.0",
       date: "22 October 2026",
       name: "Level 2, complete",

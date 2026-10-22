@@ -24,7 +24,10 @@
     scale: "sp.scale",
     mode: "sp.mode",
     last: "sp.last",
+    reviews: "sp.reviews",
   };
+  const REVIEW_DAYS = [3, 10, 30];
+  const DAY = 86400000;
 
   function read(k, fallback) {
     try {
@@ -46,12 +49,37 @@
     theme: read(KEY.theme, "auto"),
     scale: read(KEY.scale, 1),
     mode: read(KEY.mode, "read"),
+    reviews: read(KEY.reviews, {}),
   };
+
+  function isReviewable(id) {
+    return S.some((x) => x.id === id) || DATA.advanced.sessions.some((x) => x.id === id);
+  }
+  function scheduleReview(id) {
+    if (!isReviewable(id) || state.reviews[id]) return;
+    state.reviews[id] = { step: 0, due: Date.now() + REVIEW_DAYS[0] * DAY };
+    write(KEY.reviews, state.reviews);
+  }
+  function advanceReview(id) {
+    const r = state.reviews[id];
+    if (!r) return;
+    const next = r.step + 1;
+    if (next >= REVIEW_DAYS.length) delete state.reviews[id];
+    else state.reviews[id] = { step: next, due: Date.now() + REVIEW_DAYS[next] * DAY };
+    write(KEY.reviews, state.reviews);
+  }
+  function dueReviewIds() {
+    const now = Date.now();
+    return Object.entries(state.reviews)
+      .filter(([, r]) => r.due <= now)
+      .map(([id]) => id);
+  }
 
   function setDone(id, on) {
     if (on) state.done.add(id);
     else state.done.delete(id);
     write(KEY.done, [...state.done]);
+    if (on) scheduleReview(id);
   }
   function isDone(id) {
     return state.done.has(id);
@@ -134,8 +162,9 @@
     if (parts[0] === "s" && parts[1]) return renderSession(parts[1]);
     if (parts[0] === "lab" && parts[1]) return renderLabItem(parts[1]);
     if (parts[0] === "lab") return renderLab();
-    if (parts[0] === "adv" && parts[1]) return renderAdvSession(parts[1]);
+    if (parts[0] === "adv" && parts[1]) return renderAdvSession(parts[1], parts[2]);
     if (parts[0] === "adv") return renderAdvHome();
+    if (parts[0] === "review") return renderReview();
     if (parts[0] === "glossary") return renderGlossary();
     if (parts[0] === "canon") return renderCanon();
     if (parts[0] === "changelog") return renderChangelog();
@@ -159,6 +188,7 @@
     const done = countDone(PATH.map((x) => x.id));
     const labDone = countDone(LAB.map((x) => x.id));
     const advDone = countDone(DATA.advanced.sessions.map((x) => x.id));
+    const dueCount = dueReviewIds().length;
 
     const trackHtml = TRACKS.map((t) => {
       const list = trackSessions(t.id);
@@ -188,6 +218,11 @@
         <p class="dek">A guided path for complete beginners. ${S.length} sessions are open: how to read a sutta, what the teaching claims, what it asks of a life, and how the mind works. No Pali required.</p>
         <a class="canon-link" href="#/canon">What is the Pali Canon? <span>→</span></a>
       </header>
+
+      ${dueCount ? `<a class="review-banner" href="#/review">
+        <span class="review-banner__n">${dueCount}</span>
+        <span class="review-banner__body"><b>${dueCount === 1 ? "review is" : "reviews are"} due</b><span>Retrieval from memory — three days after you finished, then ten, then thirty.</span></span>
+      </a>` : ""}
 
       ${next ? `<a class="continue" href="#/s/${next.id}">
         <span class="continue__top">
@@ -734,6 +769,80 @@
     </a>`;
   }
 
+  function citationOf(uids) {
+    const a = uids[0];
+    const b = uids[uids.length - 1];
+    return a === b ? a : a + "–" + b;
+  }
+
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).catch(() => {});
+      return;
+    }
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); } catch (_) {}
+    ta.remove();
+  }
+
+  function renderReview() {
+    const now = Date.now();
+    const lookup = (id) => S.find((x) => x.id === id) || DATA.advanced.sessions.find((x) => x.id === id);
+    const due = dueReviewIds()
+      .map((id) => ({ id, entry: state.reviews[id], item: lookup(id) }))
+      .filter((x) => x.item);
+    const upcoming = Object.entries(state.reviews)
+      .filter(([, r]) => r.due > now)
+      .sort((a, b) => a[1].due - b[1].due)
+      .slice(0, 6)
+      .map(([id, r]) => ({ id, due: r.due, item: lookup(id) }))
+      .filter((x) => x.item);
+
+    const linkOf = (item) => (S.some((x) => x.id === item.id) ? "#/s/" : "#/adv/");
+
+    topbar([
+      `<a class="icon-btn" href="#/" aria-label="Back to the path">${ICON.back}</a>`,
+      `<span class="topbar__ref">Review</span>`,
+      `<span class="topbar__spacer"></span>`,
+      settingsBtn(),
+    ]);
+
+    $("#main").innerHTML = `<div class="review wrap prose">
+      <header class="masthead masthead--small">
+        <div class="eyebrow">Spaced retrieval</div>
+        <h1 class="display display--sm">What you read<br><em>three days ago.</em></h1>
+        <p class="dek">Finishing a session schedules it for retrieval at three days, then ten, then thirty. Nothing is scored. If you cannot answer from memory, the session tells you what to reread.</p>
+      </header>
+
+      ${due.length ? `<div class="review-list">
+        ${due.map(({ id, entry, item }) => `<section class="review-item">
+          <span class="review-item__meta">Review ${entry.step + 1} of ${REVIEW_DAYS.length} · ${esc(item.ref || item.code || item.id)}</span>
+          <h2 class="review-item__title"><a href="${linkOf(item)}${item.id}">${esc(item.title)}</a></h2>
+          ${item.retrieval && item.retrieval[0] ? `<details class="review-item__q"><summary>One question from memory</summary><p>${esc(item.retrieval[0].q)}</p><p class="review-item__a">${esc(item.retrieval[0].a)}</p></details>` : ""}
+          <div class="review-item__actions">
+            <button class="btn btn--ghost" data-reviewed="${item.id}">Mark reviewed</button>
+          </div>
+        </section>`).join("")}
+      </div>` : `<p class="empty">Nothing is due. Finish a session to start the cycle.</p>`}
+
+      ${upcoming.length ? `<h2>Scheduled</h2><ul class="review-upcoming">${upcoming.map(({ id, due, item }) => `<li><span>${esc(item.title)}</span><em>${new Date(due).toLocaleDateString()}</em></li>`).join("")}</ul>` : ""}
+      <p class="source-line">Retrieval prompts come from the session you finished. Your schedule stays on this device.</p>
+    </div>`;
+    $("#dockSlot").innerHTML = "";
+
+    $$("[data-reviewed]").forEach((b) =>
+      b.addEventListener("click", () => {
+        advanceReview(b.dataset.reviewed);
+        renderReview();
+      })
+    );
+  }
+
   function renderAdvHome() {
     const A = DATA.advanced;
     const done = countDone(A.sessions.map((s) => s.id));
@@ -795,7 +904,7 @@
     $("#dockSlot").innerHTML = "";
   }
 
-  function renderAdvSession(id) {
+  function renderAdvSession(id, anchor) {
     const s = DATA.advanced.sessions.find((x) => x.id === id);
     if (!s) { location.hash = "#/adv"; return; }
     currentSession = s;
@@ -817,7 +926,7 @@
         </nav>
         <p class="read-hint">Read it once for shape, then again with the section notes. The notes are ours; the text is not.</p>
         ${s.sections.map((sec, i) => `<section class="whole-sec" id="sec-${i + 1}">
-          <h3 class="whole-sec__label">${esc(sec.label)}</h3>
+          <h3 class="whole-sec__label">${esc(sec.label)}<button class="cite" data-cite="${esc(citationOf(sec.uids).replace("–", "-"))}" title="Copy the citation">${esc(citationOf(sec.uids))}</button></h3>
           <div class="whole-text">${advText(sec)}</div>
           ${sec.note ? `<p class="whole-note">${esc(sec.note)}</p>` : ""}
         </section>`).join("")}
@@ -895,6 +1004,18 @@
         if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
       })
     );
+    $$("[data-cite]").forEach((b) =>
+      b.addEventListener("click", () => {
+        copyText(b.dataset.cite);
+        const old = b.textContent;
+        b.textContent = "Copied";
+        setTimeout(() => { b.textContent = old; }, 1200);
+      })
+    );
+    if (anchor) {
+      const el = document.getElementById(anchor);
+      if (el) setTimeout(() => el.scrollIntoView({ behavior: "smooth", block: "start" }), 80);
+    }
     bindSession(s);
     setMode(state.mode, { instant: true });
   }

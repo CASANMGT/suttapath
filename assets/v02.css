@@ -761,6 +761,117 @@
   text-wrap: pretty;
 }
 
+/* ---------- review & citations ---------- */
+
+.cite {
+  margin-left: 10px;
+  padding: 2px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: none;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+  cursor: pointer;
+  vertical-align: middle;
+}
+@media (hover: hover) and (pointer: fine) {
+  .cite:hover { color: var(--accent); border-color: var(--accent); }
+}
+
+.review-banner {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin: 26px 0 0;
+  padding: 14px 16px;
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  background: var(--field);
+  text-decoration: none;
+}
+.review-banner__n {
+  min-width: 34px;
+  text-align: center;
+  font-family: var(--serif);
+  font-size: 27px;
+  color: var(--accent);
+}
+.review-banner__body b {
+  display: block;
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: 17px;
+  color: var(--ink);
+}
+.review-banner__body span {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--sans);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--ink-3);
+}
+
+.review-item { border-top: 1px solid var(--line); padding: 20px 0; }
+.review-item__meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.review-item__title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  margin: 6px 0 8px;
+}
+.review-item__title a { color: var(--ink); text-decoration: none; }
+@media (hover: hover) and (pointer: fine) {
+  .review-item__title a:hover { color: var(--accent); }
+}
+.review-item__q { margin: 0 0 10px; }
+.review-item__q summary {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.review-item__q p {
+  font-family: var(--serif);
+  font-size: 16.5px;
+  line-height: 1.5;
+  margin: 10px 0 0;
+}
+.review-item__a {
+  font-family: var(--sans) !important;
+  font-size: 14px !important;
+  color: var(--ink-2) !important;
+  border-left: 2px solid var(--line-2);
+  padding-left: 10px;
+}
+.review-upcoming { list-style: none; margin: 8px 0 0; padding: 0; }
+.review-upcoming li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink-2);
+}
+.review-upcoming em {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 10.5px;
+  color: var(--ink-3);
+}
+
 /* ---------- study plan ---------- */
 
 .plan-stats {

@@ -8,6 +8,23 @@ glossary), **Fixed**, **Build** (pipeline and validation).
 
 ---
 
+## [2.1] — 2026-10-22 — Citations and review
+
+### New
+- **Section citations**: every whole-text section shows its segment range
+  (e.g. `mn10:1.1–5.4`); clicking copies the ASCII range for a note or essay.
+- **Deep links**: `#/adv/<id>/sec-<n>` opens a whole text at that section.
+- **Spaced retrieval**: completing a session schedules it at 3, 10, and 30
+  days. A home banner appears when reviews are due; `#/review` lists them with
+  one retrieval question each and a "Mark reviewed" action.
+- Review schedule persists in `localStorage` (`sp.reviews`) with notes and
+  progress; nothing is sent anywhere.
+
+### Build
+- Version `2.1.0`; service worker `suttapath-v10`.
+
+---
+
 ## [2.0] — 2026-10-22 — Level 2, complete
 
 ### New
